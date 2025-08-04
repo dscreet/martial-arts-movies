@@ -3,7 +3,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  // output   = "../src/generated/prisma"
 }
 
 datasource db {
@@ -11,7 +10,48 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// add slug possibly
 model Movie {
-  id    String   @id @default(cuid())
-  title String
+  id                  Int          @id @default(autoincrement())
+  tmdbId              Int          @unique
+  title               String
+  overview            String
+  releaseDate         DateTime
+  posterPath          String
+  backdropPath        String
+  primaryMartialArtId Int
+  primaryMartialArt   MartialArt   @relation("PrimaryMartialArt", fields: [primaryMartialArtId], references: [id])
+  countryId           Int
+  country             Country      @relation(fields: [countryId], references: [id])
+  martialArts         MartialArt[] @relation("MovieMartialArts")
+  genres              Genre[]
+  createdAt           DateTime     @default(now())
+  updatedAt           DateTime     @updatedAt
+}
+
+/**
+ * one-to-many relations like primaryMartialArt require explicit @relation whereas many-to-many like genres do not unless...
+ * there are two relations between the same models i.e. Movie and MartialArt,
+ * which is why martialArts requires explicit @relation even though it's many-to-many
+ * - prisma cannot infer which relation you're refferring to unless given distinct relation names
+ */
+
+model MartialArt {
+  id               Int     @id // no autoincrement - use TMDB's genre IDs
+  name             String  @unique
+  movies           Movie[] @relation("MovieMartialArts") // all movies featuring this martial art
+  primaryForMovies Movie[] @relation("PrimaryMartialArt") // movies where this is the primary martial art
+}
+
+model Genre {
+  id     Int     @id @default(autoincrement())
+  name   String  @unique
+  movies Movie[]
+}
+
+model Country {
+  id     Int     @id @default(autoincrement())
+  name   String  @unique
+  code   String  @unique
+  movies Movie[]
 }
