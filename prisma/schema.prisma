@@ -19,10 +19,10 @@ model Movie {
   releaseDate         DateTime
   posterPath          String
   backdropPath        String
-  primaryMartialArtId Int
-  primaryMartialArt   MartialArt   @relation("PrimaryMartialArt", fields: [primaryMartialArtId], references: [id])
   countryId           Int
   country             Country      @relation(fields: [countryId], references: [id])
+  primaryMartialArtId Int
+  primaryMartialArt   MartialArt   @relation("PrimaryMartialArt", fields: [primaryMartialArtId], references: [id])
   martialArts         MartialArt[] @relation("MovieMartialArts")
   genres              Genre[]
   createdAt           DateTime     @default(now())
