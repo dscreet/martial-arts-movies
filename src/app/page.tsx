@@ -1,13 +1,13 @@
-import { prisma } from '@/lib/prisma';
+import { fetchMartialArts } from '@/lib/data';
 
 export default async function Home() {
-  const movies = await prisma.movie.findMany();
-  console.log(movies);
+  const martialArts = await fetchMartialArts();
+  console.log(martialArts);
   return (
     <div>
       <ul>
-        {movies.map((movie) => (
-          <li key={movie.id}>{movie.title}</li>
+        {martialArts.map((martialArt) => (
+          <li key={martialArt.id}>{martialArt.name}</li>
         ))}
       </ul>
     </div>
