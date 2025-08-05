@@ -10,6 +10,7 @@ export async function fetchMartialArts() {
 }
 
 // TODO: only fetch data that will be used on list page
+// query movie instead?
 export async function fetchMoviesByMartialArt(slug) {
   try {
     return await prisma.martialArt.findUnique({
@@ -28,7 +29,7 @@ export async function fetchMoviesByMartialArt(slug) {
     });
   } catch (error) {
     console.error('Database error:', error);
-    throw new Error('Failed to fetch movies data.');
+    throw new Error('Failed to fetch movies data.'); //change
   }
 }
 
