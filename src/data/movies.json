@@ -1,0 +1,1783 @@
+{
+  "metadata": {
+    "fetched_at": "2025-08-06T12:25:29.144Z",
+    "keyword_id": 779,
+    "total_movies": 20,
+    "source": "TMDB API"
+  },
+  "movies": [
+    {
+      "adult": false,
+      "backdrop_path": "/7Q2CmqIVJuDAESPPp76rWIiA0AD.jpg",
+      "belongs_to_collection": {
+        "id": 8580,
+        "name": "The Karate Kid Collection",
+        "poster_path": "/o6h2F0C5eZOy50Q76fNYzc9mvvw.jpg",
+        "backdrop_path": "/vG9eCvIfSoucQZ9EFEOrSXhesws.jpg"
+      },
+      "budget": 45000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "homepage": "https://karatekid.movie",
+      "id": 1011477,
+      "imdb_id": "tt1674782",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "Karate Kid: Legends",
+      "overview": "After a family tragedy, kung fu prodigy Li Fong is uprooted from his home in Beijing and forced to move to New York City with his mother. When a new friend needs his help, Li enters a karate competition – but his skills alone aren't enough. Li's kung fu teacher Mr. Han enlists original Karate Kid Daniel LaRusso for help, and Li learns a new way to fight, merging their two styles into one for the ultimate martial arts showdown.",
+      "popularity": 212.7135,
+      "poster_path": "/AEgggzRr1vZCLY86MAp93li43z.jpg",
+      "production_companies": [
+        {
+          "id": 5,
+          "logo_path": "/71BqEFAF4V3qjjMPCpLuyJFB9A.png",
+          "name": "Columbia Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 5219,
+          "logo_path": null,
+          "name": "Sunswept Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 22213,
+          "logo_path": "/qx9K6bFWJupwde0xQDwOvXkOaL8.png",
+          "name": "TSG Entertainment",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2025-05-08",
+      "revenue": 105456077,
+      "runtime": 94,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "When masters unite a new legacy begins.",
+      "title": "Karate Kid: Legends",
+      "video": false,
+      "vote_average": 7.13,
+      "vote_count": 594
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/kYgQzzjNis5jJalYtIHgrom0gOx.jpg",
+      "belongs_to_collection": {
+        "id": 77816,
+        "name": "Kung Fu Panda Collection",
+        "poster_path": "/xoYc0RYKSc3xC4S9OpPZxKocKtj.jpg",
+        "backdrop_path": "/2nbtv33hEk2CTnuMhTGZgsFdi3K.jpg"
+      },
+      "budget": 80000000,
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        },
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 14,
+          "name": "Fantasy"
+        }
+      ],
+      "homepage": "https://www.dreamworks.com/movies/kung-fu-panda-4",
+      "id": 1011985,
+      "imdb_id": "tt21692408",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "Kung Fu Panda 4",
+      "overview": "Po is gearing up to become the spiritual leader of his Valley of Peace, but also needs someone to take his place as Dragon Warrior. As such, he will train a new kung fu practitioner for the spot and will encounter a villain called the Chameleon who conjures villains from the past.",
+      "popularity": 26.5317,
+      "poster_path": "/nqXsAaQsKw2gKpkfhIgjXNDRqg7.jpg",
+      "production_companies": [
+        {
+          "id": 521,
+          "logo_path": "/bLcoNzeXlJmcL47kuE57yO9YG7M.png",
+          "name": "DreamWorks Animation",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-03-02",
+      "revenue": 548040835,
+      "runtime": 94,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "The \"Dragon\" returns.",
+      "title": "Kung Fu Panda 4",
+      "video": false,
+      "vote_average": 7.058,
+      "vote_count": 3158
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7I6VUdPj6tQECNHdviJkUHD2u89.jpg",
+      "belongs_to_collection": {
+        "id": 404609,
+        "name": "John Wick Collection",
+        "poster_path": "/sm7rZZivZm2NhJDucFf3gpfFdVt.jpg",
+        "backdrop_path": "/fSwYa5q2xRkBoOOjueLpkLf3N1m.jpg"
+      },
+      "budget": 100000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 53,
+          "name": "Thriller"
+        },
+        {
+          "id": 80,
+          "name": "Crime"
+        }
+      ],
+      "homepage": "https://johnwick.movie/film/john-wick-4",
+      "id": 603692,
+      "imdb_id": "tt10366206",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "John Wick: Chapter 4",
+      "overview": "With the price on his head ever increasing, John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+      "popularity": 20.9711,
+      "poster_path": "/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
+      "production_companies": [
+        {
+          "id": 3528,
+          "logo_path": "/cCzCClIzIh81Fa79hpW5nXoUsHK.png",
+          "name": "Thunder Road",
+          "origin_country": "US"
+        },
+        {
+          "id": 23008,
+          "logo_path": "/5SarYupipdiejsEqUkwu1SpYfru.png",
+          "name": "87Eleven",
+          "origin_country": "US"
+        },
+        {
+          "id": 264,
+          "logo_path": "/fA90qwUKgPhMONqtwY60GaHRyrW.png",
+          "name": "Studio Babelsberg",
+          "origin_country": "DE"
+        },
+        {
+          "id": 1632,
+          "logo_path": "/cisLn1YAUuptXVBa0xjq7ST9cH0.png",
+          "name": "Lionsgate",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "DE",
+          "name": "Germany"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2023-03-22",
+      "revenue": 440157245,
+      "runtime": 170,
+      "spoken_languages": [
+        {
+          "english_name": "Arabic",
+          "iso_639_1": "ar",
+          "name": "العربية"
+        },
+        {
+          "english_name": "Cantonese",
+          "iso_639_1": "cn",
+          "name": "广州话 / 廣州話"
+        },
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        },
+        {
+          "english_name": "French",
+          "iso_639_1": "fr",
+          "name": "Français"
+        },
+        {
+          "english_name": "German",
+          "iso_639_1": "de",
+          "name": "Deutsch"
+        },
+        {
+          "english_name": "Japanese",
+          "iso_639_1": "ja",
+          "name": "日本語"
+        },
+        {
+          "english_name": "Latin",
+          "iso_639_1": "la",
+          "name": "Latin"
+        },
+        {
+          "english_name": "Russian",
+          "iso_639_1": "ru",
+          "name": "Pусский"
+        },
+        {
+          "english_name": "Spanish",
+          "iso_639_1": "es",
+          "name": "Español"
+        }
+      ],
+      "status": "Released",
+      "tagline": "No way back, one way out.",
+      "title": "John Wick: Chapter 4",
+      "video": false,
+      "vote_average": 7.721,
+      "vote_count": 7262
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8K9qHeM6G6QjQN0C5XKFGvK5lzM.jpg",
+      "belongs_to_collection": {
+        "id": 2344,
+        "name": "The Matrix Collection",
+        "poster_path": "/bV9qTVHTVf0gkW0j7p7M0ILD4pG.jpg",
+        "backdrop_path": "/bRm2DEgUiYciDw3myHuYFInD7la.jpg"
+      },
+      "budget": 63000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        }
+      ],
+      "homepage": "http://www.warnerbros.com/matrix",
+      "id": 603,
+      "imdb_id": "tt0133093",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "The Matrix",
+      "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
+      "popularity": 18.4218,
+      "poster_path": "/p96dm7sCMn4VYAStA6siNz30G1r.jpg",
+      "production_companies": [
+        {
+          "id": 79,
+          "logo_path": "/at4uYdwAAgNRKhZuuFX8ShKSybw.png",
+          "name": "Village Roadshow Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 372,
+          "logo_path": null,
+          "name": "Groucho II Film Partnership",
+          "origin_country": ""
+        },
+        {
+          "id": 1885,
+          "logo_path": "/xlvoOZr4s1PygosrwZyolIFe5xs.png",
+          "name": "Silver Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 174,
+          "logo_path": "/kgJaIcKZZK4lTazer55XrgWDEvp.png",
+          "name": "Warner Bros. Pictures",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "1999-03-31",
+      "revenue": 463517383,
+      "runtime": 136,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Believe the unbelievable.",
+      "title": "The Matrix",
+      "video": false,
+      "vote_average": 8.23,
+      "vote_count": 26626
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/zYDjcLWhQWm0l3Cjdsc5jbepzHR.jpg",
+      "belongs_to_collection": {
+        "id": 263,
+        "name": "The Dark Knight Collection",
+        "poster_path": "/ogyw5LTmL53dVxsppcy8Dlm30Fu.jpg",
+        "backdrop_path": "/xyhrCEdB4XRkelfVsqXeUZ6rLHi.jpg"
+      },
+      "budget": 150000000,
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 80,
+          "name": "Crime"
+        },
+        {
+          "id": 28,
+          "name": "Action"
+        }
+      ],
+      "homepage": "https://www.warnerbros.com/movies/batman-begins/",
+      "id": 272,
+      "imdb_id": "tt0372784",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "Batman Begins",
+      "overview": "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld - The Batman.",
+      "popularity": 14.1521,
+      "poster_path": "/4MpN4kIEqUjW8OPtOQJXlTdHiJV.jpg",
+      "production_companies": [
+        {
+          "id": 174,
+          "logo_path": "/kgJaIcKZZK4lTazer55XrgWDEvp.png",
+          "name": "Warner Bros. Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 429,
+          "logo_path": "/4Y00XuSMuP1gimd0jP6JT57QbCI.png",
+          "name": "DC",
+          "origin_country": "US"
+        },
+        {
+          "id": 9996,
+          "logo_path": "/3tvBqYsBhxWeHlu62SIJ1el93O7.png",
+          "name": "Syncopy",
+          "origin_country": "GB"
+        },
+        {
+          "id": 923,
+          "logo_path": "/5UQsZrfbfG2dYJbx8DxfoTr2Bvu.png",
+          "name": "Legendary Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 19231,
+          "logo_path": null,
+          "name": "Patalex III Productions",
+          "origin_country": "GB"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "GB",
+          "name": "United Kingdom"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2005-06-10",
+      "revenue": 374218673,
+      "runtime": 140,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        },
+        {
+          "english_name": "Urdu",
+          "iso_639_1": "ur",
+          "name": "اردو"
+        },
+        {
+          "english_name": "Mandarin",
+          "iso_639_1": "zh",
+          "name": "普通话"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Evil fears the knight.",
+      "title": "Batman Begins",
+      "video": false,
+      "vote_average": 7.715,
+      "vote_count": 21651
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4s2d3xdyqotiVNHTlTlJjrr3q0H.jpg",
+      "belongs_to_collection": null,
+      "budget": 165000000,
+      "genres": [
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        },
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        }
+      ],
+      "homepage": "http://movies.disney.com/big-hero-6",
+      "id": 177572,
+      "imdb_id": "tt2245084",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "Big Hero 6",
+      "overview": "A special bond develops between plus-sized inflatable robot Baymax, and prodigy Hiro Hamada, who team up with a group of friends to form a band of high-tech heroes.",
+      "popularity": 16.8237,
+      "poster_path": "/2mxS4wUimwlLmI1xp6QW6NSU361.jpg",
+      "production_companies": [
+        {
+          "id": 2,
+          "logo_path": "/wdrCwmRnLFJhEoH8GSfymY85KHT.png",
+          "name": "Walt Disney Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 6125,
+          "logo_path": "/tzsMJBJZINu7GHzrpYzpReWhh66.png",
+          "name": "Walt Disney Animation Studios",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2014-10-24",
+      "revenue": 657870525,
+      "runtime": 102,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Drop everything. Save the world.",
+      "title": "Big Hero 6",
+      "video": false,
+      "vote_average": 7.727,
+      "vote_count": 16013
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/r17jFHAemzcWPPtoO0UxjIX0xas.jpg",
+      "belongs_to_collection": {
+        "id": 404609,
+        "name": "John Wick Collection",
+        "poster_path": "/sm7rZZivZm2NhJDucFf3gpfFdVt.jpg",
+        "backdrop_path": "/fSwYa5q2xRkBoOOjueLpkLf3N1m.jpg"
+      },
+      "budget": 40000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 53,
+          "name": "Thriller"
+        },
+        {
+          "id": 80,
+          "name": "Crime"
+        }
+      ],
+      "homepage": "https://johnwick.movie/film/john-wick/john-wick-chapter-2",
+      "id": 324552,
+      "imdb_id": "tt4425200",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "John Wick: Chapter 2",
+      "overview": "John Wick is forced out of retirement by a former associate looking to seize control of a shadowy international assassins’ guild. Bound by a blood oath to aid him, Wick travels to Rome and does battle against some of the world’s most dangerous killers.",
+      "popularity": 13.5218,
+      "poster_path": "/hXWBc0ioZP3cN4zCu6SN3YHXZVO.jpg",
+      "production_companies": [
+        {
+          "id": 3528,
+          "logo_path": "/cCzCClIzIh81Fa79hpW5nXoUsHK.png",
+          "name": "Thunder Road",
+          "origin_country": "US"
+        },
+        {
+          "id": 23008,
+          "logo_path": "/5SarYupipdiejsEqUkwu1SpYfru.png",
+          "name": "87Eleven",
+          "origin_country": "US"
+        },
+        {
+          "id": 491,
+          "logo_path": "/5LvDUt3KmvRnXQ4NrdWJYHeuA8J.png",
+          "name": "Summit Entertainment",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2017-02-08",
+      "revenue": 171539887,
+      "runtime": 122,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        },
+        {
+          "english_name": "Hebrew",
+          "iso_639_1": "he",
+          "name": "עִבְרִית"
+        },
+        {
+          "english_name": "Italian",
+          "iso_639_1": "it",
+          "name": "Italiano"
+        },
+        {
+          "english_name": "Russian",
+          "iso_639_1": "ru",
+          "name": "Pусский"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Never stab the devil in the back!",
+      "title": "John Wick: Chapter 2",
+      "video": false,
+      "vote_average": 7.3,
+      "vote_count": 13580
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/vVpEOvdxVBP2aV166j5Xlvb5Cdc.jpg",
+      "belongs_to_collection": {
+        "id": 404609,
+        "name": "John Wick Collection",
+        "poster_path": "/sm7rZZivZm2NhJDucFf3gpfFdVt.jpg",
+        "backdrop_path": "/fSwYa5q2xRkBoOOjueLpkLf3N1m.jpg"
+      },
+      "budget": 55000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 53,
+          "name": "Thriller"
+        },
+        {
+          "id": 80,
+          "name": "Crime"
+        }
+      ],
+      "homepage": "https://johnwick.movie/film/john-wick/john-wick-chapter-3-parabellum",
+      "id": 458156,
+      "imdb_id": "tt6146586",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "John Wick: Chapter 3 - Parabellum",
+      "overview": "Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin’s guild, the High Table, John Wick is excommunicado, but the world’s most ruthless hit men and women await his every turn.",
+      "popularity": 13.477,
+      "poster_path": "/ziEuG1essDuWuC5lpWUaw1uXY2O.jpg",
+      "production_companies": [
+        {
+          "id": 3528,
+          "logo_path": "/cCzCClIzIh81Fa79hpW5nXoUsHK.png",
+          "name": "Thunder Road",
+          "origin_country": "US"
+        },
+        {
+          "id": 1632,
+          "logo_path": "/cisLn1YAUuptXVBa0xjq7ST9cH0.png",
+          "name": "Lionsgate",
+          "origin_country": "US"
+        },
+        {
+          "id": 23008,
+          "logo_path": "/5SarYupipdiejsEqUkwu1SpYfru.png",
+          "name": "87Eleven",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2019-05-15",
+      "revenue": 326709727,
+      "runtime": 131,
+      "spoken_languages": [
+        {
+          "english_name": "Arabic",
+          "iso_639_1": "ar",
+          "name": "العربية"
+        },
+        {
+          "english_name": "Mandarin",
+          "iso_639_1": "zh",
+          "name": "普通话"
+        },
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        },
+        {
+          "english_name": "Indonesian",
+          "iso_639_1": "id",
+          "name": "Bahasa indonesia"
+        },
+        {
+          "english_name": "Italian",
+          "iso_639_1": "it",
+          "name": "Italiano"
+        },
+        {
+          "english_name": "Japanese",
+          "iso_639_1": "ja",
+          "name": "日本語"
+        },
+        {
+          "english_name": "Latin",
+          "iso_639_1": "la",
+          "name": "Latin"
+        },
+        {
+          "english_name": "Russian",
+          "iso_639_1": "ru",
+          "name": "Pусский"
+        }
+      ],
+      "status": "Released",
+      "tagline": "If you want peace, prepare for war.",
+      "title": "John Wick: Chapter 3 - Parabellum",
+      "video": false,
+      "vote_average": 7.443,
+      "vote_count": 11115
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/364B8ohneoQSgIuYNRYZhjOCcEL.jpg",
+      "belongs_to_collection": {
+        "id": 77816,
+        "name": "Kung Fu Panda Collection",
+        "poster_path": "/xoYc0RYKSc3xC4S9OpPZxKocKtj.jpg",
+        "backdrop_path": "/2nbtv33hEk2CTnuMhTGZgsFdi3K.jpg"
+      },
+      "budget": 130000000,
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        }
+      ],
+      "homepage": "http://www.kungfupanda.com/",
+      "id": 9502,
+      "imdb_id": "tt0441773",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "Kung Fu Panda",
+      "overview": "When the Valley of Peace is threatened, lazy Po the panda discovers his destiny as the \"chosen one\" and trains to become a kung fu hero, but transforming the unsleek slacker into a brave warrior won't be easy. It's up to Master Shifu and the Furious Five -- Tigress, Crane, Mantis, Viper and Monkey -- to give it a try.",
+      "popularity": 13.0446,
+      "poster_path": "/wWt4JYXTg5Wr3xBW2phBrMKgp3x.jpg",
+      "production_companies": [
+        {
+          "id": 521,
+          "logo_path": "/bLcoNzeXlJmcL47kuE57yO9YG7M.png",
+          "name": "DreamWorks Animation",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2008-06-04",
+      "revenue": 632091832,
+      "runtime": 90,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Prepare for awesomeness.",
+      "title": "Kung Fu Panda",
+      "video": false,
+      "vote_average": 7.303,
+      "vote_count": 12027
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/fZFSvqWsN8bQiwVmJmcgeoL9awe.jpg",
+      "belongs_to_collection": {
+        "id": 8580,
+        "name": "The Karate Kid Collection",
+        "poster_path": "/o6h2F0C5eZOy50Q76fNYzc9mvvw.jpg",
+        "backdrop_path": "/vG9eCvIfSoucQZ9EFEOrSXhesws.jpg"
+      },
+      "budget": 40000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        }
+      ],
+      "homepage": "https://www.sonypictures.com/movies/thekaratekid",
+      "id": 38575,
+      "imdb_id": "tt1155076",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "The Karate Kid",
+      "overview": "12-year-old Dre Parker could've been the most popular kid in Detroit, but his mother's latest career move has landed him in China. Dre immediately falls for his classmate Mei Ying but the cultural differences make such a friendship impossible. Even worse, Dre's feelings make him an enemy of the class bully, Cheng. With no friends in a strange land, Dre has nowhere to turn but maintenance man Mr. Han, who is a kung fu master. As Han teaches Dre that kung fu is not about punches and parries, but maturity and calm, Dre realizes that facing down the bullies will be the fight of his life.",
+      "popularity": 11.8788,
+      "poster_path": "/b1RBy3l297N0c7PHjlz35cClWju.jpg",
+      "production_companies": [
+        {
+          "id": 2596,
+          "logo_path": "/755EAcJW7MqKFpCPgbWicsb2QV6.png",
+          "name": "Jerry Weintraub Productions",
+          "origin_country": "US"
+        },
+        {
+          "id": 5,
+          "logo_path": "/71BqEFAF4V3qjjMPCpLuyJFB9A.png",
+          "name": "Columbia Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 907,
+          "logo_path": "/ca5SWI5uvU985f8Kbb4xc8AmVWH.png",
+          "name": "Overbrook Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 14714,
+          "logo_path": "/dSHaVKtBCpMU5VP9wMbTkqov62i.png",
+          "name": "China Film Group Corporation",
+          "origin_country": "CN"
+        },
+        {
+          "id": 122289,
+          "logo_path": "/4l16C8j9h4frZO5iPD71lpLqTH3.png",
+          "name": "Emperor Motion Pictures",
+          "origin_country": "HK"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "CN",
+          "name": "China"
+        },
+        {
+          "iso_3166_1": "HK",
+          "name": "Hong Kong"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2010-06-10",
+      "revenue": 359126022,
+      "runtime": 140,
+      "spoken_languages": [
+        {
+          "english_name": "Mandarin",
+          "iso_639_1": "zh",
+          "name": "普通话"
+        },
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "A challenge he never imagined. A teacher he never expected.",
+      "title": "The Karate Kid",
+      "video": false,
+      "vote_average": 6.56,
+      "vote_count": 6265
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ss0Os3uWJfQAENILHZUdX8Tt1OC.jpg",
+      "belongs_to_collection": null,
+      "budget": 25000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        }
+      ],
+      "homepage": "https://a24films.com/films/everything-everywhere-all-at-once",
+      "id": 545611,
+      "imdb_id": "tt6710474",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "Everything Everywhere All at Once",
+      "overview": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save what's important to her by connecting with the lives she could have led in other universes.",
+      "popularity": 11.649,
+      "poster_path": "/u68AjlvlutfEIcpmbYpKcdi09ut.jpg",
+      "production_companies": [
+        {
+          "id": 93105,
+          "logo_path": "/ryjDQ04FlVYVW30Eok3t5V5Gx8T.png",
+          "name": "IAC Films",
+          "origin_country": "US"
+        },
+        {
+          "id": 106544,
+          "logo_path": "/psd84iF7PTGrKf4yFOStKj8JbAh.png",
+          "name": "AGBO",
+          "origin_country": "US"
+        },
+        {
+          "id": 114130,
+          "logo_path": "/4qWbeq1VqAH1RSCBFvCNkkY5Qi8.png",
+          "name": "Ley Line Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 161506,
+          "logo_path": null,
+          "name": "Year of the Rat",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2022-03-24",
+      "revenue": 139200000,
+      "runtime": 140,
+      "spoken_languages": [
+        {
+          "english_name": "Cantonese",
+          "iso_639_1": "cn",
+          "name": "广州话 / 廣州話"
+        },
+        {
+          "english_name": "Mandarin",
+          "iso_639_1": "zh",
+          "name": "普通话"
+        },
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "The universe is so much bigger than you realize.",
+      "title": "Everything Everywhere All at Once",
+      "video": false,
+      "vote_average": 7.754,
+      "vote_count": 7184
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rAksPS6LjBONzY84szQBz5gGej6.jpg",
+      "belongs_to_collection": null,
+      "budget": 150000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 14,
+          "name": "Fantasy"
+        }
+      ],
+      "homepage": "https://www.marvel.com/movies/shang-chi-and-the-legend-of-the-ten-rings",
+      "id": 566525,
+      "imdb_id": "tt9376612",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "Shang-Chi and the Legend of the Ten Rings",
+      "overview": "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization.",
+      "popularity": 11.8129,
+      "poster_path": "/d08HqqeBQSwN8i8MEvpsZ8Cb438.jpg",
+      "production_companies": [
+        {
+          "id": 420,
+          "logo_path": "/hUzeosd33nzE5MCNsZxCGEKTXaQ.png",
+          "name": "Marvel Studios",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2021-09-01",
+      "revenue": 432243292,
+      "runtime": 132,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        },
+        {
+          "english_name": "Mandarin",
+          "iso_639_1": "zh",
+          "name": "普通话"
+        }
+      ],
+      "status": "Released",
+      "tagline": "You can't outrun your destiny.",
+      "title": "Shang-Chi and the Legend of the Ten Rings",
+      "video": false,
+      "vote_average": 7.518,
+      "vote_count": 9861
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/j1xaeJZOEOiVBD1rk3dg4YaAk23.jpg",
+      "belongs_to_collection": {
+        "id": 8580,
+        "name": "The Karate Kid Collection",
+        "poster_path": "/o6h2F0C5eZOy50Q76fNYzc9mvvw.jpg",
+        "backdrop_path": "/vG9eCvIfSoucQZ9EFEOrSXhesws.jpg"
+      },
+      "budget": 8000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        }
+      ],
+      "homepage": "https://www.sonypictures.com/movies/thekaratekid0",
+      "id": 1885,
+      "imdb_id": "tt0087538",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "The Karate Kid",
+      "overview": "New Jersey teen Daniel LaRusso moves to Los Angeles with his mother, and soon strikes up a relationship with Ali. He quickly finds himself the target of bullying by a group of thugs, led by Ali's ex-boyfriend Johnny, who study karate at the Cobra Kai dojo under ruthless sensei John Kreese. Fortunately, Daniel befriends Mr. Miyagi, an unassuming repairman who just happens to be a martial arts master himself. Miyagi takes Daniel under his wing, training him in a more compassionate form of karate for self-defense and, later, preparing him to compete against the brutal Cobra Kai.",
+      "popularity": 10.0157,
+      "poster_path": "/1mp4ViklKvA0WXXsNvNx0RBuiit.jpg",
+      "production_companies": [
+        {
+          "id": 5,
+          "logo_path": "/71BqEFAF4V3qjjMPCpLuyJFB9A.png",
+          "name": "Columbia Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 7585,
+          "logo_path": null,
+          "name": "Delphi II Productions",
+          "origin_country": ""
+        },
+        {
+          "id": 2596,
+          "logo_path": "/755EAcJW7MqKFpCPgbWicsb2QV6.png",
+          "name": "Jerry Weintraub Productions",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "1984-06-22",
+      "revenue": 130442786,
+      "runtime": 126,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "He taught him the secret to karate lies in the mind and heart. Not in the hands.",
+      "title": "The Karate Kid",
+      "video": false,
+      "vote_average": 7.21,
+      "vote_count": 4427
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/533xAMhhVyjTy8hwMUFEt5TuDfR.jpg",
+      "belongs_to_collection": {
+        "id": 2344,
+        "name": "The Matrix Collection",
+        "poster_path": "/bV9qTVHTVf0gkW0j7p7M0ILD4pG.jpg",
+        "backdrop_path": "/bRm2DEgUiYciDw3myHuYFInD7la.jpg"
+      },
+      "budget": 150000000,
+      "genres": [
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 53,
+          "name": "Thriller"
+        },
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        }
+      ],
+      "homepage": "",
+      "id": 605,
+      "imdb_id": "tt0242653",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "The Matrix Revolutions",
+      "overview": "The human city of Zion defends itself against the massive invasion of the machines as Neo fights to end the war at another front while also opposing the rogue Agent Smith.",
+      "popularity": 9.2863,
+      "poster_path": "/t1wm4PgOQ8e4z1C6tk1yDNrps4T.jpg",
+      "production_companies": [
+        {
+          "id": 79,
+          "logo_path": "/at4uYdwAAgNRKhZuuFX8ShKSybw.png",
+          "name": "Village Roadshow Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 172,
+          "logo_path": null,
+          "name": "NPV Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 1885,
+          "logo_path": "/xlvoOZr4s1PygosrwZyolIFe5xs.png",
+          "name": "Silver Pictures",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2003-11-05",
+      "revenue": 424988211,
+      "runtime": 129,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        },
+        {
+          "english_name": "French",
+          "iso_639_1": "fr",
+          "name": "Français"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Everything that has a beginning has an end.",
+      "title": "The Matrix Revolutions",
+      "video": false,
+      "vote_average": 6.74,
+      "vote_count": 10257
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9YRKhVQx174hQn35f8k1MWKLAFQ.jpg",
+      "belongs_to_collection": {
+        "id": 90863,
+        "name": "Rush Hour Collection",
+        "poster_path": "/pEvK2AoBnhC1RgqB7VRbBCMDq23.jpg",
+        "backdrop_path": "/Atik4QqBg8IrTPiCzaj9AcI9p1i.jpg"
+      },
+      "budget": 33000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 80,
+          "name": "Crime"
+        }
+      ],
+      "homepage": "",
+      "id": 2109,
+      "imdb_id": "tt0120812",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "Rush Hour",
+      "overview": "When Hong Kong Inspector Lee is summoned to Los Angeles to investigate a kidnapping, the FBI doesn't want any outside help and assigns cocky LAPD Detective James Carter to distract Lee from the case. Not content to watch the action from the sidelines, Lee and Carter form an unlikely partnership and investigate the case themselves.",
+      "popularity": 9.6396,
+      "poster_path": "/we7wOLVFgxhzLzUt0qNe50xdIQZ.jpg",
+      "production_companies": [
+        {
+          "id": 12,
+          "logo_path": "/x33I3vv8nx1O7rECNN7X5MsAFoN.png",
+          "name": "New Line Cinema",
+          "origin_country": "US"
+        },
+        {
+          "id": 139921,
+          "logo_path": null,
+          "name": "Arthur Sarkissian Productions",
+          "origin_country": "US"
+        },
+        {
+          "id": 961,
+          "logo_path": null,
+          "name": "Roger Birnbaum Productions",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "1998-09-18",
+      "revenue": 244721064,
+      "runtime": 97,
+      "spoken_languages": [
+        {
+          "english_name": "Cantonese",
+          "iso_639_1": "cn",
+          "name": "广州话 / 廣州話"
+        },
+        {
+          "english_name": "Mandarin",
+          "iso_639_1": "zh",
+          "name": "普通话"
+        },
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "The fastest hands in the East meet the biggest mouth in the West.",
+      "title": "Rush Hour",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 5261
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/96WHK0TiIslmM8rGVIejMtMtaPG.jpg",
+      "belongs_to_collection": {
+        "id": 2344,
+        "name": "The Matrix Collection",
+        "poster_path": "/bV9qTVHTVf0gkW0j7p7M0ILD4pG.jpg",
+        "backdrop_path": "/bRm2DEgUiYciDw3myHuYFInD7la.jpg"
+      },
+      "budget": 150000000,
+      "genres": [
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 53,
+          "name": "Thriller"
+        },
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        }
+      ],
+      "homepage": "https://www.warnerbros.com/movies/matrix-reloaded",
+      "id": 604,
+      "imdb_id": "tt0234215",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "The Matrix Reloaded",
+      "overview": "The Resistance builds in numbers as humans are freed from the Matrix and brought to the city of Zion. Neo discovers his superpowers, including the ability to see the code inside the Matrix. With machine sentinels digging to Zion in 72 hours, Neo, Morpheus and Trinity must find the Keymaker to ultimately reach the Source.",
+      "popularity": 9.7527,
+      "poster_path": "/9TGHDvWrqKBzwDxDodHYXEmOE6J.jpg",
+      "production_companies": [
+        {
+          "id": 79,
+          "logo_path": "/at4uYdwAAgNRKhZuuFX8ShKSybw.png",
+          "name": "Village Roadshow Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 1885,
+          "logo_path": "/xlvoOZr4s1PygosrwZyolIFe5xs.png",
+          "name": "Silver Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 172,
+          "logo_path": null,
+          "name": "NPV Entertainment",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2003-05-15",
+      "revenue": 738599701,
+      "runtime": 138,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        },
+        {
+          "english_name": "French",
+          "iso_639_1": "fr",
+          "name": "Français"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Free your mind.",
+      "title": "The Matrix Reloaded",
+      "video": false,
+      "vote_average": 7.061,
+      "vote_count": 11368
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/p3WiF8qYS7Qp17YRYgrFh7gf9P9.jpg",
+      "belongs_to_collection": {
+        "id": 2883,
+        "name": "Kill Bill Collection",
+        "poster_path": "/tf1nUtw3LJGUGv1EFFi23iz6ngr.jpg",
+        "backdrop_path": "/voSMLsbi3f0YMGuC8DvflOEB3lo.jpg"
+      },
+      "budget": 30000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 80,
+          "name": "Crime"
+        }
+      ],
+      "homepage": "http://www.miramax.com/movie/kill-bill-volume-1",
+      "id": 24,
+      "imdb_id": "tt0266697",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "Kill Bill: Vol. 1",
+      "overview": "An assassin is shot by her ruthless employer, Bill, and other members of their assassination circle – but she lives to plot her vengeance.",
+      "popularity": 7.9552,
+      "poster_path": "/v7TaX8kXMXs5yFFGR41guUDNcnB.jpg",
+      "production_companies": [
+        {
+          "id": 14,
+          "logo_path": "/m6AHu84oZQxvq7n1rsvMNJIAsMu.png",
+          "name": "Miramax",
+          "origin_country": "US"
+        },
+        {
+          "id": 59,
+          "logo_path": "/b1tj5EWcFQLYaQrw1D9V4s8kUgN.png",
+          "name": "A Band Apart",
+          "origin_country": "US"
+        },
+        {
+          "id": 39121,
+          "logo_path": null,
+          "name": "Super Cool ManChu",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2003-10-10",
+      "revenue": 180906076,
+      "runtime": 111,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        },
+        {
+          "english_name": "Japanese",
+          "iso_639_1": "ja",
+          "name": "日本語"
+        },
+        {
+          "english_name": "French",
+          "iso_639_1": "fr",
+          "name": "Français"
+        }
+      ],
+      "status": "Released",
+      "tagline": "A Roaring Rampage of Revenge",
+      "title": "Kill Bill: Vol. 1",
+      "video": false,
+      "vote_average": 7.97,
+      "vote_count": 18039
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7BdxZXbSkUiVeCRXKD3hi9KYeWm.jpg",
+      "belongs_to_collection": {
+        "id": 77816,
+        "name": "Kung Fu Panda Collection",
+        "poster_path": "/xoYc0RYKSc3xC4S9OpPZxKocKtj.jpg",
+        "backdrop_path": "/2nbtv33hEk2CTnuMhTGZgsFdi3K.jpg"
+      },
+      "budget": 150000000,
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        }
+      ],
+      "homepage": "http://www.kungfupanda.com/",
+      "id": 49444,
+      "imdb_id": "tt1302011",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "Kung Fu Panda 2",
+      "overview": "Po and his friends fight to stop a peacock villain from conquering China with a deadly new weapon, but first the Dragon Warrior must come to terms with his past.",
+      "popularity": 8.7237,
+      "poster_path": "/mtqqD00vB4PGRt20gWtGqFhrkd0.jpg",
+      "production_companies": [
+        {
+          "id": 521,
+          "logo_path": "/bLcoNzeXlJmcL47kuE57yO9YG7M.png",
+          "name": "DreamWorks Animation",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2011-05-25",
+      "revenue": 665692281,
+      "runtime": 91,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Twice the awesomeness.",
+      "title": "Kung Fu Panda 2",
+      "video": false,
+      "vote_average": 7,
+      "vote_count": 7477
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/n4GJFGzsc7NinI1VeGDXIcQjtU2.jpg",
+      "belongs_to_collection": {
+        "id": 1454788,
+        "name": "In the Mood for Love Collection",
+        "poster_path": null,
+        "backdrop_path": null
+      },
+      "budget": 3000000,
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 10749,
+          "name": "Romance"
+        }
+      ],
+      "homepage": "https://www.janusfilms.com/films/2274",
+      "id": 843,
+      "imdb_id": "tt0118694",
+      "origin_country": [
+        "HK"
+      ],
+      "original_language": "cn",
+      "original_title": "花樣年華",
+      "overview": "In 1962 Hong Kong, neighbors Su Li-zhen (Mrs. Chan) and Chow Mo-wan (Mr. Chow) discover their spouses are having an affair. As they spend time together, they develop feelings for each other, but their relationship remains chaste and unspoken, reflecting societal constraints and their own moral compass.",
+      "popularity": 7.5045,
+      "poster_path": "/8BgGbbWiLNhPtkMkN0gGTnbtvBv.jpg",
+      "production_companies": [
+        {
+          "id": 539,
+          "logo_path": "/iPLtePguIzOPNtAWfTxWLXb2O11.png",
+          "name": "Block 2 Pictures",
+          "origin_country": "HK"
+        },
+        {
+          "id": 255,
+          "logo_path": "/b1zTOpnNn5g0nHjhpn3Dx17QaoP.png",
+          "name": "Paradis Films",
+          "origin_country": "FR"
+        },
+        {
+          "id": 540,
+          "logo_path": "/gqx0uCS4P0hEgaDl61TfKODIwMe.png",
+          "name": "Jet Tone Production",
+          "origin_country": "HK"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "HK",
+          "name": "Hong Kong"
+        },
+        {
+          "iso_3166_1": "FR",
+          "name": "France"
+        }
+      ],
+      "release_date": "2000-09-29",
+      "revenue": 15867968,
+      "runtime": 98,
+      "spoken_languages": [
+        {
+          "english_name": "Cantonese",
+          "iso_639_1": "cn",
+          "name": "广州话 / 廣州話"
+        },
+        {
+          "english_name": "French",
+          "iso_639_1": "fr",
+          "name": "Français"
+        },
+        {
+          "english_name": "Spanish",
+          "iso_639_1": "es",
+          "name": "Español"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Feel the heat, keep the feeling burning, let the sensation explode.",
+      "title": "In the Mood for Love",
+      "video": false,
+      "vote_average": 8.1,
+      "vote_count": 2986
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nuijC0rSLcVfkfxEJVdqMDrnSba.jpg",
+      "belongs_to_collection": {
+        "id": 401562,
+        "name": "Teenage Mutant Ninja Turtles (Remake) Collection",
+        "poster_path": "/i3DywIl37k83YXWreQGIcWNF7kL.jpg",
+        "backdrop_path": "/uzCsSNd3ImvH7Q6DIHAYrG0Q11Q.jpg"
+      },
+      "budget": 125000000,
+      "genres": [
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        },
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        }
+      ],
+      "homepage": "http://www.teenagemutantninjaturtlesmovie.com",
+      "id": 98566,
+      "imdb_id": "tt1291150",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_title": "Teenage Mutant Ninja Turtles",
+      "overview": "When a kingpin threatens New York City, a group of mutated turtle warriors must emerge from the shadows to protect their home.",
+      "popularity": 9.5457,
+      "poster_path": "/azL2ThbJMIkts3ZMt3j1YgBUeDB.jpg",
+      "production_companies": [
+        {
+          "id": 2348,
+          "logo_path": "/m31fQvZJuUvAgxoqTiCGYFBfZYe.png",
+          "name": "Nickelodeon Movies",
+          "origin_country": "US"
+        },
+        {
+          "id": 4,
+          "logo_path": "/gz66EfNoYPqHTYI4q9UEN4CbHRc.png",
+          "name": "Paramount Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 2481,
+          "logo_path": "/vOQg26GjR0LnkN1Ph9uyog1UuOE.png",
+          "name": "Platinum Dunes",
+          "origin_country": "US"
+        },
+        {
+          "id": 30900,
+          "logo_path": "/gyO0BxkreNepFOxc882GIdWHblX.png",
+          "name": "Mirage Studios",
+          "origin_country": "US"
+        },
+        {
+          "id": 77208,
+          "logo_path": null,
+          "name": "Gama Entertainment Partners",
+          "origin_country": ""
+        },
+        {
+          "id": 61203,
+          "logo_path": null,
+          "name": "Mednick Productions",
+          "origin_country": ""
+        },
+        {
+          "id": 216877,
+          "logo_path": null,
+          "name": "Heavy Metal",
+          "origin_country": ""
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2014-08-07",
+      "revenue": 485004754,
+      "runtime": 101,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Mysterious. Dangerous. Reptilious. You've never seen heroes like this.",
+      "title": "Teenage Mutant Ninja Turtles",
+      "video": false,
+      "vote_average": 5.921,
+      "vote_count": 6936
+    }
+  ]
+}

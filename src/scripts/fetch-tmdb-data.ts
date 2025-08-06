@@ -1,9 +1,33 @@
+import fs from 'fs/promises';
+import path from 'path';
 import dotenv from 'dotenv';
+
 dotenv.config();
 
 const ACCESS_TOKEN = process.env.TMDB_API_ACCESS_TOKEN;
 const BASE_URL = 'https://api.themoviedb.org/3/';
 const KEYWORD_ID = 779; // "martial arts" - can turn into array and use keywords such as "boxing" to get specific martial arts
+
+async function saveMoviesToFile(movies) {
+  try {
+    const output = {
+      metadata: {
+        fetched_at: new Date().toISOString(),
+        keyword_id: KEYWORD_ID,
+        total_movies: movies.length,
+        source: 'TMDB API',
+      },
+      movies: movies,
+    };
+
+    const outputPath = path.resolve(__dirname, '../data/movies.json');
+    await fs.writeFile(outputPath, JSON.stringify(output, null, 2));
+
+    console.log(`\nsaved ${movies.length} movies to ${outputPath}\n`);
+  } catch (error) {
+    console.error(`failed to write movies to file:`, error.message);
+  }
+}
 
 async function fetchFromTMDB(url) {
   const options = {
@@ -30,7 +54,7 @@ async function fetchFromTMDB(url) {
 async function getTotalPages() {
   const url = `${BASE_URL}discover/movie?page=1&with_keywords=${KEYWORD_ID}`;
   const data = await fetchFromTMDB(url);
-  console.log(`found ${data.total_results} results across ${data.total_pages} pages`);
+  console.log(`\nfound ${data.total_results} results across ${data.total_pages} pages`);
   return data.total_pages - 98;
 }
 
@@ -46,7 +70,7 @@ async function fetchMovieIds() {
     movieIds.push(...ids);
   }
 
-  console.log(`fetched ${movieIds.length} movie ids`);
+  console.log(`\nfetched ${movieIds.length} movie ids\n`);
   return movieIds;
 }
 
@@ -54,14 +78,28 @@ async function fetchMovieIds() {
 async function fetchMovies() {
   const movies = [];
   const movieIds = await fetchMovieIds();
-  for (const id of movieIds) {
+  for (let i = 0; i < movieIds.length; i++) {
+    const id = movieIds[i];
     const url = `${BASE_URL}movie/${id}`;
     const movie = await fetchFromTMDB(url);
-    if (movie) movies.push(movie);
+    if (movie) {
+      movies.push(movie);
+      console.log(`[${i + 1}/${movieIds.length}] fetched movie id ${movie.id}`);
+    }
   }
-  console.log(movies);
+  return movies;
 }
 
-fetchMovies();
+async function main() {
+  try {
+    const movies = await fetchMovies();
+    await saveMoviesToFile(movies);
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
+}
+
+main();
 
 // need to get list of genres, countries, martial arts
