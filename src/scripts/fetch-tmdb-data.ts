@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
+import dayjs from 'dayjs';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -8,24 +9,25 @@ const ACCESS_TOKEN = process.env.TMDB_API_ACCESS_TOKEN;
 const BASE_URL = 'https://api.themoviedb.org/3/';
 const KEYWORD_ID = 779; // "martial arts" - can turn into array and use keywords such as "boxing" to get specific martial arts
 
-async function saveMoviesToFile(movies) {
+async function saveDataToFile(data, dataName) {
   try {
+    const timestamp = dayjs().format('YYYY-MM-DD_HH-mm-ss');
     const output = {
       metadata: {
-        fetched_at: new Date().toISOString(),
-        keyword_id: KEYWORD_ID,
-        total_movies: movies.length,
+        fetched_at: timestamp,
+        ...(dataName === 'movies' ? { keyword_id: KEYWORD_ID } : {}),
+        [`total_${dataName}`]: data.length,
         source: 'TMDB API',
       },
-      movies: movies,
+      [dataName]: data,
     };
 
-    const outputPath = path.resolve(__dirname, '../data/movies.json');
+    const outputPath = path.resolve(__dirname, `../data/${dataName}_${timestamp}.json`);
     await fs.writeFile(outputPath, JSON.stringify(output, null, 2));
 
-    console.log(`\nsaved ${movies.length} movies to ${outputPath}\n`);
+    console.log(`\nsaved ${data.length} ${dataName} to ${outputPath}\n`);
   } catch (error) {
-    console.error(`failed to write movies to file:`, error.message);
+    console.error(`failed to write ${dataName} to file:`, error.message);
   }
 }
 
@@ -55,7 +57,7 @@ async function getTotalPages() {
   const url = `${BASE_URL}discover/movie?page=1&with_keywords=${KEYWORD_ID}`;
   const data = await fetchFromTMDB(url);
   console.log(`\nfound ${data.total_results} results across ${data.total_pages} pages`);
-  return data.total_pages - 98;
+  return data.total_pages;
 }
 
 // use /discover/movie with martial arts keyword to get list of movie ids
@@ -90,10 +92,28 @@ async function fetchMovies() {
   return movies;
 }
 
+async function fetchGenres() {
+  const url = `${BASE_URL}genre/movie/list`;
+  const data = await fetchFromTMDB(url);
+  return data.genres;
+}
+
+async function fetchCountries() {
+  const url = `${BASE_URL}configuration/countries`;
+  const data = await fetchFromTMDB(url);
+  return data;
+}
+
 async function main() {
   try {
     const movies = await fetchMovies();
-    await saveMoviesToFile(movies);
+    await saveDataToFile(movies, 'movies');
+
+    const genres = await fetchGenres();
+    await saveDataToFile(genres, 'genres');
+
+    const countires = await fetchCountries();
+    await saveDataToFile(countires, 'countries');
   } catch (error) {
     console.error(error);
     process.exit(1);
@@ -101,5 +121,3 @@ async function main() {
 }
 
 main();
-
-// need to get list of genres, countries, martial arts
