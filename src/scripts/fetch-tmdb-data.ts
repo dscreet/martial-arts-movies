@@ -1,6 +1,5 @@
 import fs from 'fs/promises';
 import path from 'path';
-import dayjs from 'dayjs';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -11,10 +10,9 @@ const KEYWORD_ID = 779; // "martial arts" - can turn into array and use keywords
 
 async function saveDataToFile(data, dataName) {
   try {
-    const timestamp = dayjs().format('YYYY-MM-DD_HH-mm-ss');
     const output = {
       metadata: {
-        fetched_at: timestamp,
+        fetched_at: new Date().toISOString(),
         ...(dataName === 'movies' ? { keyword_id: KEYWORD_ID } : {}),
         [`total_${dataName}`]: data.length,
         source: 'TMDB API',
@@ -22,7 +20,7 @@ async function saveDataToFile(data, dataName) {
       [dataName]: data,
     };
 
-    const outputPath = path.resolve(__dirname, `../data/${dataName}_${timestamp}.json`);
+    const outputPath = path.resolve(__dirname, `../data/${dataName}.json`);
     await fs.writeFile(outputPath, JSON.stringify(output, null, 2));
 
     console.log(`\nsaved ${data.length} ${dataName} to ${outputPath}\n`);
