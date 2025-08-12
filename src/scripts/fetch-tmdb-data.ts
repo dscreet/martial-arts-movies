@@ -23,7 +23,7 @@ async function saveDataToFile(data, dataName) {
     const outputPath = path.resolve(__dirname, `../data/${dataName}.json`);
     await fs.writeFile(outputPath, JSON.stringify(output, null, 2));
 
-    console.log(`\nsaved ${data.length} ${dataName} to ${outputPath}\n`);
+    console.log(`saved ${data.length} ${dataName} to ${outputPath}\n`);
   } catch (error) {
     console.error(`failed to write ${dataName} to file:`, error.message);
   }
@@ -54,7 +54,7 @@ async function fetchFromTMDB(url) {
 async function getTotalPages() {
   const url = `${BASE_URL}discover/movie?page=1&with_keywords=${KEYWORD_ID}`;
   const data = await fetchFromTMDB(url);
-  console.log(`\nfound ${data.total_results} results across ${data.total_pages} pages`);
+  console.log(`\nfound ${data.total_results} results across ${data.total_pages} pages\n`);
   return data.total_pages;
 }
 
@@ -63,6 +63,7 @@ async function fetchMovieIds() {
   const movieIds = [];
   const totalPages = await getTotalPages();
 
+  console.log(`fetching movie ids...`);
   for (let page = 1; page <= totalPages; page++) {
     const url = `${BASE_URL}discover/movie?page=${page}&with_keywords=${KEYWORD_ID}`;
     const data = await fetchFromTMDB(url);
@@ -70,7 +71,7 @@ async function fetchMovieIds() {
     movieIds.push(...ids);
   }
 
-  console.log(`\nfetched ${movieIds.length} movie ids\n`);
+  console.log(`fetched ${movieIds.length} movie ids`);
   return movieIds;
 }
 
@@ -78,32 +79,42 @@ async function fetchMovieIds() {
 async function fetchMovies() {
   const movies = [];
   const movieIds = await fetchMovieIds();
+
+  console.log(`\nfetching ${movieIds.length} movies...`);
   for (let i = 0; i < movieIds.length; i++) {
     const id = movieIds[i];
     const url = `${BASE_URL}movie/${id}`;
     const movie = await fetchFromTMDB(url);
     if (movie) {
       movies.push(movie);
-      console.log(`[${i + 1}/${movieIds.length}] fetched movie id ${movie.id}`);
+      console.log(`[${i + 1}/${movieIds.length}] fetched movie ${movie.id}`);
     }
   }
+
+  console.log(`fetched ${movies.length} movies`);
   return movies;
 }
 
 async function fetchGenres() {
+  console.log('fetching genres...');
   const url = `${BASE_URL}genre/movie/list`;
   const data = await fetchFromTMDB(url);
+  console.log(`fetched ${data.genres.length} genres`);
   return data.genres;
 }
 
 async function fetchCountries() {
+  console.log('fetching countries...');
   const url = `${BASE_URL}configuration/countries`;
   const data = await fetchFromTMDB(url);
+  console.log(`fetched ${data.length} countries`);
   return data;
 }
 
 async function main() {
   try {
+    console.log('starting TMDB data fetch...');
+
     const movies = await fetchMovies();
     await saveDataToFile(movies, 'movies');
 
@@ -112,6 +123,8 @@ async function main() {
 
     const countires = await fetchCountries();
     await saveDataToFile(countires, 'countries');
+
+    console.log('TMDB data successfully fetched and saved');
   } catch (error) {
     console.error(error);
     process.exit(1);
