@@ -1,8 +1,9 @@
 {
   "metadata": {
-    "fetched_at": "2025-08-09T13:54:16.103Z",
-    "total_genres": 19,
-    "source": "TMDB API"
+    "fetched_at": "2025-09-03T14:55:23.479Z",
+    "source": "TMDB API",
+    "total_items": 19,
+    "dataset": "genres"
   },
   "genres": [
     {

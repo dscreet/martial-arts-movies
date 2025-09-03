@@ -8,14 +8,63 @@ const ACCESS_TOKEN = process.env.TMDB_API_ACCESS_TOKEN;
 const BASE_URL = 'https://api.themoviedb.org/3/';
 const KEYWORD_ID = 779; // "martial arts" - can turn into array and use keywords such as "boxing" to get specific martial arts
 
-async function saveDataToFile(data, dataName) {
+interface TMDBDiscoverResponse {
+  page: number;
+  results: { id: number }[]; // only need the movie ids from this response to use in fetchMovies()
+  total_pages: number;
+  total_results: number;
+}
+
+interface TMDBGenreResponse {
+  genres: Genre[];
+}
+
+interface Movie {
+  id: number;
+  title: string;
+  overview: string;
+  release_date: string;
+  poster_path: string;
+  backdrop_path: string;
+  genres: Genre[];
+  origin_country: string[];
+}
+
+interface Genre {
+  id: number;
+  name: string;
+}
+
+interface Country {
+  iso_3166_1: string;
+  english_name: string;
+  native_name: string;
+}
+
+interface Metadata {
+  fetched_at: string;
+  source: string;
+  keyword_id?: number;
+  total_items: number;
+  dataset: DataName;
+}
+
+type OutputData<T> = {
+  metadata: Metadata;
+  [key: string]: T[] | Metadata;
+};
+
+type DataName = 'movies' | 'genres' | 'countries';
+
+async function saveDataToFile<T>(data: T[], dataName: DataName): Promise<void> {
   try {
-    const output = {
+    const output: OutputData<T> = {
       metadata: {
         fetched_at: new Date().toISOString(),
-        ...(dataName === 'movies' ? { keyword_id: KEYWORD_ID } : {}),
-        [`total_${dataName}`]: data.length,
         source: 'TMDB API',
+        ...(dataName === 'movies' ? { keyword_id: KEYWORD_ID } : {}),
+        total_items: data.length,
+        dataset: dataName,
       },
       [dataName]: data,
     };
@@ -25,11 +74,11 @@ async function saveDataToFile(data, dataName) {
 
     console.log(`saved ${data.length} ${dataName} to ${outputPath}\n`);
   } catch (error) {
-    console.error(`failed to write ${dataName} to file:`, error.message);
+    console.error(`failed to write ${dataName} to file:`, error);
   }
 }
 
-async function fetchFromTMDB(url) {
+async function fetchFromTMDB<T>(url: string): Promise<T> {
   const options = {
     method: 'GET',
     headers: {
@@ -42,31 +91,32 @@ async function fetchFromTMDB(url) {
     const response = await fetch(url, options);
 
     if (!response.ok) {
-      throw new Error(`TMDB API error: ${response.statusText}, ${response.status}`);
+      throw new Error(`TMDB API error: ${response.status} ${response.statusText}`);
     }
 
     return await response.json();
   } catch (error) {
-    throw new Error(`TMDB API fetch error: ${url}`, error);
+    throw new Error(`TMDB API fetch error: ${url}`, { cause: error });
   }
 }
 
-async function getTotalPages() {
+// need to get the total amount of pages of results to iterate through
+async function getTotalPages(): Promise<number> {
   const url = `${BASE_URL}discover/movie?page=1&with_keywords=${KEYWORD_ID}`;
-  const data = await fetchFromTMDB(url);
+  const data = await fetchFromTMDB<TMDBDiscoverResponse>(url);
   console.log(`\nfound ${data.total_results} results across ${data.total_pages} pages\n`);
   return data.total_pages;
 }
 
 // use /discover/movie with martial arts keyword to get list of movie ids
-async function fetchMovieIds() {
-  const movieIds = [];
+async function fetchMovieIds(): Promise<number[]> {
+  const movieIds: number[] = [];
   const totalPages = await getTotalPages();
 
   console.log(`fetching movie ids...`);
   for (let page = 1; page <= totalPages; page++) {
     const url = `${BASE_URL}discover/movie?page=${page}&with_keywords=${KEYWORD_ID}`;
-    const data = await fetchFromTMDB(url);
+    const data = await fetchFromTMDB<TMDBDiscoverResponse>(url);
     const ids = data.results.map((movie) => movie.id);
     movieIds.push(...ids);
   }
@@ -76,15 +126,15 @@ async function fetchMovieIds() {
 }
 
 // fetch movies by id and save responses
-async function fetchMovies() {
-  const movies = [];
+async function fetchMovies(): Promise<Movie[]> {
+  const movies: Movie[] = [];
   const movieIds = await fetchMovieIds();
 
   console.log(`\nfetching ${movieIds.length} movies...`);
   for (let i = 0; i < movieIds.length; i++) {
     const id = movieIds[i];
     const url = `${BASE_URL}movie/${id}`;
-    const movie = await fetchFromTMDB(url);
+    const movie = await fetchFromTMDB<Movie>(url);
     if (movie) {
       movies.push(movie);
       console.log(`[${i + 1}/${movieIds.length}] fetched movie ${movie.id}`);
@@ -95,20 +145,20 @@ async function fetchMovies() {
   return movies;
 }
 
-async function fetchGenres() {
+async function fetchGenres(): Promise<Genre[]> {
   console.log('fetching genres...');
   const url = `${BASE_URL}genre/movie/list`;
-  const data = await fetchFromTMDB(url);
-  console.log(`fetched ${data.genres.length} genres`);
-  return data.genres;
+  const { genres } = await fetchFromTMDB<TMDBGenreResponse>(url);
+  console.log(`fetched ${genres.length} genres`);
+  return genres;
 }
 
-async function fetchCountries() {
+async function fetchCountries(): Promise<Country[]> {
   console.log('fetching countries...');
   const url = `${BASE_URL}configuration/countries`;
-  const data = await fetchFromTMDB(url);
-  console.log(`fetched ${data.length} countries`);
-  return data;
+  const countries = await fetchFromTMDB<Country[]>(url);
+  console.log(`fetched ${countries.length} countries`);
+  return countries;
 }
 
 async function main() {
