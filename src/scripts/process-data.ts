@@ -3,12 +3,13 @@
 // add classification data to movie object
 // save to new json file
 // additionally, create a new json for classification data
+// Pipeline: build batch → submit → poll → retrieve results → save files
 
 import fs from 'fs/promises';
+import { createReadStream } from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
 import OpenAI from 'openai';
-import { createReadStream } from 'fs';
 
 dotenv.config();
 
@@ -144,6 +145,10 @@ interface BatchEntry {
 //   }
 // }
 
+function logStep(message: string) {
+  console.log(`[${new Date().toISOString()}] ${message}`);
+}
+
 function chunkArray<T>(array: T[], chunkSize: number): T[][] {
   const chunks: T[][] = [];
   for (let i = 0; i < 2; i += chunkSize) {
@@ -153,71 +158,92 @@ function chunkArray<T>(array: T[], chunkSize: number): T[][] {
 }
 
 async function buildBatchFile(): Promise<number> {
-  const rawData = await fs.readFile(RAW_MOVIES_FILE, 'utf-8');
-  const { movies: rawMovies }: { movies: RawMovie[] } = JSON.parse(rawData);
+  logStep('\nbuilding batch file...');
 
-  const chunkSize = 10;
-  const chunks = chunkArray(rawMovies, chunkSize);
+  try {
+    const rawData = await fs.readFile(RAW_MOVIES_FILE, 'utf-8');
+    const { movies: rawMovies }: { movies: RawMovie[] } = JSON.parse(rawData);
 
-  const batchEntries: BatchEntry[] = chunks.map((chunk, idx) => {
-    const inputText = chunk
-      .map((movie, i) => `Movie ${i + 1}:\nId: ${movie.id}\nTitle: ${movie.title}\nOverview: ${movie.overview}`)
-      .join('\n\n');
-    console.log('input text:', inputText);
+    const chunkSize = 10;
+    const chunks = chunkArray(rawMovies, chunkSize);
 
-    return {
-      custom_id: `batch-${idx + 1}`,
-      method: 'POST',
-      url: '/v1/responses',
-      body: {
-        model: 'gpt-5',
-        reasoning: {
-          effort: 'medium',
+    logStep('generating batch entires...');
+    const batchEntries: BatchEntry[] = chunks.map((chunk, idx) => {
+      const inputText = chunk
+        .map((movie, i) => `Movie ${i + 1}:\nId: ${movie.id}\nTitle: ${movie.title}\nOverview: ${movie.overview}`)
+        .join('\n\n');
+
+      return {
+        custom_id: `batch-${idx + 1}`,
+        method: 'POST',
+        url: '/v1/responses',
+        body: {
+          model: 'gpt-5',
+          reasoning: {
+            effort: 'medium',
+          },
+          input: [
+            { role: 'system', content: CLASSIFIER_PROMPT },
+            { role: 'user', content: inputText },
+          ],
         },
-        input: [
-          { role: 'system', content: CLASSIFIER_PROMPT },
-          { role: 'user', content: inputText },
-        ],
-      },
-    };
-  });
+      };
+    });
+    console.log(`created ${batchEntries.length} batch entires`);
 
-  console.log('batch entries:', batchEntries);
+    const jsonl = batchEntries.map((entry) => JSON.stringify(entry)).join('\n');
+    await fs.writeFile(BATCH_FILE, jsonl);
 
-  const jsonl = batchEntries.map((entry) => JSON.stringify(entry)).join('\n');
-  await fs.writeFile(BATCH_FILE, jsonl);
-  return batchEntries.length;
+    console.log('successfully built and saved batch file');
+    return batchEntries.length;
+  } catch (error) {
+    console.error('failed to build batch file', error);
+    throw error;
+  }
 }
 
 async function submitBatch(): Promise<string> {
-  const file = await client.files.create({
-    file: createReadStream(BATCH_FILE),
-    purpose: 'batch',
-  });
-  console.log(`Uploaded batch file: ${file.id}`);
+  logStep('\nsubmitting batch job...');
 
-  const batch = await client.batches.create({
-    input_file_id: file.id,
-    endpoint: '/v1/responses',
-    completion_window: '24h',
-  });
+  try {
+    logStep('uploading batch file...');
+    const file = await client.files.create({
+      file: createReadStream(BATCH_FILE),
+      purpose: 'batch',
+    });
+    logStep(`uploaded batch file: ${file.id}`);
 
-  // console.log('Batch job submitted. ID:', batch.id);
-  console.log(batch.id);
-  return batch.id;
+    logStep('creating batch...');
+    const batch = await client.batches.create({
+      input_file_id: file.id,
+      endpoint: '/v1/responses',
+      completion_window: '24h',
+    });
+    logStep(`created batch job: ${batch.id}`);
+
+    logStep('successfully submitted batch job');
+    return batch.id;
+  } catch (error) {
+    console.error('failed to submit batch', error);
+    throw error;
+  }
 }
 
+/*
+1. build the batch file full of requests for classification
+2. upload the batch file and create a batch request
+3. poll the batch file and when finished, retrieve the batch output
+4. save the classification results as json
+5. create a new json file with movie objects containing the new martial arts fields and removing the redundant ones
+*/
 async function main() {
   try {
-    await buildBatchFile();
-    // await submitBatch();
-    //1. build the batch file
-    //2 submit the batch file for classification
-    //3. retrieve the results and save the json
-    //4. add the new properties to the movie object and save json
+    logStep('starting data processing...');
 
-    // console.log('starting TMDB data fetch...');
-    // console.log('TMDB data successfully fetched and saved');
+    await buildBatchFile();
+    const batchId = await submitBatch();
+
+    logStep('successfully processed data');
   } catch (error) {
     console.error(error);
     process.exit(1);
