@@ -145,10 +145,6 @@ interface BatchEntry {
 //   }
 // }
 
-function logStep(message: string) {
-  console.log(`[${new Date().toISOString()}] ${message}`);
-}
-
 function chunkArray<T>(array: T[], chunkSize: number): T[][] {
   const chunks: T[][] = [];
   for (let i = 0; i < 2; i += chunkSize) {
@@ -158,7 +154,7 @@ function chunkArray<T>(array: T[], chunkSize: number): T[][] {
 }
 
 async function buildBatchFile(): Promise<number> {
-  logStep('\nbuilding batch file...');
+  console.log('\nbuilding batch file for movie martial arts classification...');
 
   try {
     const rawData = await fs.readFile(RAW_MOVIES_FILE, 'utf-8');
@@ -167,7 +163,7 @@ async function buildBatchFile(): Promise<number> {
     const chunkSize = 10;
     const chunks = chunkArray(rawMovies, chunkSize);
 
-    logStep('generating batch entires...');
+    console.log('generating batch entries...');
     const batchEntries: BatchEntry[] = chunks.map((chunk, idx) => {
       const inputText = chunk
         .map((movie, i) => `Movie ${i + 1}:\nId: ${movie.id}\nTitle: ${movie.title}\nOverview: ${movie.overview}`)
@@ -189,7 +185,7 @@ async function buildBatchFile(): Promise<number> {
         },
       };
     });
-    console.log(`created ${batchEntries.length} batch entires`);
+    console.log(`created ${batchEntries.length} batch entries`);
 
     const jsonl = batchEntries.map((entry) => JSON.stringify(entry)).join('\n');
     await fs.writeFile(BATCH_FILE, jsonl);
@@ -203,29 +199,56 @@ async function buildBatchFile(): Promise<number> {
 }
 
 async function submitBatch(): Promise<string> {
-  logStep('\nsubmitting batch job...');
+  console.log('\nsubmitting batch job...');
 
   try {
-    logStep('uploading batch file...');
+    console.log('uploading batch file...');
     const file = await client.files.create({
       file: createReadStream(BATCH_FILE),
       purpose: 'batch',
     });
-    logStep(`uploaded batch file: ${file.id}`);
+    console.log(`uploaded batch file: ${file.id}`);
 
-    logStep('creating batch...');
+    console.log('creating batch...');
     const batch = await client.batches.create({
       input_file_id: file.id,
       endpoint: '/v1/responses',
       completion_window: '24h',
     });
-    logStep(`created batch job: ${batch.id}`);
+    console.log(`created batch job: ${batch.id}`);
 
-    logStep('successfully submitted batch job');
+    console.log('successfully submitted batch job for movie martial arts classification');
     return batch.id;
   } catch (error) {
     console.error('failed to submit batch', error);
     throw error;
+  }
+}
+
+async function pollBatch(batchId: string): Promise<OpenAI.Batch> {
+  console.log(`\npolling batch: ${batchId}...`);
+
+  while (true) {
+    try {
+      const batch = await client.batches.retrieve(batchId);
+
+      if (batch.status === 'completed') {
+        console.log(`[${new Date().toISOString()}] batch completed`);
+        return batch;
+      } else if (batch.status === 'in_progress') {
+        const { completed = 0, failed = 0, total = 0 } = batch.request_counts || {};
+        console.log(`[${new Date().toISOString()}] completed ${completed}/${total} requests, ${failed} failed`);
+      } else if (batch.status === 'failed' || batch.status === 'expired') {
+        throw new Error(`batch unsuccessful: ${batch.status}`);
+      } else {
+        console.log(`[${new Date().toISOString()}] batch status: ${batch.status}`);
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 60_000));
+    } catch (error) {
+      console.error('error polling batch', error);
+      throw error;
+    }
   }
 }
 
@@ -238,12 +261,13 @@ async function submitBatch(): Promise<string> {
 */
 async function main() {
   try {
-    logStep('starting data processing...');
+    console.log('starting data processing...');
 
     await buildBatchFile();
     const batchId = await submitBatch();
+    const batch = await pollBatch(batchId);
 
-    logStep('successfully processed data');
+    console.log('successfully processed data');
   } catch (error) {
     console.error(error);
     process.exit(1);
