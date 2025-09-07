@@ -148,6 +148,7 @@ interface BatchEntry {
 function chunkArray<T>(array: T[], chunkSize: number): T[][] {
   const chunks: T[][] = [];
   for (let i = 0; i < 2; i += chunkSize) {
+    // dont forget
     chunks.push(array.slice(i, i + chunkSize));
   }
   return chunks;
@@ -251,6 +252,52 @@ async function pollBatch(batchId: string): Promise<OpenAI.Batch> {
     }
   }
 }
+//remove redundant try cathces
+
+async function retrieveBatchResults(batch: OpenAI.Batch): Promise<string> {
+  console.log('\nretrieving batch results...');
+
+  if (!batch.output_file_id) {
+    throw new Error('batch completed but output file not found');
+  }
+
+  console.log(`downloading results from batch output file: ${batch.output_file_id}...`);
+  const fileResponse = await client.files.content(batch.output_file_id);
+  const fileContents = await fileResponse.text();
+  console.log(fileContents); //del
+
+  console.log('successfully downloaded batch results');
+  return fileContents;
+}
+
+function parseBatchResults(fileContents: string): ClassificationResult[] {
+  console.log('\nparsing batch results...');
+
+  try {
+    const lines = fileContents
+      .trim()
+      .split('\n')
+      .map((l) => JSON.parse(l));
+    console.log(lines); //del
+
+    const results: ClassificationResult[] = [];
+    for (const line of lines) {
+      try {
+        const responseText = line.response.body.output[1].content[0].text;
+        console.log(JSON.parse(responseText)); //del
+        results.push(JSON.parse(responseText));
+      } catch {
+        console.error(`failed to parse: ${line}`);
+      }
+    }
+
+    console.log(`successfully parsed ${results.length}/${lines.length} batch entries`);
+    return results;
+  } catch (error) {
+    console.error('failed to parse batch results', error);
+    throw error;
+  }
+}
 
 /*
 1. build the batch file full of requests for classification
@@ -261,13 +308,16 @@ async function pollBatch(batchId: string): Promise<OpenAI.Batch> {
 */
 async function main() {
   try {
-    console.log('starting data processing...');
+    console.log('starting data processing and martial arts classification pipeline...');
 
-    await buildBatchFile();
-    const batchId = await submitBatch();
-    const batch = await pollBatch(batchId);
+    // await buildBatchFile();
+    // const batchId = await submitBatch();
+    const batch = await pollBatch('batch_68bcbe465e2c8190896baf5fb099bff1');
+    const batchResults = await retrieveBatchResults(batch);
+    const classifications = parseBatchResults(batchResults);
 
-    console.log('successfully processed data');
+    // dont forget \n before this
+    console.log('successfully completed the data processing pipeline');
   } catch (error) {
     console.error(error);
     process.exit(1);
