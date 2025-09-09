@@ -133,8 +133,8 @@ type ClassificationOutputData = {
 };
 
 function chunkArray<T>(array: T[], chunkSize: number): T[][] {
-  const chunks: T[][] = []; //change later
-  for (let i = 0; i < 20; i += chunkSize) {
+  const chunks: T[][] = [];
+  for (let i = 0; i < array.length; i += chunkSize) {
     chunks.push(array.slice(i, i + chunkSize));
   }
   return chunks;
@@ -145,7 +145,7 @@ async function buildBatchFile(): Promise<number> {
 
   try {
     const rawData = await fs.readFile(RAW_MOVIES_FILE, 'utf-8');
-    const { movies: rawMovies }: { movies: RawMovie[] } = JSON.parse(rawData);
+    const { data: rawMovies }: { data: RawMovie[] } = JSON.parse(rawData);
 
     const chunkSize = 10;
     const chunks = chunkArray(rawMovies, chunkSize);
