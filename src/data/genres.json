@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "fetched_at": "2025-09-03T14:55:23.479Z",
+    "fetchedAt": "2025-09-09T19:10:29.401Z",
     "source": "TMDB API",
-    "total_items": 19,
+    "totalItems": 19,
     "dataset": "genres"
   },
-  "genres": [
+  "data": [
     {
       "id": 28,
       "name": "Action"

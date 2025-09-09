@@ -42,10 +42,10 @@ interface Country {
 }
 
 interface Metadata {
-  fetched_at: string;
+  fetchedAt: string;
   source: string;
-  keyword_id?: number;
-  total_items: number;
+  keywordId?: number;
+  totalItems: number;
   dataset: DataName;
 }
 
@@ -60,13 +60,13 @@ async function saveDataToFile<T>(data: T[], dataName: DataName): Promise<void> {
   try {
     const output: OutputData<T> = {
       metadata: {
-        fetched_at: new Date().toISOString(),
+        fetchedAt: new Date().toISOString(),
         source: 'TMDB API',
-        ...(dataName === 'movies' ? { keyword_id: KEYWORD_ID } : {}),
-        total_items: data.length,
+        ...(dataName === 'movies' ? { keywordId: KEYWORD_ID } : {}),
+        totalItems: data.length,
         dataset: dataName,
       },
-      [dataName]: data,
+      data: data,
     };
 
     const outputPath = path.resolve(__dirname, `../data/${dataName}.json`);
@@ -171,8 +171,8 @@ async function main() {
     const genres = await fetchGenres();
     await saveDataToFile(genres, 'genres');
 
-    const countires = await fetchCountries();
-    await saveDataToFile(countires, 'countries');
+    const countries = await fetchCountries();
+    await saveDataToFile(countries, 'countries');
 
     console.log('TMDB data successfully fetched and saved');
   } catch (error) {
