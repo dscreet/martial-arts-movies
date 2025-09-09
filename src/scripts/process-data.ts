@@ -108,47 +108,33 @@ interface BatchEntry {
   };
 }
 
-// async function processMovies() {
-//   try {
-//     console.log('reading input file...');
-//     const inputFilePath = path.resolve(__dirname, '../data/movies.json');
-//     const rawData = await fs.readFile(inputFilePath, 'utf-8');
-//     const { movies } = JSON.parse(rawData);
+interface ClassificationMetadata {
+  createdAt: string;
+  completedAt: string;
+  model: string;
+  reasoning: string;
+  sourceFile: string;
+  classificationCount: number;
+  requests: {
+    total: number;
+    successful: number;
+    failed: number;
+  };
+  tokens: {
+    input: number;
+    output: number;
+    total: number;
+  };
+}
 
-//     console.log(`\nprocessing ${movies.length} movies...`);
-//     const processedMovies = [];
-//     for (let i = 0; i < movies.length; i++) {
-//       const movie = movies[i];
-//       console.log(`[${i + 1}/${movies.length}] processing movie ${movie.id}`);
-
-//       const processedMovie = {
-//         tmdbId: movie.id,
-//         title: movie.title,
-//         overview: movie.overview,
-//         releaseDate: movie.release_date,
-//         posterPath: movie.poster_path,
-//         backdropPath: movie.backdrop_path,
-//         // primaryMartialArtId:
-//         // primaryMartialArt:
-//         // martialArts:
-//         genres: movie.genres,
-//         countries: movie.origin_country,
-//       };
-
-//       processedMovies.push(processedMovie);
-//     }
-
-//     console.log(`processed ${processedMovies.length} movies`);
-
-//   } catch (error) {
-//     console.error('error processsing movies:', error);
-//   }
-// }
+type ClassificationOutputData = {
+  metadata: ClassificationMetadata;
+  data: ClassificationResult[];
+};
 
 function chunkArray<T>(array: T[], chunkSize: number): T[][] {
-  const chunks: T[][] = [];
-  for (let i = 0; i < 2; i += chunkSize) {
-    // dont forget
+  const chunks: T[][] = []; //change later
+  for (let i = 0; i < 20; i += chunkSize) {
     chunks.push(array.slice(i, i + chunkSize));
   }
   return chunks;
@@ -264,7 +250,6 @@ async function retrieveBatchResults(batch: OpenAI.Batch): Promise<string> {
   console.log(`downloading results from batch output file: ${batch.output_file_id}...`);
   const fileResponse = await client.files.content(batch.output_file_id);
   const fileContents = await fileResponse.text();
-  console.log(fileContents); //del
 
   console.log('successfully downloaded batch results');
   return fileContents;
@@ -278,13 +263,11 @@ function parseBatchResults(fileContents: string): ClassificationResult[] {
       .trim()
       .split('\n')
       .map((l) => JSON.parse(l));
-    console.log(lines); //del
 
     const results: ClassificationResult[] = [];
     for (const line of lines) {
       try {
         const responseText = line.response.body.output[1].content[0].text;
-        console.log(JSON.parse(responseText)); //del
         results.push(JSON.parse(responseText));
       } catch {
         console.error(`failed to parse: ${line}`);
@@ -292,11 +275,78 @@ function parseBatchResults(fileContents: string): ClassificationResult[] {
     }
 
     console.log(`successfully parsed ${results.length}/${lines.length} batch entries`);
-    return results;
+    return results.flat(); //removes chunks
   } catch (error) {
     console.error('failed to parse batch results', error);
     throw error;
   }
+}
+
+async function saveClassifications(classifications: ClassificationResult[], batch: OpenAI.Batch): Promise<void> {
+  console.log(`\nsaving classifications...`);
+
+  const output: ClassificationOutputData = {
+    metadata: {
+      createdAt: new Date(batch.created_at * 1000).toISOString(),
+      completedAt: new Date(batch.completed_at! * 1000).toISOString(),
+
+      model: 'gpt-5-2025-08-07',
+      reasoning: 'medium',
+
+      sourceFile: path.basename(RAW_MOVIES_FILE),
+      classificationCount: classifications.length,
+
+      requests: {
+        total: batch.request_counts?.total ?? 0,
+        successful: batch.request_counts?.completed ?? 0,
+        failed: batch.request_counts?.failed ?? 0,
+      },
+
+      tokens: {
+        input: (batch as any).usage.input_tokens ?? 0,
+        output: (batch as any).usage.output_tokens ?? 0,
+        total: (batch as any).usage.total_tokens ?? 0,
+      },
+    },
+    data: classifications,
+  };
+
+  await fs.writeFile(CLASSIFICATIONS_FILE, JSON.stringify(output, null, 2));
+  console.log(`successfully saved ${classifications.length} classifications to: ${CLASSIFICATIONS_FILE}`);
+}
+
+async function saveProcessedMovies(classifications: ClassificationResult[]): Promise<void> {
+  // async function processMovies() {
+  //   try {
+  //     console.log('reading input file...');
+  //     const inputFilePath = path.resolve(__dirname, '../data/movies.json');
+  //     const rawData = await fs.readFile(inputFilePath, 'utf-8');
+  //     const { movies } = JSON.parse(rawData);
+  //     console.log(`\nprocessing ${movies.length} movies...`);
+  //     const processedMovies = [];
+  //     for (let i = 0; i < movies.length; i++) {
+  //       const movie = movies[i];
+  //       console.log(`[${i + 1}/${movies.length}] processing movie ${movie.id}`);
+  //       const processedMovie = {
+  //         tmdbId: movie.id,
+  //         title: movie.title,
+  //         overview: movie.overview,
+  //         releaseDate: movie.release_date,
+  //         posterPath: movie.poster_path,
+  //         backdropPath: movie.backdrop_path,
+  //         // primaryMartialArtId:
+  //         // primaryMartialArt:
+  //         // martialArts:
+  //         genres: movie.genres,
+  //         countries: movie.origin_country,
+  //       };
+  //       processedMovies.push(processedMovie);
+  //     }
+  //     console.log(`processed ${processedMovies.length} movies`);
+  //   } catch (error) {
+  //     console.error('error processsing movies:', error);
+  //   }
+  // }
 }
 
 /*
@@ -310,11 +360,13 @@ async function main() {
   try {
     console.log('starting data processing and martial arts classification pipeline...');
 
-    // await buildBatchFile();
-    // const batchId = await submitBatch();
-    const batch = await pollBatch('batch_68bcbe465e2c8190896baf5fb099bff1');
+    await buildBatchFile();
+    const batchId = await submitBatch();
+    const batch = await pollBatch(batchId);
     const batchResults = await retrieveBatchResults(batch);
     const classifications = parseBatchResults(batchResults);
+    await saveClassifications(classifications, batch);
+    await saveProcessedMovies(classifications);
 
     // dont forget \n before this
     console.log('successfully completed the data processing pipeline');
