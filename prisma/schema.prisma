@@ -36,14 +36,14 @@ model Movie {
  */
 
 model MartialArt {
-  id               Int     @id // no autoincrement - use TMDB's genre IDs
+  id               Int     @id @default(autoincrement())
   name             String  @unique
   movies           Movie[] @relation("MovieMartialArts") // all movies featuring this martial art
   primaryForMovies Movie[] @relation("PrimaryMartialArt") // movies where this is the primary martial art
 }
 
 model Genre {
-  id     Int     @id @default(autoincrement())
+  id     Int     @id // no autoincrement - use TMDB's genre IDs
   name   String  @unique
   movies Movie[]
 }
