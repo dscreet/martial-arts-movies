@@ -22,8 +22,8 @@ model Movie {
   primaryMartialArtId Int
   primaryMartialArt   MartialArt   @relation("PrimaryMartialArt", fields: [primaryMartialArtId], references: [id])
   martialArts         MartialArt[] @relation("MovieMartialArts")
-  countries           Country[]
   genres              Genre[]
+  countries           Country[]
   createdAt           DateTime     @default(now())
   updatedAt           DateTime     @updatedAt
 }
