@@ -4,6 +4,7 @@
 // save to new json file
 // additionally, create a new json for classification data
 // Pipeline: build batch → submit → poll → retrieve results → save files
+//TODO: write a better summary
 
 import fs from 'fs/promises';
 import { createReadStream } from 'fs';
@@ -73,21 +74,21 @@ interface RawMovie {
   origin_country: string[];
 }
 
-interface Movie {
+interface ProcessedMovie {
   tmdbId: number;
   title: string;
   overview: string;
   releaseDate: string;
   posterPath: string;
   backdropPath: string;
-  genres: Genre[];
-  countries: string[];
   primaryMartialArt: string;
   martialArts: string[];
+  genres: Genre[];
+  countries: string[];
 }
 
 interface ClassificationResult {
-  tmdbId: number;
+  id: number;
   primary: string;
   secondary: string[];
 }
@@ -130,6 +131,22 @@ interface ClassificationMetadata {
 type ClassificationOutputData = {
   metadata: ClassificationMetadata;
   data: ClassificationResult[];
+};
+
+interface ProcessedMoviesMetadata {
+  createdAt: string;
+  sourceFile: string;
+  classificationFile: string;
+  counts: {
+    input: number;
+    output: number;
+    filtered: number;
+  };
+}
+
+type ProcessedMoviesOutputData = {
+  metadata: ProcessedMoviesMetadata;
+  data: ProcessedMovie[];
 };
 
 function chunkArray<T>(array: T[], chunkSize: number): T[][] {
@@ -238,7 +255,6 @@ async function pollBatch(batchId: string): Promise<OpenAI.Batch> {
     }
   }
 }
-//remove redundant try cathces
 
 async function retrieveBatchResults(batch: OpenAI.Batch): Promise<string> {
   console.log('\nretrieving batch results...');
@@ -315,38 +331,67 @@ async function saveClassifications(classifications: ClassificationResult[], batc
   console.log(`successfully saved ${classifications.length} classifications to: ${CLASSIFICATIONS_FILE}`);
 }
 
-async function saveProcessedMovies(classifications: ClassificationResult[]): Promise<void> {
-  // async function processMovies() {
-  //   try {
-  //     console.log('reading input file...');
-  //     const inputFilePath = path.resolve(__dirname, '../data/movies.json');
-  //     const rawData = await fs.readFile(inputFilePath, 'utf-8');
-  //     const { movies } = JSON.parse(rawData);
-  //     console.log(`\nprocessing ${movies.length} movies...`);
-  //     const processedMovies = [];
-  //     for (let i = 0; i < movies.length; i++) {
-  //       const movie = movies[i];
-  //       console.log(`[${i + 1}/${movies.length}] processing movie ${movie.id}`);
-  //       const processedMovie = {
-  //         tmdbId: movie.id,
-  //         title: movie.title,
-  //         overview: movie.overview,
-  //         releaseDate: movie.release_date,
-  //         posterPath: movie.poster_path,
-  //         backdropPath: movie.backdrop_path,
-  //         // primaryMartialArtId:
-  //         // primaryMartialArt:
-  //         // martialArts:
-  //         genres: movie.genres,
-  //         countries: movie.origin_country,
-  //       };
-  //       processedMovies.push(processedMovie);
-  //     }
-  //     console.log(`processed ${processedMovies.length} movies`);
-  //   } catch (error) {
-  //     console.error('error processsing movies:', error);
-  //   }
-  // }
+async function processMovies(
+  rawMovies: RawMovie[],
+  classifications: ClassificationResult[]
+): Promise<ProcessedMovie[]> {
+  try {
+    console.log(`\nprocessing ${rawMovies.length} movies...`);
+
+    const classificationMap = new Map(classifications.map((c) => [c.id, c]));
+    const processedMovies: ProcessedMovie[] = [];
+
+    for (const movie of rawMovies) {
+      const classification = classificationMap.get(movie.id);
+
+      if (!classification?.primary || classification?.primary === 'None') {
+        continue;
+      }
+
+      processedMovies.push({
+        tmdbId: movie.id,
+        title: movie.title,
+        overview: movie.overview,
+        releaseDate: movie.release_date,
+        posterPath: movie.poster_path,
+        backdropPath: movie.backdrop_path,
+        primaryMartialArt: classification.primary,
+        martialArts: [classification.primary, ...(classification.secondary ?? [])],
+        genres: movie.genres,
+        countries: movie.origin_country,
+      });
+    }
+
+    console.log(`successfully processed ${rawMovies.length} movies`);
+    console.log(`${processedMovies.length} outputted movies`);
+    return processedMovies;
+  } catch (error) {
+    console.error('error processsing movies:', error);
+    throw error;
+  }
+}
+
+async function saveProcessedMovies(movies: ProcessedMovie[], rawMoviesCount: number): Promise<void> {
+  console.log(`\nsaving processed movies...`);
+
+  const output: ProcessedMoviesOutputData = {
+    metadata: {
+      createdAt: new Date().toISOString(),
+
+      sourceFile: path.basename(RAW_MOVIES_FILE),
+      classificationFile: path.basename(CLASSIFICATIONS_FILE),
+
+      counts: {
+        input: rawMoviesCount,
+        output: movies.length,
+        filtered: rawMoviesCount - movies.length,
+      },
+    },
+    data: movies,
+  };
+
+  await fs.writeFile(PROCESSED_MOVIES_FILE, JSON.stringify(output, null, 2));
+  console.log(`successfully saved ${movies.length} processed movies to: ${PROCESSED_MOVIES_FILE}\n`);
 }
 
 /*
@@ -366,9 +411,12 @@ async function main() {
     const batchResults = await retrieveBatchResults(batch);
     const classifications = parseBatchResults(batchResults);
     await saveClassifications(classifications, batch);
-    await saveProcessedMovies(classifications);
 
-    // dont forget \n before this
+    const rawData = await fs.readFile(RAW_MOVIES_FILE, 'utf-8');
+    const { data: rawMovies }: { data: RawMovie[] } = JSON.parse(rawData);
+    const processedMovies = await processMovies(rawMovies, classifications);
+    await saveProcessedMovies(processedMovies, rawMovies.length);
+
     console.log('successfully completed the data processing pipeline');
   } catch (error) {
     console.error(error);

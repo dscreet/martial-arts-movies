@@ -1,0 +1,10750 @@
+{
+  "metadata": {
+    "createdAt": "2025-09-09T21:57:32.000Z",
+    "completedAt": "2025-09-09T22:44:17.000Z",
+    "model": "gpt-5-2025-08-07",
+    "reasoning": "medium",
+    "sourceFile": "movies.json",
+    "classificationCount": 1982,
+    "requests": {
+      "total": 199,
+      "successful": 199,
+      "failed": 0
+    },
+    "tokens": {
+      "input": 220428,
+      "output": 445952,
+      "total": 666380
+    }
+  },
+  "data": [
+    {
+      "id": 1011477,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 1011985,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 603692,
+      "primary": "Judo",
+      "secondary": [
+        "Jiu-Jitsu",
+        "Sambo"
+      ]
+    },
+    {
+      "id": 603,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Jiu-Jitsu"
+      ]
+    },
+    {
+      "id": 177572,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 272,
+      "primary": "Keysi",
+      "secondary": [
+        "Ninjutsu",
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 324552,
+      "primary": "Judo",
+      "secondary": [
+        "Jiu-Jitsu",
+        "Sambo"
+      ]
+    },
+    {
+      "id": 9502,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 458156,
+      "primary": "Judo",
+      "secondary": [
+        "Jiu-Jitsu",
+        "Sambo"
+      ]
+    },
+    {
+      "id": 2109,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 345887,
+      "primary": "Krav Maga",
+      "secondary": []
+    },
+    {
+      "id": 566525,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 604,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Judo",
+        "Jiu-Jitsu"
+      ]
+    },
+    {
+      "id": 24,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 98566,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 49444,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 399579,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 5175,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 545611,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Wrestling",
+        "Judo"
+      ]
+    },
+    {
+      "id": 605,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Judo",
+        "Jiu-Jitsu"
+      ]
+    },
+    {
+      "id": 393,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 1885,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 9470,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 27578,
+      "primary": "Other",
+      "secondary": [
+        "Kung Fu",
+        "MMA",
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 10483,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 9739,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 140300,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 38575,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 5174,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 346,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 36647,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kenjutsu",
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 146,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 979660,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1226406,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 9312,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate",
+        "Ninjutsu",
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 739405,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 9316,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 27582,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 843,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 9335,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Boxing",
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 22832,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 990140,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 4108,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 34433,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 36648,
+      "primary": "Other",
+      "secondary": [
+        "Kenjutsu",
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 923667,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Muay Thai",
+        "Boxing"
+      ]
+    },
+    {
+      "id": 8856,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 16320,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 317442,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 11770,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 11690,
+      "primary": "MMA",
+      "secondary": [
+        "Karate",
+        "Kickboxing",
+        "Taekwondo",
+        "Muay Thai",
+        "Wrestling",
+        "Ninjutsu"
+      ]
+    },
+    {
+      "id": 79,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 4327,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 7299,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 9495,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 13387,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 379149,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 94329,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 506763,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 9462,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 14854,
+      "primary": "Karate",
+      "secondary": [
+        "Kickboxing",
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 610150,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Other"
+      ]
+    },
+    {
+      "id": 346672,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 602063,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 2019,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 192252,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 9823,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate",
+        "Taekwondo",
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 1139817,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 8456,
+      "primary": "MMA",
+      "secondary": [
+        "Boxing",
+        "Kickboxing",
+        "Jiu-Jitsu",
+        "Muay Thai",
+        "Wrestling"
+      ]
+    },
+    {
+      "id": 337401,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 9399,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Boxing",
+        "Muay Thai"
+      ]
+    },
+    {
+      "id": 64348,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 11713,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate",
+        "Judo"
+      ]
+    },
+    {
+      "id": 1151949,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 9604,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 7549,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Boxing",
+        "Judo",
+        "Wrestling"
+      ]
+    },
+    {
+      "id": 10423,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 8009,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 39108,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 485811,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 36586,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 15070,
+      "primary": "Boxing",
+      "secondary": []
+    },
+    {
+      "id": 8814,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 10222,
+      "primary": "Muay Thai",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 10027,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 8010,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 1103,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 9594,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 347375,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 391757,
+      "primary": "MMA",
+      "secondary": [
+        "Boxing",
+        "Kickboxing",
+        "Jiu-Jitsu",
+        "Wrestling"
+      ]
+    },
+    {
+      "id": 11841,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 391629,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1577,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 14362,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 12207,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 126963,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 44251,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 37034,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 13161,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 16353,
+      "primary": "Muay Thai",
+      "secondary": [
+        "Kenjutsu",
+        "Ninjutsu",
+        "Kung Fu",
+        "Capoeira"
+      ]
+    },
+    {
+      "id": 9624,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 64991,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 11230,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 11891,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 11358,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 40081,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 682,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 10131,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 480001,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 39107,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 13333,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 1128509,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 28366,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 8202,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 534490,
+      "primary": "MMA",
+      "secondary": [
+        "Kickboxing",
+        "Boxing"
+      ]
+    },
+    {
+      "id": 9404,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 6978,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1729,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 39105,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 9947,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 10771,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1498,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 33542,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 71598,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 51608,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 2085,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 9056,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 48298,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 10109,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 363937,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 270309,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 10617,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 303857,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 379418,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1273,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 186666,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 424778,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1077280,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 55931,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 180299,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 39103,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1269732,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 10992,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 39144,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 390954,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 658009,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 34179,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 44092,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1099939,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 931285,
+      "primary": "MMA",
+      "secondary": [
+        "Kung Fu",
+        "Karate",
+        "Muay Thai",
+        "Judo",
+        "Jiu-Jitsu",
+        "Wrestling",
+        "Kickboxing",
+        "Ninjutsu"
+      ]
+    },
+    {
+      "id": 11667,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate",
+        "Muay Thai",
+        "Boxing"
+      ]
+    },
+    {
+      "id": 15357,
+      "primary": "Other",
+      "secondary": [
+        "Savate",
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 87156,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 28609,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 39102,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 467619,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 64997,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 472793,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 9461,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu",
+        "Karate",
+        "Judo",
+        "Boxing"
+      ]
+    },
+    {
+      "id": 1727,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1403690,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 66977,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187705,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 6038,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 13481,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 39106,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 107491,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 10044,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Ninjutsu"
+      ]
+    },
+    {
+      "id": 24752,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 69865,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 239801,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 41377,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 10796,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 171242,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1472668,
+      "primary": "Judo",
+      "secondary": [
+        "Jiu-Jitsu",
+        "Sambo"
+      ]
+    },
+    {
+      "id": 587825,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 10577,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 48300,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 59961,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 165021,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 156422,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1263421,
+      "primary": "MMA",
+      "secondary": [
+        "Karate",
+        "Boxing",
+        "Kickboxing",
+        "Muay Thai",
+        "Judo",
+        "Jiu-Jitsu",
+        "Wrestling"
+      ]
+    },
+    {
+      "id": 31443,
+      "primary": "Karate",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 19267,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Boxing",
+        "Wrestling"
+      ]
+    },
+    {
+      "id": 48773,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 1155270,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 586532,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 494129,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 274862,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 294993,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 2140,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 495437,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 26877,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 11636,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 74268,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 12481,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 20256,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 19277,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 10045,
+      "primary": "Savate",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 290864,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Boxing",
+        "Wrestling"
+      ]
+    },
+    {
+      "id": 879444,
+      "primary": "MMA",
+      "secondary": [
+        "Kickboxing",
+        "Jiu-Jitsu"
+      ]
+    },
+    {
+      "id": 251688,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 17467,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 11817,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 250750,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 146840,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 32065,
+      "primary": "Karate",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 35854,
+      "primary": "MMA",
+      "secondary": [
+        "Jiu-Jitsu",
+        "Wrestling",
+        "Judo",
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 60060,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 18855,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 177541,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 25855,
+      "primary": "Capoeira",
+      "secondary": [
+        "Muay Thai",
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 221014,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 590706,
+      "primary": "Jiu-Jitsu",
+      "secondary": []
+    },
+    {
+      "id": 1499,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 39881,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 9569,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 48297,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 4105,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 25602,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 25473,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 11205,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 116776,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 50393,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 300697,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Ninjutsu"
+      ]
+    },
+    {
+      "id": 201347,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 114980,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 46103,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 450001,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Boxing",
+        "Muay Thai"
+      ]
+    },
+    {
+      "id": 187318,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 10753,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 260733,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 11231,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 449985,
+      "primary": "Muay Thai",
+      "secondary": [
+        "Silat",
+        "Kung Fu",
+        "Kickboxing",
+        "MMA"
+      ]
+    },
+    {
+      "id": 10610,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 15136,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 452910,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 10622,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 9550,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 12289,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 8831,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 1497,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 39101,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 180894,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Muay Thai"
+      ]
+    },
+    {
+      "id": 840733,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 47648,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 44865,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Other"
+      ]
+    },
+    {
+      "id": 10348,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 63441,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 38594,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 46736,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 64992,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 46957,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 77061,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 1212597,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 10495,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 286548,
+      "primary": "Karate",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 14289,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 10275,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 11134,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 8584,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 156232,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 11412,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 107897,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 142387,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 181749,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 234710,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187440,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 423407,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 44554,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 310275,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 931851,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 15983,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 110552,
+      "primary": "Muay Thai",
+      "secondary": [
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 6312,
+      "primary": "Capoeira",
+      "secondary": []
+    },
+    {
+      "id": 9471,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 9395,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 10951,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 378406,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 17809,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate",
+        "Judo"
+      ]
+    },
+    {
+      "id": 58348,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 10061,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 11398,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 64990,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 82979,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 454615,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 88518,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 795122,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1115623,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 451775,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 11563,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 16456,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 64988,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 451653,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 11198,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 378065,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 17386,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 16113,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 467707,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 12613,
+      "primary": "Karate",
+      "secondary": [
+        "Kung Fu",
+        "Muay Thai",
+        "Boxing",
+        "Jeet Kune Do",
+        "Wrestling",
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 10852,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 10618,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 9103,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Muay Thai",
+        "Capoeira",
+        "Karate",
+        "Kung Fu",
+        "Boxing",
+        "Wrestling"
+      ]
+    },
+    {
+      "id": 560805,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 11849,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 841593,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 67988,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 24411,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 263341,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 167704,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 21519,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 153847,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 10134,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 32302,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 839163,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 54841,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Jeet Kune Do"
+      ]
+    },
+    {
+      "id": 463045,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Other"
+      ]
+    },
+    {
+      "id": 147413,
+      "primary": "Other",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 73652,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 19274,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 56671,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 187490,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 36682,
+      "primary": "Aikido",
+      "secondary": [
+        "Kung Fu",
+        "Judo"
+      ]
+    },
+    {
+      "id": 141131,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 163592,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 121985,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 192226,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 54178,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 14756,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 649314,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 467136,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 240323,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 131975,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 21537,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 35632,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 5470,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 15724,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 312890,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 54321,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 43209,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 490223,
+      "primary": "Taekwondo",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 74274,
+      "primary": "Boxing",
+      "secondary": []
+    },
+    {
+      "id": 100943,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 40805,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 9460,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 155599,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 40662,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 186693,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187473,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 66238,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 2137,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187391,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 104597,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 323164,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 15854,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 78165,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 67021,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187015,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 59558,
+      "primary": "Taekwondo",
+      "secondary": [
+        "Ninjutsu"
+      ]
+    },
+    {
+      "id": 40508,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 331576,
+      "primary": "Muay Thai",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 1494,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 68942,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 122880,
+      "primary": "Taekwondo",
+      "secondary": [
+        "Kung Fu",
+        "Karate"
+      ]
+    },
+    {
+      "id": 16437,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 495950,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 346808,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 810875,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 316053,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 1792,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 57747,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 50571,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 54864,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 252819,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 10703,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 557968,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 310555,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 108665,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 468720,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187727,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187365,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 875104,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 30596,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 172952,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 39100,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187387,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 14164,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 74269,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 313320,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 47854,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu",
+        "Kendo"
+      ]
+    },
+    {
+      "id": 18707,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 1329643,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 657268,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 489195,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 10620,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 333479,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 16269,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 161017,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 13153,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 54182,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 111323,
+      "primary": "Jeet Kune Do",
+      "secondary": []
+    },
+    {
+      "id": 66730,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 141461,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 107828,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 164061,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 109111,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 88046,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 40388,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 192254,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 152421,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 141469,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 147404,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Other"
+      ]
+    },
+    {
+      "id": 20966,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Other"
+      ]
+    },
+    {
+      "id": 48301,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 74257,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Other"
+      ]
+    },
+    {
+      "id": 171400,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Other"
+      ]
+    },
+    {
+      "id": 25661,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 62762,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 350740,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Other"
+      ]
+    },
+    {
+      "id": 187682,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Other"
+      ]
+    },
+    {
+      "id": 537328,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 13722,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 164433,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 42194,
+      "primary": "MMA",
+      "secondary": [
+        "Karate",
+        "Kickboxing",
+        "Boxing",
+        "Capoeira",
+        "Ninjutsu",
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 45925,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 16407,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 946756,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 57754,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 13345,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 201531,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 173776,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 261183,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 66981,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 21733,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kickboxing",
+        "Boxing"
+      ]
+    },
+    {
+      "id": 73841,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187659,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 107887,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 17433,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 182878,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 619757,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 22124,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 890656,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 217054,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 560144,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1475583,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 750318,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 18814,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 352612,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 201619,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 126498,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 66210,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 229422,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 34658,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 149085,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 15417,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 127987,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 45736,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 38155,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 154989,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 171834,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 14818,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 1240458,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 18885,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 705041,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 202530,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 76544,
+      "primary": "Kung Fu",
+      "secondary": [
+        "MMA",
+        "Kickboxing",
+        "Muay Thai"
+      ]
+    },
+    {
+      "id": 308529,
+      "primary": "Muay Thai",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 25539,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 73749,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 221463,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 229754,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 44924,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 37632,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 24056,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 11537,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 39145,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 85020,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 839026,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 39448,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 325348,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 44263,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 65207,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 138845,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 66759,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 61040,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 174765,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 270516,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 66160,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 839317,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 3513,
+      "primary": "Boxing",
+      "secondary": []
+    },
+    {
+      "id": 91847,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 306295,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 59402,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 15860,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 529755,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 8845,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 90805,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 40810,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 66974,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 109088,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 55068,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 15379,
+      "primary": "Karate",
+      "secondary": [
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 62329,
+      "primary": "MMA",
+      "secondary": [
+        "Kickboxing",
+        "Jiu-Jitsu",
+        "Wrestling"
+      ]
+    },
+    {
+      "id": 229287,
+      "primary": "Muay Thai",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 39901,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 186890,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 87036,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 40863,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 75696,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1007401,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 44154,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1198961,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 26615,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 621464,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 383785,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 73603,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 95955,
+      "primary": "Karate",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 217923,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 169499,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 192871,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 91845,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 152251,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187392,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 2004,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 248376,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 17466,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 140765,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 10923,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 9625,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 13127,
+      "primary": "MMA",
+      "secondary": [
+        "Jiu-Jitsu",
+        "Wrestling",
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 450547,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 231047,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 183540,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 9405,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 131824,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 88048,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 55292,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 27352,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 284814,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 42324,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 64364,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 24825,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 61037,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 105001,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 46479,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 173038,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 245592,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 604811,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 37702,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 49514,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 186882,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 359879,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 29014,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 90556,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 251859,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 181648,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 669969,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 183783,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 64273,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 609146,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 98171,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Ninjutsu",
+        "Karate",
+        "Judo",
+        "Kendo"
+      ]
+    },
+    {
+      "id": 29459,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 488439,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 109116,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 253873,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 346335,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 455662,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 13938,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 485313,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 813525,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 26480,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 43636,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187406,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 20811,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 321395,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 265895,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 722065,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 64994,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 54851,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 299041,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 39879,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Ninjutsu"
+      ]
+    },
+    {
+      "id": 157887,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 242454,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 187403,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1446634,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 371163,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 8011,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 187751,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 254473,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 25074,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 75844,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 17457,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187390,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1036561,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 365222,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 47313,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 106725,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 86718,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 89478,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 1208561,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 9320,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 9978,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 449924,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Jeet Kune Do"
+      ]
+    },
+    {
+      "id": 45403,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 35106,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 54857,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 17832,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 839157,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 981622,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 336281,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 121367,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 20721,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 66171,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 182030,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 66217,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 66212,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 76520,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 21964,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 85602,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 26569,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 21990,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 18760,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 12211,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 724305,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 64205,
+      "primary": "Muay Thai",
+      "secondary": [
+        "Taekwondo",
+        "Capoeira",
+        "Kickboxing",
+        "MMA"
+      ]
+    },
+    {
+      "id": 40980,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate",
+        "Kenjutsu",
+        "Ninjutsu",
+        "Judo",
+        "Aikido"
+      ]
+    },
+    {
+      "id": 414419,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 147942,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 441542,
+      "primary": "MMA",
+      "secondary": [
+        "Kickboxing",
+        "Boxing",
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 71518,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 5889,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Ninjutsu"
+      ]
+    },
+    {
+      "id": 38099,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 92800,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 105393,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 205493,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 433845,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 13295,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate",
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 40832,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 81870,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 128486,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 348562,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 181009,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 10619,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 164086,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 327526,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 68590,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 121483,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 18860,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 592867,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 67346,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 127461,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 13995,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 16314,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 13498,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 32631,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 70982,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 460079,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1247147,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 227733,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 161611,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 22094,
+      "primary": "Boxing",
+      "secondary": []
+    },
+    {
+      "id": 39148,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 17810,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Ninjutsu"
+      ]
+    },
+    {
+      "id": 35138,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 73751,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 175843,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 147408,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 301737,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 571627,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 385958,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187185,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 104237,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 41380,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 35170,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 54856,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 59387,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 43672,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 192933,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 1046912,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 446352,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 39751,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 9456,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 146530,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 53970,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 275673,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 64360,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 169809,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 73754,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 48361,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 295705,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 36693,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate",
+        "Kung Fu",
+        "Wrestling"
+      ]
+    },
+    {
+      "id": 432829,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 281486,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 472127,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 39245,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 512901,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 64259,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 2436,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 292432,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 80343,
+      "primary": "Silat",
+      "secondary": [
+        "Karate",
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 123913,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 970546,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1341726,
+      "primary": "Judo",
+      "secondary": []
+    },
+    {
+      "id": 732450,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 58295,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 120713,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 596838,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 42205,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 487117,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 185885,
+      "primary": "Muay Thai",
+      "secondary": [
+        "Kung Fu",
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 422436,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 395797,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 392425,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 963264,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 226157,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 257881,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 618176,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 12780,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 75697,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 522496,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 9924,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 254354,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 103535,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 462278,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 669687,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 80474,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 18666,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 255600,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 34856,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 484884,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 451770,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 161469,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 255629,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 9053,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Wrestling",
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 460080,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 319569,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 493488,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 65192,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 415839,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 246,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 229277,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 13514,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 881575,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 50569,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 48492,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 198303,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 839092,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 23520,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 672445,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 60368,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 45454,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 154694,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 479568,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1077654,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 107627,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 22590,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 62960,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 345829,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 222245,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 21376,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 164439,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 313466,
+      "primary": "Taekwondo",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 66013,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 67342,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1217410,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 155397,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 490464,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 353636,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 38940,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 149961,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 204202,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 722988,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 203458,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 109080,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 289269,
+      "primary": "Karate",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 144641,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 5753,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 254672,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 34546,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 276090,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 875024,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 41474,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 64316,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 53658,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 59268,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 19086,
+      "primary": "Karate",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 68810,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 146350,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 96967,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 360426,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 491354,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Ninjutsu"
+      ]
+    },
+    {
+      "id": 467703,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 45197,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 86468,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 164427,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 723786,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 274530,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 447049,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 250482,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 53163,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Judo"
+      ]
+    },
+    {
+      "id": 37024,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kendo"
+      ]
+    },
+    {
+      "id": 1264145,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 378401,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 162455,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 18812,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187439,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 17108,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 211126,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 433819,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 85673,
+      "primary": "Karate",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 170378,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 399300,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 568881,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 67023,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 16687,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 17774,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 60402,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 607299,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 106423,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 14763,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 114372,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 467602,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 57843,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 173001,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 128651,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 611395,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 120591,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 31544,
+      "primary": "Karate",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 977223,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 512730,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 8675,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 579180,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 178753,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 85264,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1280822,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 172786,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 98420,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 21512,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 251749,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 75899,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 238726,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 252505,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 142300,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kickboxing",
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 179631,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 38955,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 256474,
+      "primary": "MMA",
+      "secondary": [
+        "Muay Thai",
+        "Jiu-Jitsu"
+      ]
+    },
+    {
+      "id": 46122,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 423627,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 75832,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 45965,
+      "primary": "Judo",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 63721,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Muay Thai",
+        "Karate"
+      ]
+    },
+    {
+      "id": 661435,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 107891,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 729720,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 260015,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 252944,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 40107,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 241765,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 21707,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 42287,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 232317,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 27150,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 147423,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 495452,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 106463,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 71019,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 13126,
+      "primary": "Karate",
+      "secondary": [
+        "Wrestling"
+      ]
+    },
+    {
+      "id": 191446,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 76654,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 172972,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 155384,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 550593,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 11143,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 35067,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 221044,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 121827,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 75694,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 435236,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 152540,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 104992,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 156007,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 188836,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 121823,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 54858,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 10546,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1304702,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 361613,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 145920,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 186648,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 99582,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187897,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 165829,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 420921,
+      "primary": "Karate",
+      "secondary": [
+        "Kung Fu",
+        "Muay Thai"
+      ]
+    },
+    {
+      "id": 89483,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 71397,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 66746,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 56095,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 336187,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 205524,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 37498,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 187674,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 57848,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 468273,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 548669,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 40166,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 27302,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 432937,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 350117,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 104240,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 335195,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 8592,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 110455,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 13512,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 180539,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 354524,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187996,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 298849,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 239028,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 257683,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 92737,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 315498,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Ninjutsu"
+      ]
+    },
+    {
+      "id": 444462,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 134117,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 57286,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 155551,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 121456,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 392690,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 657079,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 254785,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 183048,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 22411,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 322160,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 88141,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 75837,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 147400,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 88889,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 104606,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 281954,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 18763,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1239232,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 35117,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 327833,
+      "primary": "Muay Thai",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 708066,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 349409,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 270826,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Jiu-Jitsu",
+        "Karate"
+      ]
+    },
+    {
+      "id": 187464,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 71120,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 186659,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 111983,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 151850,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 309051,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 24351,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 133234,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 138530,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 271547,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 292283,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 309048,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 89340,
+      "primary": "Other",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 193683,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 59405,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 837587,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 73414,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1034062,
+      "primary": "MMA",
+      "secondary": [
+        "Karate",
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 106425,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 726429,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 202509,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 25087,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Kung Fu",
+        "Karate",
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 202220,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 57109,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1380952,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 63032,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 201099,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 155349,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 41673,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 161471,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 696192,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 476313,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 11702,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 673771,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 170805,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 91286,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 275138,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 369216,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 50936,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 438279,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 573743,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 45075,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 147399,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 193246,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 70697,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1064517,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 299738,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 581003,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 219397,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 76349,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 203049,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1356478,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 12715,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 73587,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 53351,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 352865,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 45278,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 320979,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 811086,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 405414,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 314866,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kung Fu",
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 18758,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 995120,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1026836,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 54863,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 484997,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 172940,
+      "primary": "Boxing",
+      "secondary": []
+    },
+    {
+      "id": 321494,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 158833,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 313313,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 175821,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 52972,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 386291,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 90565,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 618113,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 139321,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 416149,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 278583,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 221461,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 57063,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 314741,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 74262,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 54840,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 479059,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 100636,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 17047,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 412012,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 172790,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 67097,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 25296,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 20971,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 57198,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 114370,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 355988,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 348744,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 106660,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 436219,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 221062,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 151988,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 144610,
+      "primary": "Karate",
+      "secondary": [
+        "Kickboxing",
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 36884,
+      "primary": "Taekwondo",
+      "secondary": [
+        "Karate",
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 63340,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 464645,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1240493,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 45443,
+      "primary": "Karate",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 52627,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 45379,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 253711,
+      "primary": "Karate",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 19124,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 105231,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 348791,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 227974,
+      "primary": "MMA",
+      "secondary": [
+        "Kung Fu",
+        "Kenjutsu",
+        "Other"
+      ]
+    },
+    {
+      "id": 490424,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Jeet Kune Do"
+      ]
+    },
+    {
+      "id": 220587,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 199296,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 455578,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 600014,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 311345,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 1159004,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 406835,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 157389,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 233361,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 25425,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 56277,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 310830,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 455581,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 271404,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 101189,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 250946,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 220428,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 13124,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 411632,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 963323,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 10167,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 19884,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 153145,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 564028,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 459816,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 49516,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kickboxing",
+        "Wrestling"
+      ]
+    },
+    {
+      "id": 172661,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 24546,
+      "primary": "Aikido",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 151974,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 86539,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 812338,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 36909,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 155091,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 578122,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 368195,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 185477,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 18852,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1243693,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 716466,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 81778,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 35038,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 452734,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 379660,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 812329,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 15268,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 401085,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 66011,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 349631,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 65852,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 476819,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 1268068,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 118545,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 18257,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 275639,
+      "primary": "Muay Thai",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 99591,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 79875,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 74266,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 17314,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 75569,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 75701,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 261258,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 536672,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 38097,
+      "primary": "Taekwondo",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 725625,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Other"
+      ]
+    },
+    {
+      "id": 724790,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 869990,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 120985,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 197655,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 102477,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 983311,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 213015,
+      "primary": "Boxing",
+      "secondary": []
+    },
+    {
+      "id": 68868,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1280738,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 64272,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 185741,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 283994,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 52541,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 141365,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 37021,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kendo",
+        "Judo"
+      ]
+    },
+    {
+      "id": 238359,
+      "primary": "Boxing",
+      "secondary": []
+    },
+    {
+      "id": 410212,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 1291785,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 373956,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 37032,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 440239,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 90567,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Muay Thai"
+      ]
+    },
+    {
+      "id": 483412,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 399010,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 10550,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 142927,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 64161,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 32654,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 44914,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 258437,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 64160,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 45459,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 64305,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 62331,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 66009,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 117164,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 92743,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 18214,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 467139,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 159401,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 364730,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 25946,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 442325,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 213496,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 179944,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 57040,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 193228,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 505107,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 333024,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 63033,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 64999,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 19877,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 666701,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 829832,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 175682,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 244495,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 68867,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 870219,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 305111,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 573173,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 14355,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 1291787,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 88633,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 732203,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 467705,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 24993,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Muay Thai"
+      ]
+    },
+    {
+      "id": 106658,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 581122,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 38040,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 800942,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 426646,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Ninjutsu"
+      ]
+    },
+    {
+      "id": 85780,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 12764,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 90121,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 1229455,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 36209,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 173015,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 156054,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1282930,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 88945,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kendo"
+      ]
+    },
+    {
+      "id": 53426,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 159375,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 63988,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 812314,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 203509,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 41482,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 1247366,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 360186,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 55459,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 45492,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 45489,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 275844,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 18248,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 84657,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 21708,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 273171,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 154261,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 468605,
+      "primary": "Boxing",
+      "secondary": []
+    },
+    {
+      "id": 446142,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 13988,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 289198,
+      "primary": "MMA",
+      "secondary": [
+        "Kickboxing",
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 239837,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1165851,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187376,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 495439,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 277690,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 449707,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 462213,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 61717,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1471033,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1061536,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 768449,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 58365,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 356784,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 455231,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1069487,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 269028,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 79516,
+      "primary": "Karate",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 58311,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 467610,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 351719,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 36692,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate",
+        "Muay Thai",
+        "Wrestling",
+        "Judo"
+      ]
+    },
+    {
+      "id": 49642,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 86254,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 38202,
+      "primary": "Karate",
+      "secondary": [
+        "Taekwondo",
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 25571,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 61039,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 55199,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 11847,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 311240,
+      "primary": "Judo",
+      "secondary": [
+        "Jiu-Jitsu"
+      ]
+    },
+    {
+      "id": 555587,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 65497,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 45011,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 440911,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 727283,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 400759,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 68479,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 261200,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 320747,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 200395,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 653733,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 172745,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 988595,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 17169,
+      "primary": "Boxing",
+      "secondary": []
+    },
+    {
+      "id": 619188,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 114371,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 67221,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 10049,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 38670,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 66033,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 62877,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 225262,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 267046,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 43637,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 39854,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 297552,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 251516,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 988496,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 150154,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 829787,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 421313,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 98377,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 462253,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 897589,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 47537,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 132769,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 447051,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 193385,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 355996,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 247541,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 42012,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 29640,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 460787,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 288112,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 444097,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 259390,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Kendo"
+      ]
+    },
+    {
+      "id": 254972,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 403605,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 608559,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 63031,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 8382,
+      "primary": "Aikido",
+      "secondary": [
+        "Judo"
+      ]
+    },
+    {
+      "id": 925682,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 62328,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 147407,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 935198,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 82386,
+      "primary": "Kendo",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 221049,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1380356,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 107840,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 661617,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 30806,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 380738,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1489180,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 944810,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 116445,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 247543,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 30644,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 18070,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 451492,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187336,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 146926,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 42566,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 969084,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 1281386,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 249254,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 435598,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 94858,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 380104,
+      "primary": "Boxing",
+      "secondary": []
+    },
+    {
+      "id": 50505,
+      "primary": "Other",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 135549,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 734194,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 648125,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 312755,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 93754,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 269651,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 621099,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 779545,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 103675,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 96448,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 722735,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 54853,
+      "primary": "Jeet Kune Do",
+      "secondary": []
+    },
+    {
+      "id": 145561,
+      "primary": "Karate",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 643413,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 68649,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 20771,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 81472,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 17205,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 258597,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 12312,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 30948,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 19174,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1054766,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 118809,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 235362,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 529362,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 106958,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 14396,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1206282,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 310570,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 554530,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 26196,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 369939,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 58358,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 1146399,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 378412,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 154183,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 90590,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 224634,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Jeet Kune Do"
+      ]
+    },
+    {
+      "id": 167647,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 107617,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1406246,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1235648,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 326161,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 23739,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 790325,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1280790,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 10855,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 72335,
+      "primary": "Boxing",
+      "secondary": [
+        "Other"
+      ]
+    },
+    {
+      "id": 96926,
+      "primary": "Karate",
+      "secondary": [
+        "Kickboxing",
+        "Muay Thai"
+      ]
+    },
+    {
+      "id": 84415,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 385383,
+      "primary": "MMA",
+      "secondary": [
+        "Boxing",
+        "Jiu-Jitsu",
+        "Muay Thai",
+        "Wrestling"
+      ]
+    },
+    {
+      "id": 447479,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 185640,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 34003,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 1160209,
+      "primary": "MMA",
+      "secondary": [
+        "Boxing",
+        "Jiu-Jitsu",
+        "Muay Thai",
+        "Wrestling"
+      ]
+    },
+    {
+      "id": 208567,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 413553,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 251893,
+      "primary": "Karate",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 105919,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 90546,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 880857,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 90068,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 13273,
+      "primary": "Jiu-Jitsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 239333,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 186518,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 696196,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 229594,
+      "primary": "Taekwondo",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 23807,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 13293,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1064869,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 39027,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Muay Thai"
+      ]
+    },
+    {
+      "id": 366627,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 72690,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 187977,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1269941,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 503314,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 233490,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 85258,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 325822,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 322769,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 145068,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 664345,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 272461,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 167675,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Jeet Kune Do"
+      ]
+    },
+    {
+      "id": 26300,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 42544,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 582083,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 1071531,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 35081,
+      "primary": "Jeet Kune Do",
+      "secondary": []
+    },
+    {
+      "id": 942956,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 124409,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 444719,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 177014,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 45554,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Kendo"
+      ]
+    },
+    {
+      "id": 543094,
+      "primary": "Karate",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 567973,
+      "primary": "MMA",
+      "secondary": [
+        "Kickboxing",
+        "Muay Thai"
+      ]
+    },
+    {
+      "id": 427029,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 40661,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Muay Thai"
+      ]
+    },
+    {
+      "id": 1313181,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 27271,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 166178,
+      "primary": "Muay Thai",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 281753,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 347835,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 252220,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 85676,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 372935,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 40572,
+      "primary": "Jeet Kune Do",
+      "secondary": []
+    },
+    {
+      "id": 657087,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 38610,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 31249,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 16228,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 50346,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Muay Thai"
+      ]
+    },
+    {
+      "id": 155613,
+      "primary": "Sambo",
+      "secondary": [
+        "Karate",
+        "Judo",
+        "Aikido"
+      ]
+    },
+    {
+      "id": 68895,
+      "primary": "Muay Thai",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 1245103,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 336945,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 26340,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 58370,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 19108,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 1220915,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 173793,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 46958,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 944741,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 311146,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 167635,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 574546,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 984846,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 14664,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 407777,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 232574,
+      "primary": "Kenjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 1295447,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 451652,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 439048,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 94505,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 16257,
+      "primary": "Karate",
+      "secondary": [
+        "Kung Fu",
+        "Muay Thai",
+        "Boxing",
+        "Wrestling",
+        "Judo"
+      ]
+    },
+    {
+      "id": 175054,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 45833,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 22058,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 51786,
+      "primary": "Other",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 145667,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 395475,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 926746,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 210756,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 662285,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 295528,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 6473,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 36934,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 171595,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 37588,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu",
+        "Boxing"
+      ]
+    },
+    {
+      "id": 150230,
+      "primary": "Other",
+      "secondary": [
+        "Ninjutsu"
+      ]
+    },
+    {
+      "id": 451937,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 25391,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 57782,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1082413,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 30042,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 18383,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 157002,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 26481,
+      "primary": "Taekwondo",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 327934,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 226729,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 110830,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 95722,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 199966,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 74035,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 625985,
+      "primary": "Judo",
+      "secondary": []
+    },
+    {
+      "id": 416093,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 54481,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1535021,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 308810,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 963772,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 374993,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 433623,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 269133,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Wrestling"
+      ]
+    },
+    {
+      "id": 564906,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 104586,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 482933,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 40104,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 63432,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 872186,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 34626,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 80780,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 172349,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 336982,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 151842,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 215136,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1221210,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 780290,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 165803,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Karate",
+        "Kung Fu",
+        "Jiu-Jitsu",
+        "Kendo"
+      ]
+    },
+    {
+      "id": 17282,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 147973,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 175447,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 501038,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 195803,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 201478,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 154114,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 476310,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 580566,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 451804,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 24527,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 349258,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1062372,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 92746,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 710571,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 297009,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1152358,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 433810,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 312121,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 596826,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 223760,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 255714,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 218735,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 205680,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 109742,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 112331,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 352103,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 356237,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 84383,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 451672,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 169037,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 59404,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 580914,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1421155,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 1022632,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 848913,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 55505,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 1236942,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 37472,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 647763,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 204634,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 479363,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 745080,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 50007,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 657145,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 81463,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 88882,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 117571,
+      "primary": "Karate",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 161353,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 913885,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 312855,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 1063161,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 24830,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 318192,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 107503,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 99580,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 591446,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 61802,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 154877,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 779239,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 48295,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 255594,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 372933,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 455575,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 305104,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 370843,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 50151,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 48375,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 356568,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 784032,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1440780,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1260991,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 799537,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 401449,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 1497243,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 501445,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 425104,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 310301,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 814375,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1177678,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 118945,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 75203,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 52591,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 74561,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 147839,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 839177,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 305102,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 755472,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 610133,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1328842,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1461294,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 34465,
+      "primary": "Karate",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 159604,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Jiu-Jitsu"
+      ]
+    },
+    {
+      "id": 736328,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 200388,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kenjutsu",
+        "Karate"
+      ]
+    },
+    {
+      "id": 417145,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 391766,
+      "primary": "MMA",
+      "secondary": [
+        "Boxing"
+      ]
+    },
+    {
+      "id": 435305,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 77132,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 409058,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Jeet Kune Do"
+      ]
+    },
+    {
+      "id": 10270,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 669761,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1315677,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 308602,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 770828,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 253909,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 321336,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 63440,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 467464,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 288132,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 144807,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 208543,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 305915,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 94742,
+      "primary": "Karate",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 143653,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 16487,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 379371,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 913884,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 445856,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 933723,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1267311,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 314814,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 768560,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 291008,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 28085,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 44249,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 647393,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 213964,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 463044,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 456854,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 397152,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 265546,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 341839,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 316822,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 161163,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 30750,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 45716,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 45375,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1092310,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 364112,
+      "primary": "Jeet Kune Do",
+      "secondary": []
+    },
+    {
+      "id": 839353,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 705043,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 259478,
+      "primary": "Jiu-Jitsu",
+      "secondary": []
+    },
+    {
+      "id": 1296831,
+      "primary": "Aikido",
+      "secondary": []
+    },
+    {
+      "id": 452738,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 187447,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 235425,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 19550,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 68416,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 397148,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 719503,
+      "primary": "Boxing",
+      "secondary": []
+    },
+    {
+      "id": 461519,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 121374,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 246162,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 23981,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1438993,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 58695,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 795389,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 796312,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 212006,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 284169,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 258722,
+      "primary": "Boxing",
+      "secondary": []
+    },
+    {
+      "id": 444206,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 194600,
+      "primary": "Kendo",
+      "secondary": []
+    },
+    {
+      "id": 190392,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 297247,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 128782,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 448923,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 728887,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 216802,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 416108,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 575249,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 424190,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 282915,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 349966,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 661668,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 382845,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 250804,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Ninjutsu"
+      ]
+    },
+    {
+      "id": 935186,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 204452,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 462217,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 442883,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 251532,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 37571,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 1461138,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 385240,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1021357,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 84616,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 320303,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 268950,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 87369,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 201882,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 457325,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 323371,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 1255387,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 255612,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 53362,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 997204,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 70506,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1147859,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 446649,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1273214,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 155380,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 257501,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 963778,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 246926,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 280563,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1465382,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 201231,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 323078,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 498246,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 285324,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 401531,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 184185,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 620303,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 275599,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 913889,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1040054,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 447806,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1428741,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 295045,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 1420947,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 348710,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 769356,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 85664,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 439755,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 584171,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 257658,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 342217,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 916534,
+      "primary": "MMA",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 68462,
+      "primary": "Other",
+      "secondary": [
+        "Kung Fu",
+        "Kenjutsu",
+        "Karate",
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 506629,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 371160,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 155702,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1412511,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 69115,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 31302,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1321338,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 217052,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 446858,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 150987,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 183044,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 185973,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 812748,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 318290,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 697003,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 1009636,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 186671,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 213052,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1181488,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1428039,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 154600,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 74749,
+      "primary": "Judo",
+      "secondary": []
+    },
+    {
+      "id": 290456,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 92727,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 532197,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1509579,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 518493,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 529415,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 103831,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 215612,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 224274,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 300639,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 651016,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 481215,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 657253,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1355766,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 488436,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 256932,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 996553,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 497513,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 385280,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 390678,
+      "primary": "Silat",
+      "secondary": []
+    },
+    {
+      "id": 80487,
+      "primary": "Ninjutsu",
+      "secondary": [
+        "Kung Fu",
+        "Kenjutsu"
+      ]
+    },
+    {
+      "id": 118224,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1008025,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1201946,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 941427,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 443132,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 639377,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1074164,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 466114,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 499933,
+      "primary": "Wrestling",
+      "secondary": [
+        "Judo"
+      ]
+    },
+    {
+      "id": 714132,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 813307,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 241856,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 82586,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 324160,
+      "primary": "Muay Thai",
+      "secondary": []
+    },
+    {
+      "id": 1443646,
+      "primary": "Judo",
+      "secondary": []
+    },
+    {
+      "id": 430657,
+      "primary": "MMA",
+      "secondary": [
+        "Karate"
+      ]
+    },
+    {
+      "id": 1182928,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 65293,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1179126,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 724300,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 852641,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1216594,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 100941,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 123542,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 1505022,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 740768,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 275868,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1406744,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 212217,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 531185,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 1376792,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 215761,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 574481,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 451854,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 213780,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 471557,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 622840,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 631016,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1172387,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 604113,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 478956,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 522885,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1147182,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 31343,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1357877,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 376042,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 362250,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 119577,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 701085,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1056812,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 969400,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1109359,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 220594,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 451380,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 209175,
+      "primary": "Jiu-Jitsu",
+      "secondary": [
+        "MMA"
+      ]
+    },
+    {
+      "id": 229291,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 332171,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1286947,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 722777,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1022742,
+      "primary": "Kickboxing",
+      "secondary": []
+    },
+    {
+      "id": 1217301,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 307191,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 461235,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 447524,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 447464,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 657256,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 996552,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Jeet Kune Do"
+      ]
+    },
+    {
+      "id": 609904,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 472985,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 769353,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1101422,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1283776,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 167005,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Other"
+      ]
+    },
+    {
+      "id": 666681,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 914011,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 708930,
+      "primary": "Jiu-Jitsu",
+      "secondary": []
+    },
+    {
+      "id": 334947,
+      "primary": "Kickboxing",
+      "secondary": [
+        "Karate",
+        "Taekwondo"
+      ]
+    },
+    {
+      "id": 537578,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 919208,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 531111,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 56763,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1253554,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 895570,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1453543,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 444666,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 1257426,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 893094,
+      "primary": "Boxing",
+      "secondary": []
+    },
+    {
+      "id": 722067,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 329879,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 621434,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 826767,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 361320,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1243825,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 365720,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 684618,
+      "primary": "Wrestling",
+      "secondary": []
+    },
+    {
+      "id": 1241493,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1284428,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1207609,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 990749,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 444556,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 812749,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 410764,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 1086875,
+      "primary": "MMA",
+      "secondary": []
+    },
+    {
+      "id": 63380,
+      "primary": "Jeet Kune Do",
+      "secondary": []
+    },
+    {
+      "id": 1475631,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 835840,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 303559,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1470410,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 349563,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 1290308,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1486287,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 351909,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 348181,
+      "primary": "Jiu-Jitsu",
+      "secondary": []
+    },
+    {
+      "id": 784892,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 447525,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 444672,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 486356,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1439046,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 886826,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 284164,
+      "primary": "Kung Fu",
+      "secondary": [
+        "Boxing",
+        "Muay Thai"
+      ]
+    },
+    {
+      "id": 736447,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 334942,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 444716,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 496845,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 305566,
+      "primary": "MMA",
+      "secondary": [
+        "Jiu-Jitsu",
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 1047034,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 562897,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 447060,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 447519,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 856597,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 822978,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 329214,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1244733,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 913887,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 445694,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1435444,
+      "primary": "Kenjutsu",
+      "secondary": []
+    },
+    {
+      "id": 996563,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 331373,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 418254,
+      "primary": "Jiu-Jitsu",
+      "secondary": [
+        "Karate",
+        "Kickboxing",
+        "MMA"
+      ]
+    },
+    {
+      "id": 1057220,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 448125,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 447481,
+      "primary": "Boxing",
+      "secondary": []
+    },
+    {
+      "id": 1036860,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 578009,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 201595,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1431305,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 1325905,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 605615,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 475645,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 620503,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 228537,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1475651,
+      "primary": "Ninjutsu",
+      "secondary": []
+    },
+    {
+      "id": 1404374,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1316156,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1124284,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1110295,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 447057,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 446963,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 147401,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 803052,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 571116,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 443608,
+      "primary": "Boxing",
+      "secondary": [
+        "Capoeira"
+      ]
+    },
+    {
+      "id": 232801,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1523565,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 1477243,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 1473077,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 882046,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 812625,
+      "primary": "Taekwondo",
+      "secondary": []
+    },
+    {
+      "id": 446954,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 444558,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 436338,
+      "primary": "Jeet Kune Do",
+      "secondary": [
+        "Kung Fu"
+      ]
+    },
+    {
+      "id": 418257,
+      "primary": "Jiu-Jitsu",
+      "secondary": [
+        "Judo",
+        "MMA"
+      ]
+    },
+    {
+      "id": 351767,
+      "primary": "Muay Thai",
+      "secondary": [
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 323076,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 322657,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 61058,
+      "primary": "MMA",
+      "secondary": [
+        "Judo",
+        "Karate",
+        "Jiu-Jitsu",
+        "Kickboxing",
+        "Wrestling"
+      ]
+    },
+    {
+      "id": 13050,
+      "primary": "MMA",
+      "secondary": [
+        "Wrestling",
+        "Boxing",
+        "Jiu-Jitsu",
+        "Muay Thai",
+        "Kickboxing"
+      ]
+    },
+    {
+      "id": 1318143,
+      "primary": "Judo",
+      "secondary": []
+    },
+    {
+      "id": 936566,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 898799,
+      "primary": "None",
+      "secondary": []
+    },
+    {
+      "id": 797993,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 481398,
+      "primary": "Karate",
+      "secondary": []
+    },
+    {
+      "id": 275882,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 175190,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 1102409,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 759048,
+      "primary": "Kung Fu",
+      "secondary": []
+    },
+    {
+      "id": 750397,
+      "primary": "Other",
+      "secondary": []
+    },
+    {
+      "id": 329245,
+      "primary": "Kung Fu",
+      "secondary": []
+    }
+  ]
+}
