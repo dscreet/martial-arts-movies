@@ -50,7 +50,7 @@ model Genre {
 
 model Country {
   id     Int     @id @default(autoincrement())
-  name   String  @unique
+  name   String
   code   String  @unique
   movies Movie[]
 }
