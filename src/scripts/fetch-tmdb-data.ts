@@ -1,13 +1,33 @@
+// ----------------------------------------------------
+// TMDB Data Fetch Workflow
+// ----------------------------------------------------
+// This script fetches raw movie data and supporting metadata
+// (genres, countries) from the TMDB API and saves them to JSON.
+//
+// Workflow:
+// 1. Discover martial arts movies by keyword (ID = 779)
+// 2. Fetch full movie details for each discovered movie
+// 3. Fetch TMDB genres
+// 4. Fetch TMDB countries
+// 5. Save each dataset with metadata
+//
+// Output:
+// - movies.json
+// - genres.json
+// - countries.json
+
 import fs from 'fs/promises';
 import path from 'path';
 import dotenv from 'dotenv';
 
 dotenv.config();
 
+// --- TMDB API constants ---
 const ACCESS_TOKEN = process.env.TMDB_API_ACCESS_TOKEN;
 const BASE_URL = 'https://api.themoviedb.org/3/';
 const KEYWORD_ID = 779; // "martial arts" - can turn into array and use keywords such as "boxing" to get specific martial arts
 
+// --- Types ---
 interface TMDBDiscoverResponse {
   page: number;
   results: { id: number }[]; // only need the movie ids from this response to use in fetchMovies()
@@ -49,33 +69,29 @@ interface Metadata {
   dataset: DataName;
 }
 
-type OutputData<T> = {
+type OutputFile<T> = {
   metadata: Metadata;
   [key: string]: T[] | Metadata;
 };
 
 type DataName = 'movies' | 'genres' | 'countries';
 
+// --- Helpers ---
 async function saveDataToFile<T>(data: T[], dataName: DataName): Promise<void> {
-  try {
-    const output: OutputData<T> = {
-      metadata: {
-        fetchedAt: new Date().toISOString(),
-        source: 'TMDB API',
-        ...(dataName === 'movies' ? { keywordId: KEYWORD_ID } : {}),
-        totalItems: data.length,
-        dataset: dataName,
-      },
-      data: data,
-    };
+  const output: OutputFile<T> = {
+    metadata: {
+      fetchedAt: new Date().toISOString(),
+      source: 'TMDB API',
+      ...(dataName === 'movies' ? { keywordId: KEYWORD_ID } : {}),
+      totalItems: data.length,
+      dataset: dataName,
+    },
+    data: data,
+  };
 
-    const outputPath = path.resolve(__dirname, `../data/${dataName}.json`);
-    await fs.writeFile(outputPath, JSON.stringify(output, null, 2));
-
-    console.log(`saved ${data.length} ${dataName} to ${outputPath}\n`);
-  } catch (error) {
-    console.error(`failed to write ${dataName} to file:`, error);
-  }
+  const outputPath = path.resolve(__dirname, `../data/${dataName}.json`);
+  await fs.writeFile(outputPath, JSON.stringify(output, null, 2));
+  console.log(`saved ${data.length} ${dataName} to ${outputPath}\n`);
 }
 
 async function fetchFromTMDB<T>(url: string): Promise<T> {
@@ -100,6 +116,7 @@ async function fetchFromTMDB<T>(url: string): Promise<T> {
   }
 }
 
+// --- Discover fetch functions ---
 // need to get the total amount of pages of results to iterate through
 async function getTotalPages(): Promise<number> {
   const url = `${BASE_URL}discover/movie?page=1&with_keywords=${KEYWORD_ID}`;
@@ -125,6 +142,7 @@ async function fetchMovieIds(): Promise<number[]> {
   return movieIds;
 }
 
+// --- Main fetch functions ---
 // fetch movies by id and save responses
 async function fetchMovies(): Promise<Movie[]> {
   const movies: Movie[] = [];
@@ -161,6 +179,7 @@ async function fetchCountries(): Promise<Country[]> {
   return countries;
 }
 
+// --- Workflow ---
 async function main() {
   try {
     console.log('starting TMDB data fetch...');

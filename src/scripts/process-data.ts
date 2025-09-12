@@ -1,10 +1,21 @@
-// read from movies file
-// remove unused fields
-// add classification data to movie object
-// save to new json file
-// additionally, create a new json for classification data
-// Pipeline: build batch → submit → poll → retrieve results → save files
-//TODO: write a better summary
+// ----------------------------------------------------
+// Martial Arts Classification Pipeline
+// ----------------------------------------------------
+// This script processes raw TMDB movie data by running it
+// through OpenAI batch classification to identify martial arts.
+//
+// Pipeline:
+// 1. Build batch file with classification requests
+// 2. Submit batch job to OpenAI
+// 3. Poll until batch completes
+// 4. Retrieve and parse classification results
+// 5. Save classification results to JSON
+// 6. Process movies (merge raw movie data + classifications)
+// 7. Save final processed movies dataset
+//
+// Output:
+// - movie-classifications.json
+// - processed-movies.json
 
 import fs from 'fs/promises';
 import { createReadStream } from 'fs';
@@ -13,14 +24,17 @@ import dotenv from 'dotenv';
 import OpenAI from 'openai';
 
 dotenv.config();
-
 const client = new OpenAI();
 
-const BATCH_FILE = path.resolve(__dirname, '../data/movies-batch.jsonl');
+// --- File paths ---
 const RAW_MOVIES_FILE = path.resolve(__dirname, '../data/movies.json');
 const PROCESSED_MOVIES_FILE = path.resolve(__dirname, '../data/processed-movies.json');
+const BATCH_FILE = path.resolve(__dirname, '../data/movies-batch.jsonl');
 const CLASSIFICATIONS_FILE = path.resolve(__dirname, '../data/movie-classifications.json');
 
+// --- OpenAI ---
+const OPENAI_MODEL = 'gpt-5-2025-08-07';
+const OPENAI_REASONING = 'medium';
 const CLASSIFIER_PROMPT = `
 You are a movie martial arts classifier.
 Rules:
@@ -58,11 +72,7 @@ Rules:
    - If the movie shows no martial arts or fighting at all, classify as "None".
 `;
 
-interface Genre {
-  id: number;
-  name: string;
-}
-
+// --- Types ---
 interface RawMovie {
   id: number;
   title: string;
@@ -70,7 +80,7 @@ interface RawMovie {
   release_date: string;
   poster_path: string;
   backdrop_path: string;
-  genres: Genre[];
+  genres: { id: number; name: string }[];
   origin_country: string[];
 }
 
@@ -83,14 +93,8 @@ interface ProcessedMovie {
   backdropPath: string;
   primaryMartialArt: string;
   martialArts: string[];
-  genres: Genre[];
+  genres: { id: number; name: string }[];
   countries: string[];
-}
-
-interface ClassificationResult {
-  id: number;
-  primary: string;
-  secondary: string[];
 }
 
 interface BatchEntry {
@@ -107,6 +111,12 @@ interface BatchEntry {
       content: string;
     }[];
   };
+}
+
+interface ClassificationResult {
+  id: number;
+  primary: string;
+  secondary: string[];
 }
 
 interface ClassificationMetadata {
@@ -128,7 +138,7 @@ interface ClassificationMetadata {
   };
 }
 
-type ClassificationOutputData = {
+type ClassificationFile = {
   metadata: ClassificationMetadata;
   data: ClassificationResult[];
 };
@@ -144,11 +154,12 @@ interface ProcessedMoviesMetadata {
   };
 }
 
-type ProcessedMoviesOutputData = {
+type ProcessedMoviesFile = {
   metadata: ProcessedMoviesMetadata;
   data: ProcessedMovie[];
 };
 
+// --- Helpers ---
 function chunkArray<T>(array: T[], chunkSize: number): T[][] {
   const chunks: T[][] = [];
   for (let i = 0; i < array.length; i += chunkSize) {
@@ -157,102 +168,85 @@ function chunkArray<T>(array: T[], chunkSize: number): T[][] {
   return chunks;
 }
 
-async function buildBatchFile(): Promise<number> {
+// --- Classification steps ---
+async function buildBatchFile(rawMovies: RawMovie[]): Promise<void> {
   console.log('\nbuilding batch file for movie martial arts classification...');
 
-  try {
-    const rawData = await fs.readFile(RAW_MOVIES_FILE, 'utf-8');
-    const { data: rawMovies }: { data: RawMovie[] } = JSON.parse(rawData);
+  const chunkSize = 10;
+  const chunks = chunkArray(rawMovies, chunkSize);
 
-    const chunkSize = 10;
-    const chunks = chunkArray(rawMovies, chunkSize);
+  console.log('generating batch entries...');
+  const batchEntries: BatchEntry[] = chunks.map((chunk, idx) => {
+    const inputText = chunk
+      .map((movie, i) => `Movie ${i + 1}:\nId: ${movie.id}\nTitle: ${movie.title}\nOverview: ${movie.overview}`)
+      .join('\n\n');
 
-    console.log('generating batch entries...');
-    const batchEntries: BatchEntry[] = chunks.map((chunk, idx) => {
-      const inputText = chunk
-        .map((movie, i) => `Movie ${i + 1}:\nId: ${movie.id}\nTitle: ${movie.title}\nOverview: ${movie.overview}`)
-        .join('\n\n');
-
-      return {
-        custom_id: `batch-${idx + 1}`,
-        method: 'POST',
-        url: '/v1/responses',
-        body: {
-          model: 'gpt-5',
-          reasoning: {
-            effort: 'medium',
-          },
-          input: [
-            { role: 'system', content: CLASSIFIER_PROMPT },
-            { role: 'user', content: inputText },
-          ],
+    return {
+      custom_id: `batch-${idx + 1}`,
+      method: 'POST',
+      url: '/v1/responses',
+      body: {
+        model: OPENAI_MODEL,
+        reasoning: {
+          effort: OPENAI_REASONING,
         },
-      };
-    });
-    console.log(`created ${batchEntries.length} batch entries`);
+        input: [
+          { role: 'system', content: CLASSIFIER_PROMPT },
+          { role: 'user', content: inputText },
+        ],
+      },
+    };
+  });
+  console.log(`created ${batchEntries.length} batch entries`);
 
-    const jsonl = batchEntries.map((entry) => JSON.stringify(entry)).join('\n');
-    await fs.writeFile(BATCH_FILE, jsonl);
-
-    console.log('successfully built and saved batch file');
-    return batchEntries.length;
-  } catch (error) {
-    console.error('failed to build batch file', error);
-    throw error;
-  }
+  const jsonl = batchEntries.map((entry) => JSON.stringify(entry)).join('\n');
+  await fs.writeFile(BATCH_FILE, jsonl);
+  console.log('successfully built and saved batch file');
 }
 
 async function submitBatch(): Promise<string> {
   console.log('\nsubmitting batch job...');
 
-  try {
-    console.log('uploading batch file...');
-    const file = await client.files.create({
-      file: createReadStream(BATCH_FILE),
-      purpose: 'batch',
-    });
-    console.log(`uploaded batch file: ${file.id}`);
+  console.log('uploading batch file...');
+  const file = await client.files.create({
+    file: createReadStream(BATCH_FILE),
+    purpose: 'batch',
+  });
+  console.log(`uploaded batch file: ${file.id}`);
 
-    console.log('creating batch...');
-    const batch = await client.batches.create({
-      input_file_id: file.id,
-      endpoint: '/v1/responses',
-      completion_window: '24h',
-    });
-    console.log(`created batch job: ${batch.id}`);
+  console.log('creating batch...');
+  const batch = await client.batches.create({
+    input_file_id: file.id,
+    endpoint: '/v1/responses',
+    completion_window: '24h',
+  });
+  console.log(`created batch job: ${batch.id}`);
 
-    console.log('successfully submitted batch job for movie martial arts classification');
-    return batch.id;
-  } catch (error) {
-    console.error('failed to submit batch', error);
-    throw error;
-  }
+  console.log('successfully submitted batch job for movie martial arts classification');
+  return batch.id;
 }
 
 async function pollBatch(batchId: string): Promise<OpenAI.Batch> {
   console.log(`\npolling batch: ${batchId}...`);
 
+  const pollIntervalMs = 60_000;
+
   while (true) {
-    try {
-      const batch = await client.batches.retrieve(batchId);
+    const batch = await client.batches.retrieve(batchId);
 
-      if (batch.status === 'completed') {
-        console.log(`[${new Date().toISOString()}] batch completed`);
-        return batch;
-      } else if (batch.status === 'in_progress') {
-        const { completed = 0, failed = 0, total = 0 } = batch.request_counts || {};
-        console.log(`[${new Date().toISOString()}] completed ${completed}/${total} requests, ${failed} failed`);
-      } else if (batch.status === 'failed' || batch.status === 'expired') {
-        throw new Error(`batch unsuccessful: ${batch.status}`);
-      } else {
-        console.log(`[${new Date().toISOString()}] batch status: ${batch.status}`);
-      }
-
-      await new Promise((resolve) => setTimeout(resolve, 60_000));
-    } catch (error) {
-      console.error('error polling batch', error);
-      throw error;
+    if (batch.status === 'completed') {
+      console.log(`[${new Date().toISOString()}] batch completed`);
+      return batch;
+    } else if (batch.status === 'in_progress') {
+      const { completed = 0, failed = 0, total = 0 } = batch.request_counts || {};
+      console.log(`[${new Date().toISOString()}] completed ${completed}/${total} requests, ${failed} failed`);
+    } else if (batch.status === 'failed' || batch.status === 'expired') {
+      throw new Error(`batch unsuccessful: ${batch.status}`);
+    } else {
+      console.log(`[${new Date().toISOString()}] batch status: ${batch.status}`);
     }
+
+    await new Promise((resolve) => setTimeout(resolve, pollIntervalMs));
   }
 }
 
@@ -263,61 +257,51 @@ async function retrieveBatchResults(batch: OpenAI.Batch): Promise<string> {
     throw new Error('batch completed but output file not found');
   }
 
-  console.log(`downloading results from batch output file: ${batch.output_file_id}...`);
   const fileResponse = await client.files.content(batch.output_file_id);
   const fileContents = await fileResponse.text();
 
-  console.log('successfully downloaded batch results');
+  console.log(`successfully downloaded batch results from batch output file: ${batch.output_file_id}`);
   return fileContents;
 }
 
 function parseBatchResults(fileContents: string): ClassificationResult[] {
   console.log('\nparsing batch results...');
 
-  try {
-    const lines = fileContents
-      .trim()
-      .split('\n')
-      .map((l) => JSON.parse(l));
+  const results: ClassificationResult[] = [];
+  const lines = fileContents
+    .trim()
+    .split('\n')
+    .map((l) => JSON.parse(l));
 
-    const results: ClassificationResult[] = [];
-    for (const line of lines) {
-      try {
-        const responseText = line.response.body.output[1].content[0].text;
-        results.push(JSON.parse(responseText));
-      } catch {
-        console.error(`failed to parse: ${line}`);
-      }
+  for (const line of lines) {
+    try {
+      const responseText = line.response.body.output[1].content[0].text;
+      results.push(JSON.parse(responseText));
+    } catch {
+      console.error(`failed to parse: ${line}`);
     }
-
-    console.log(`successfully parsed ${results.length}/${lines.length} batch entries`);
-    return results.flat(); //removes chunks
-  } catch (error) {
-    console.error('failed to parse batch results', error);
-    throw error;
   }
+
+  console.log(`successfully parsed ${results.length}/${lines.length} batch entries`);
+  return results.flat(); //removes chunks
 }
 
 async function saveClassifications(classifications: ClassificationResult[], batch: OpenAI.Batch): Promise<void> {
   console.log(`\nsaving classifications...`);
 
-  const output: ClassificationOutputData = {
+  const output: ClassificationFile = {
     metadata: {
       createdAt: new Date(batch.created_at * 1000).toISOString(),
       completedAt: new Date(batch.completed_at! * 1000).toISOString(),
-
-      model: 'gpt-5-2025-08-07',
-      reasoning: 'medium',
-
+      model: OPENAI_MODEL,
+      reasoning: OPENAI_REASONING,
       sourceFile: path.basename(RAW_MOVIES_FILE),
       classificationCount: classifications.length,
-
       requests: {
         total: batch.request_counts?.total ?? 0,
         successful: batch.request_counts?.completed ?? 0,
         failed: batch.request_counts?.failed ?? 0,
       },
-
       tokens: {
         input: (batch as any).usage.input_tokens ?? 0,
         output: (batch as any).usage.output_tokens ?? 0,
@@ -331,56 +315,49 @@ async function saveClassifications(classifications: ClassificationResult[], batc
   console.log(`successfully saved ${classifications.length} classifications to: ${CLASSIFICATIONS_FILE}`);
 }
 
+// --- Movie processing steps ---
 async function processMovies(
   rawMovies: RawMovie[],
   classifications: ClassificationResult[]
 ): Promise<ProcessedMovie[]> {
-  try {
-    console.log(`\nprocessing ${rawMovies.length} movies...`);
+  console.log(`\nprocessing ${rawMovies.length} movies...`);
 
-    const classificationMap = new Map(classifications.map((c) => [c.id, c]));
-    const processedMovies: ProcessedMovie[] = [];
+  const classificationMap = new Map(classifications.map((c) => [c.id, c]));
+  const processedMovies: ProcessedMovie[] = [];
 
-    for (const movie of rawMovies) {
-      const classification = classificationMap.get(movie.id);
-
-      if (!classification?.primary || classification?.primary === 'None') {
-        continue;
-      }
-
-      processedMovies.push({
-        tmdbId: movie.id,
-        title: movie.title,
-        overview: movie.overview,
-        releaseDate: movie.release_date,
-        posterPath: movie.poster_path,
-        backdropPath: movie.backdrop_path,
-        primaryMartialArt: classification.primary,
-        martialArts: [classification.primary, ...(classification.secondary ?? [])],
-        genres: movie.genres,
-        countries: movie.origin_country,
-      });
+  for (const movie of rawMovies) {
+    const classification = classificationMap.get(movie.id);
+    // skip movies with no martial arts
+    if (!classification?.primary || classification?.primary === 'None') {
+      continue;
     }
-
-    console.log(`successfully processed ${rawMovies.length} movies`);
-    console.log(`${processedMovies.length} outputted movies`);
-    return processedMovies;
-  } catch (error) {
-    console.error('error processsing movies:', error);
-    throw error;
+    processedMovies.push({
+      tmdbId: movie.id,
+      title: movie.title,
+      overview: movie.overview,
+      releaseDate: movie.release_date,
+      posterPath: movie.poster_path,
+      backdropPath: movie.backdrop_path,
+      primaryMartialArt: classification.primary,
+      martialArts: [classification.primary, ...(classification.secondary ?? [])],
+      genres: movie.genres,
+      countries: movie.origin_country,
+    });
   }
+
+  console.log(`successfully processed ${rawMovies.length} movies`);
+  console.log(`${processedMovies.length} outputted movies`);
+  return processedMovies;
 }
 
 async function saveProcessedMovies(movies: ProcessedMovie[], rawMoviesCount: number): Promise<void> {
   console.log(`\nsaving processed movies...`);
 
-  const output: ProcessedMoviesOutputData = {
+  const output: ProcessedMoviesFile = {
     metadata: {
       createdAt: new Date().toISOString(),
-
       sourceFile: path.basename(RAW_MOVIES_FILE),
       classificationFile: path.basename(CLASSIFICATIONS_FILE),
-
       counts: {
         input: rawMoviesCount,
         output: movies.length,
@@ -394,26 +371,21 @@ async function saveProcessedMovies(movies: ProcessedMovie[], rawMoviesCount: num
   console.log(`successfully saved ${movies.length} processed movies to: ${PROCESSED_MOVIES_FILE}\n`);
 }
 
-/*
-1. build the batch file full of requests for classification
-2. upload the batch file and create a batch request
-3. poll the batch file and when finished, retrieve the batch output
-4. save the classification results as json
-5. create a new json file with movie objects containing the new martial arts fields and removing the redundant ones
-*/
+// --- Pipeline ---
 async function main() {
   try {
     console.log('starting data processing and martial arts classification pipeline...');
 
-    await buildBatchFile();
+    const rawData = await fs.readFile(RAW_MOVIES_FILE, 'utf-8');
+    const { data: rawMovies }: { data: RawMovie[] } = JSON.parse(rawData);
+
+    await buildBatchFile(rawMovies);
     const batchId = await submitBatch();
     const batch = await pollBatch(batchId);
     const batchResults = await retrieveBatchResults(batch);
     const classifications = parseBatchResults(batchResults);
     await saveClassifications(classifications, batch);
 
-    const rawData = await fs.readFile(RAW_MOVIES_FILE, 'utf-8');
-    const { data: rawMovies }: { data: RawMovie[] } = JSON.parse(rawData);
     const processedMovies = await processMovies(rawMovies, classifications);
     await saveProcessedMovies(processedMovies, rawMovies.length);
 
