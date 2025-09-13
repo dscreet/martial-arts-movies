@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "data:fetch": "tsx src/scripts/fetch-tmdb-data.ts",
-    "data:process": "tsx src/scripts/process-data.ts"
+    "data:process": "tsx src/scripts/process-data.ts",
+    "data:seed": "tsx src/scripts/seed-database.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.13.0",
