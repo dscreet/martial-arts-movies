@@ -8,6 +8,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // --- File paths ---
+const MARTIAL_ARTS_FILE = path.resolve(__dirname, '../data/martial-arts.json');
 const GENRES_FILE = path.resolve(__dirname, '../data/genres.json');
 const COUNTRIES_FILE = path.resolve(__dirname, '../data/countries.json');
 const MOVIES_FILE = path.resolve(__dirname, '../data/processed-movies.json');
@@ -35,30 +36,7 @@ async function readJson<T>(filePath: string): Promise<{ data: T[] }> {
 async function seedMartialArts() {
   console.log(`\nseeding martial arts data...`);
 
-  const martialArts = [
-    'Aikido',
-    'Boxing',
-    'Capoeira',
-    'Jeet Kune Do',
-    'Jiu-Jitsu',
-    'Judo',
-    'Karate',
-    'Kendo',
-    'Kenjutsu',
-    'Keysi',
-    'Kickboxing',
-    'Krav Maga',
-    'Kung Fu',
-    'MMA',
-    'Muay Thai',
-    'Ninjutsu',
-    'Sambo',
-    'Savate',
-    'Silat',
-    'Taekwondo',
-    'Wrestling',
-    'Other',
-  ];
+  const { data: martialArts } = await readJson<string>(MARTIAL_ARTS_FILE);
 
   const results = await prisma.$transaction(
     martialArts.map((name) =>
