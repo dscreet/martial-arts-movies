@@ -16,7 +16,7 @@ model Movie {
   tmdbId              Int          @unique
   title               String
   overview            String
-  releaseDate         DateTime
+  releaseDate         DateTime?
   posterPath          String
   backdropPath        String
   primaryMartialArtId Int
