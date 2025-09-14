@@ -19,6 +19,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import dotenv from 'dotenv';
+import { Genre, Country, RawMovie } from '@/types/common';
 
 dotenv.config();
 
@@ -37,28 +38,6 @@ interface TMDBDiscoverResponse {
 
 interface TMDBGenreResponse {
   genres: Genre[];
-}
-
-interface Movie {
-  id: number;
-  title: string;
-  overview: string;
-  release_date: string;
-  poster_path: string | null;
-  backdrop_path: string | null;
-  genres: Genre[];
-  origin_country: string[];
-}
-
-interface Genre {
-  id: number;
-  name: string;
-}
-
-interface Country {
-  iso_3166_1: string;
-  english_name: string;
-  native_name: string;
 }
 
 interface Metadata {
@@ -144,15 +123,15 @@ async function fetchMovieIds(): Promise<number[]> {
 
 // --- Main fetch functions ---
 // fetch movies by id and save responses
-async function fetchMovies(): Promise<Movie[]> {
-  const movies: Movie[] = [];
+async function fetchMovies(): Promise<RawMovie[]> {
+  const movies: RawMovie[] = [];
   const movieIds = await fetchMovieIds();
 
   console.log(`\nfetching ${movieIds.length} movies...`);
   for (let i = 0; i < movieIds.length; i++) {
     const id = movieIds[i];
     const url = `${BASE_URL}movie/${id}`;
-    const movie = await fetchFromTMDB<Movie>(url);
+    const movie = await fetchFromTMDB<RawMovie>(url);
     if (movie) {
       movies.push(movie);
       console.log(`[${i + 1}/${movieIds.length}] fetched movie ${movie.id}`);

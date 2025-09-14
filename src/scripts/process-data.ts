@@ -22,6 +22,7 @@ import { createReadStream } from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
 import OpenAI from 'openai';
+import { RawMovie, ProcessedMovie } from '@/types/common';
 
 dotenv.config();
 const client = new OpenAI();
@@ -73,30 +74,6 @@ Rules:
 `;
 
 // --- Types ---
-interface RawMovie {
-  id: number;
-  title: string;
-  overview: string;
-  release_date: string;
-  poster_path: string | null;
-  backdrop_path: string | null;
-  genres: { id: number; name: string }[];
-  origin_country: string[];
-}
-
-interface ProcessedMovie {
-  tmdbId: number;
-  title: string;
-  overview: string | null;
-  releaseDate: string | null;
-  posterPath: string | null;
-  backdropPath: string | null;
-  primaryMartialArt: string;
-  martialArts: string[];
-  genres: { id: number; name: string }[];
-  countries: string[];
-}
-
 interface BatchEntry {
   custom_id: string;
   method: 'POST';

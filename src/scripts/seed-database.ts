@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma';
 import fs from 'fs/promises';
 import path from 'path';
 import dotenv from 'dotenv';
+import { Genre, Country, ProcessedMovie } from '@/types/common';
 
 dotenv.config();
 
@@ -12,31 +13,6 @@ const MARTIAL_ARTS_FILE = path.resolve(__dirname, '../data/martial-arts.json');
 const GENRES_FILE = path.resolve(__dirname, '../data/genres.json');
 const COUNTRIES_FILE = path.resolve(__dirname, '../data/countries.json');
 const MOVIES_FILE = path.resolve(__dirname, '../data/processed-movies.json');
-
-// --- Types ---
-interface Genre {
-  id: number;
-  name: string;
-}
-
-interface Country {
-  iso_3166_1: string;
-  english_name: string;
-  native_name: string;
-}
-
-interface Movie {
-  tmdbId: number;
-  title: string;
-  overview: string | null;
-  releaseDate: string | null;
-  posterPath: string | null;
-  backdropPath: string | null;
-  primaryMartialArt: string;
-  martialArts: string[];
-  genres: { id: number; name: string }[];
-  countries: string[];
-}
 
 // --- Helpers ---
 async function readJson<T>(filePath: string): Promise<{ data: T[] }> {
@@ -103,7 +79,7 @@ async function seedCountries() {
 async function seedMovies() {
   console.log(`\nseeding movies data...`);
 
-  const { data: movies } = await readJson<Movie>(MOVIES_FILE);
+  const { data: movies } = await readJson<ProcessedMovie>(MOVIES_FILE);
 
   const results = await prisma.$transaction(
     movies.map((movie) =>
