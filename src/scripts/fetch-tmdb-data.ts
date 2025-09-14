@@ -44,8 +44,8 @@ interface Movie {
   title: string;
   overview: string;
   release_date: string;
-  poster_path: string;
-  backdrop_path: string;
+  poster_path: string | null;
+  backdrop_path: string | null;
   genres: Genre[];
   origin_country: string[];
 }

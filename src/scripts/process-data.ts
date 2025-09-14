@@ -78,8 +78,8 @@ interface RawMovie {
   title: string;
   overview: string;
   release_date: string;
-  poster_path: string;
-  backdrop_path: string;
+  poster_path: string | null;
+  backdrop_path: string | null;
   genres: { id: number; name: string }[];
   origin_country: string[];
 }

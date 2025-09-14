@@ -25,6 +25,19 @@ interface Country {
   native_name: string;
 }
 
+interface Movie {
+  tmdbId: number;
+  title: string;
+  overview: string | null;
+  releaseDate: string | null;
+  posterPath: string | null;
+  backdropPath: string | null;
+  primaryMartialArt: string;
+  martialArts: string[];
+  genres: { id: number; name: string }[];
+  countries: string[];
+}
+
 // --- Helpers ---
 async function readJson<T>(filePath: string): Promise<{ data: T[] }> {
   const file = await fs.readFile(filePath, 'utf-8');
@@ -87,7 +100,46 @@ async function seedCountries() {
   console.log(`successfully inserted ${results.length} countries`);
 }
 
-async function seedMovies() {}
+async function seedMovies() {
+  console.log(`\nseeding movies data...`);
+
+  const { data: movies } = await readJson<Movie>(MOVIES_FILE);
+
+  const results = await prisma.$transaction(
+    movies.map((movie) =>
+      prisma.movie.upsert({
+        where: { tmdbId: movie.tmdbId },
+        update: {},
+        create: {
+          tmdbId: movie.tmdbId,
+          title: movie.title,
+          overview: movie.overview,
+          releaseDate: movie.releaseDate ? new Date(movie.releaseDate) : null,
+          posterPath: movie.posterPath,
+          backdropPath: movie.backdropPath,
+
+          primaryMartialArt: {
+            connect: { name: movie.primaryMartialArt },
+          },
+
+          martialArts: {
+            connect: movie.martialArts.map((name) => ({ name })),
+          },
+
+          genres: {
+            connect: movie.genres.map((genre) => ({ id: genre.id })),
+          },
+
+          countries: {
+            connect: movie.countries.map((code) => ({ code })),
+          },
+        },
+      })
+    )
+  );
+
+  console.log(`successfully inserted ${results.length} movies`);
+}
 
 // --- Seed runner ---
 async function main() {
