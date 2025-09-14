@@ -87,10 +87,10 @@ interface RawMovie {
 interface ProcessedMovie {
   tmdbId: number;
   title: string;
-  overview: string;
-  releaseDate: string;
-  posterPath: string;
-  backdropPath: string;
+  overview: string | null;
+  releaseDate: string | null;
+  posterPath: string | null;
+  backdropPath: string | null;
   primaryMartialArt: string;
   martialArts: string[];
   genres: { id: number; name: string }[];
@@ -334,10 +334,10 @@ async function processMovies(
     processedMovies.push({
       tmdbId: movie.id,
       title: movie.title,
-      overview: movie.overview,
-      releaseDate: movie.release_date,
-      posterPath: movie.poster_path,
-      backdropPath: movie.backdrop_path,
+      overview: movie.overview || null,
+      releaseDate: movie.release_date || null,
+      posterPath: movie.poster_path || null,
+      backdropPath: movie.backdrop_path || null,
       primaryMartialArt: classification.primary,
       martialArts: [classification.primary, ...(classification.secondary ?? [])],
       genres: movie.genres,
