@@ -1,6 +1,6 @@
-// ----------------------------------------------------
-// Martial Arts Classification Pipeline
-// ----------------------------------------------------
+// -------------------------------------------------------
+// Martial Arts Classification & Data Processing Pipeline
+// -------------------------------------------------------
 // This script processes raw TMDB movie data by running it
 // through OpenAI batch classification to identify martial arts.
 //

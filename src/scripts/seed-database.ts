@@ -1,4 +1,14 @@
-//TODO: script explanation
+// -------------------------------------------------------
+// Database Seeding Script
+// -------------------------------------------------------
+// This script reads prepared JSON files and seeds the database
+// with martial arts movies and supporting metadata.
+//
+// Workflow:
+// 1. Seed martial arts table
+// 2. Seed genres table
+// 3. Seed countries table
+// 4. Seed processed movies table with relations (genres, countries, martial arts)
 
 import { prisma } from '@/lib/prisma';
 import fs from 'fs/promises';
@@ -93,19 +103,15 @@ async function seedMovies() {
           releaseDate: movie.releaseDate ? new Date(movie.releaseDate) : null,
           posterPath: movie.posterPath,
           backdropPath: movie.backdropPath,
-
           primaryMartialArt: {
             connect: { name: movie.primaryMartialArt },
           },
-
           martialArts: {
             connect: movie.martialArts.map((name) => ({ name })),
           },
-
           genres: {
             connect: movie.genres.map((genre) => ({ id: genre.id })),
           },
-
           countries: {
             connect: movie.countries.map((code) => ({ code })),
           },
@@ -114,7 +120,7 @@ async function seedMovies() {
     )
   );
 
-  console.log(`successfully inserted ${results.length} movies`);
+  console.log(`successfully inserted ${results.length} movies\n`);
 }
 
 // --- Seed runner ---

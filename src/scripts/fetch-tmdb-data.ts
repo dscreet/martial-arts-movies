@@ -1,6 +1,6 @@
-// ----------------------------------------------------
-// TMDB Data Fetch Workflow
-// ----------------------------------------------------
+// -------------------------------------------------------
+// TMDB Data Fetching Workflow
+// -------------------------------------------------------
 // This script fetches raw movie data and supporting metadata
 // (genres, countries) from the TMDB API and saves them to JSON.
 //
