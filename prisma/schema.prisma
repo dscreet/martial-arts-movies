@@ -15,10 +15,10 @@ model Movie {
   id                  Int          @id @default(autoincrement())
   tmdbId              Int          @unique
   title               String
-  overview            String
+  overview            String?
   releaseDate         DateTime?
-  posterPath          String
-  backdropPath        String
+  posterPath          String?
+  backdropPath        String?
   primaryMartialArtId Int
   primaryMartialArt   MartialArt   @relation("PrimaryMartialArt", fields: [primaryMartialArtId], references: [id])
   martialArts         MartialArt[] @relation("MovieMartialArts")
