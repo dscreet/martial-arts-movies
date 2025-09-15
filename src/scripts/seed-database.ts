@@ -98,6 +98,7 @@ async function seedMovies() {
         update: {},
         create: {
           tmdbId: movie.tmdbId,
+          slug: movie.slug,
           title: movie.title,
           overview: movie.overview,
           releaseDate: movie.releaseDate ? new Date(movie.releaseDate) : null,

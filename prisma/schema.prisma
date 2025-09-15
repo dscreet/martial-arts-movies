@@ -10,10 +10,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// add slug possibly
 model Movie {
   id                  Int          @id @default(autoincrement())
   tmdbId              Int          @unique
+  slug                String       @unique
   title               String
   overview            String?
   releaseDate         DateTime?

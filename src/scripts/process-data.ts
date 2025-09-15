@@ -22,6 +22,7 @@ import { createReadStream } from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
 import OpenAI from 'openai';
+import slugify from 'slugify';
 import { RawMovie, ProcessedMovie } from '@/types/common';
 
 dotenv.config();
@@ -143,6 +144,12 @@ function chunkArray<T>(array: T[], chunkSize: number): T[][] {
     chunks.push(array.slice(i, i + chunkSize));
   }
   return chunks;
+}
+
+function createSlug(title: string, releaseDate: string, tmdbId: number): string {
+  const base = slugify(title, { lower: true, strict: true });
+  const suffix = releaseDate?.slice(0, 4) || tmdbId;
+  return `${base}-${suffix}`;
 }
 
 // --- Classification steps ---
@@ -310,6 +317,7 @@ async function processMovies(
     }
     processedMovies.push({
       tmdbId: movie.id,
+      slug: createSlug(movie.title, movie.release_date, movie.id),
       title: movie.title,
       overview: movie.overview || null,
       releaseDate: movie.release_date || null,

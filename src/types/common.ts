@@ -11,6 +11,7 @@ export interface RawMovie {
 
 export interface ProcessedMovie {
   tmdbId: number;
+  slug: string;
   title: string;
   overview: string | null;
   releaseDate: string | null;

@@ -3,7 +3,7 @@
     "fetchedAt": "2025-09-09T19:10:29.274Z",
     "source": "TMDB API",
     "keywordId": 779,
-    "totalItems": 1982,
+    "totalItems": 1977,
     "dataset": "movies"
   },
   "data": [
@@ -84891,67 +84891,6 @@
     },
     {
       "adult": false,
-      "backdrop_path": "/rEyQQFzs9ZgKUzYHRJagSM67LCg.jpg",
-      "belongs_to_collection": null,
-      "budget": 0,
-      "genres": [
-        {
-          "id": 28,
-          "name": "Action"
-        },
-        {
-          "id": 18,
-          "name": "Drama"
-        }
-      ],
-      "homepage": "",
-      "id": 355996,
-      "imdb_id": "tt0104889",
-      "origin_country": ["HK"],
-      "original_language": "cn",
-      "original_title": "金三角群英會",
-      "overview": "Two agents are assigned to break up a gang involved in counterfeiting, slavery and drug smuggling.",
-      "popularity": 1.3447,
-      "poster_path": "/rsr1wVhw2ZYmV2rQ2IC6q2UcEi7.jpg",
-      "production_companies": [
-        {
-          "id": 39989,
-          "logo_path": null,
-          "name": "Joe Siu International Film Ltd",
-          "origin_country": ""
-        },
-        {
-          "id": 6920,
-          "logo_path": null,
-          "name": "J.S. Productions",
-          "origin_country": "FR"
-        }
-      ],
-      "production_countries": [
-        {
-          "iso_3166_1": "HK",
-          "name": "Hong Kong"
-        }
-      ],
-      "release_date": "1992-01-03",
-      "revenue": 0,
-      "runtime": 85,
-      "spoken_languages": [
-        {
-          "english_name": "Cantonese",
-          "iso_639_1": "cn",
-          "name": "广州话 / 廣州話"
-        }
-      ],
-      "status": "Released",
-      "tagline": "",
-      "title": "Mission of Justice",
-      "video": false,
-      "vote_average": 4.4,
-      "vote_count": 5
-    },
-    {
-      "adult": false,
       "backdrop_path": "/cfxs03SLYYFlIJsF0Sjgl7DXVMn.jpg",
       "belongs_to_collection": {
         "id": 247559,
@@ -94444,121 +94383,6 @@
     },
     {
       "adult": false,
-      "backdrop_path": "/vXQqXGrh6v57n6mPPS9nbyG3BcJ.jpg",
-      "belongs_to_collection": null,
-      "budget": 0,
-      "genres": [
-        {
-          "id": 16,
-          "name": "Animation"
-        },
-        {
-          "id": 14,
-          "name": "Fantasy"
-        }
-      ],
-      "homepage": "",
-      "id": 1245103,
-      "imdb_id": null,
-      "origin_country": ["CN"],
-      "original_language": "zh",
-      "original_title": "一人之下·锈铁重现",
-      "overview": "",
-      "popularity": 0.9544,
-      "poster_path": "/jIFhMbxLbzO2UtZcxXMCSCSPUis.jpg",
-      "production_companies": [
-        {
-          "id": 74457,
-          "logo_path": "/mPsCbXC5k20bpKErrbOQd1fG0L7.png",
-          "name": "Tencent Video",
-          "origin_country": "CN"
-        },
-        {
-          "id": 154509,
-          "logo_path": "/7U4tXEAPaa1qqCdQEAqLyGlEFfA.png",
-          "name": "Qiyuan Yinghua",
-          "origin_country": "CN"
-        },
-        {
-          "id": 238683,
-          "logo_path": null,
-          "name": "Yikuiduo Animation",
-          "origin_country": "CN"
-        },
-        {
-          "id": 109474,
-          "logo_path": "/16ydjNJFFhTh8QyHnaIc9TrTvdF.png",
-          "name": "Tencent Animation & Comics",
-          "origin_country": "CN"
-        },
-        {
-          "id": 84946,
-          "logo_path": "/8wrAXwrNZ5zHImKb0SyVLQbXkaM.png",
-          "name": "Tencent Penguin Pictures",
-          "origin_country": "CN"
-        },
-        {
-          "id": 238938,
-          "logo_path": null,
-          "name": "Guangzhiyu Animation",
-          "origin_country": "CN"
-        },
-        {
-          "id": 238939,
-          "logo_path": null,
-          "name": "Root Animation",
-          "origin_country": "CN"
-        },
-        {
-          "id": 238940,
-          "logo_path": null,
-          "name": "Dalian Tongmeng Animation",
-          "origin_country": "CN"
-        },
-        {
-          "id": 238941,
-          "logo_path": null,
-          "name": "Yihong Animation",
-          "origin_country": "CN"
-        },
-        {
-          "id": 238942,
-          "logo_path": null,
-          "name": "Tengyun Culture",
-          "origin_country": "CN"
-        },
-        {
-          "id": 248722,
-          "logo_path": "/dZAFgZhOegeKuSPgzDJ4RIk97mi.png",
-          "name": "Dong Man Tang",
-          "origin_country": "CN"
-        }
-      ],
-      "production_countries": [
-        {
-          "iso_3166_1": "CN",
-          "name": "China"
-        }
-      ],
-      "release_date": "2024-02-15",
-      "revenue": 0,
-      "runtime": 0,
-      "spoken_languages": [
-        {
-          "english_name": "Mandarin",
-          "iso_639_1": "zh",
-          "name": "普通话"
-        }
-      ],
-      "status": "Released",
-      "tagline": "",
-      "title": "一人之下·锈铁重现",
-      "video": false,
-      "vote_average": 6,
-      "vote_count": 2
-    },
-    {
-      "adult": false,
       "backdrop_path": "/vGQinn4opDyBtaQYzj6YkQaJ96n.jpg",
       "belongs_to_collection": null,
       "budget": 0,
@@ -101850,55 +101674,6 @@
       "video": false,
       "vote_average": 6,
       "vote_count": 1
-    },
-    {
-      "adult": false,
-      "backdrop_path": null,
-      "belongs_to_collection": {
-        "id": 904761,
-        "name": "女神捕（系列）",
-        "poster_path": "/rLBRny4hYwjQJL2dzeqUhmr8rDR.jpg",
-        "backdrop_path": "/squa9uFZIuweiCcrYiJsECe4Xk7.jpg"
-      },
-      "budget": 0,
-      "genres": [
-        {
-          "id": 18,
-          "name": "Drama"
-        }
-      ],
-      "homepage": "",
-      "id": 913885,
-      "imdb_id": null,
-      "origin_country": ["CN"],
-      "original_language": "zh",
-      "original_title": "侠义神捕之诡影",
-      "overview": "",
-      "popularity": 0.6199,
-      "poster_path": "/5D3iw9GdYW60vxQ97zCtUPtfG7H.jpg",
-      "production_companies": [],
-      "production_countries": [
-        {
-          "iso_3166_1": "CN",
-          "name": "China"
-        }
-      ],
-      "release_date": "2018-02-03",
-      "revenue": 0,
-      "runtime": 0,
-      "spoken_languages": [
-        {
-          "english_name": "Mandarin",
-          "iso_639_1": "zh",
-          "name": "普通话"
-        }
-      ],
-      "status": "Released",
-      "tagline": "",
-      "title": "侠义神捕之诡影",
-      "video": false,
-      "vote_average": 0,
-      "vote_count": 0
     },
     {
       "adult": false,
@@ -120910,55 +120685,6 @@
     },
     {
       "adult": false,
-      "backdrop_path": null,
-      "belongs_to_collection": {
-        "id": 904761,
-        "name": "女神捕（系列）",
-        "poster_path": "/rLBRny4hYwjQJL2dzeqUhmr8rDR.jpg",
-        "backdrop_path": "/squa9uFZIuweiCcrYiJsECe4Xk7.jpg"
-      },
-      "budget": 0,
-      "genres": [
-        {
-          "id": 18,
-          "name": "Drama"
-        }
-      ],
-      "homepage": "",
-      "id": 913887,
-      "imdb_id": null,
-      "origin_country": ["CN"],
-      "original_language": "zh",
-      "original_title": "侠义神捕之请君入瓮",
-      "overview": "",
-      "popularity": 0.0338,
-      "poster_path": "/1b8cZvtuneNmdRV1IUAMKI4FXTg.jpg",
-      "production_companies": [],
-      "production_countries": [
-        {
-          "iso_3166_1": "CN",
-          "name": "China"
-        }
-      ],
-      "release_date": "2018-02-04",
-      "revenue": 0,
-      "runtime": 0,
-      "spoken_languages": [
-        {
-          "english_name": "Mandarin",
-          "iso_639_1": "zh",
-          "name": "普通话"
-        }
-      ],
-      "status": "Released",
-      "tagline": "",
-      "title": "侠义神捕之请君入瓮",
-      "video": false,
-      "vote_average": 0,
-      "vote_count": 0
-    },
-    {
-      "adult": false,
       "backdrop_path": "/mrW78PT0Yqisen42ZXMnRTMSfuz.jpg",
       "belongs_to_collection": null,
       "budget": 0,
@@ -121084,70 +120810,6 @@
       "status": "Released",
       "tagline": "",
       "title": "Suspect No. 1",
-      "video": false,
-      "vote_average": 0,
-      "vote_count": 0
-    },
-    {
-      "adult": false,
-      "backdrop_path": null,
-      "belongs_to_collection": null,
-      "budget": 0,
-      "genres": [
-        {
-          "id": 28,
-          "name": "Action"
-        },
-        {
-          "id": 80,
-          "name": "Crime"
-        },
-        {
-          "id": 878,
-          "name": "Science Fiction"
-        }
-      ],
-      "homepage": "https://www.facebook.com/ninjaninjab14",
-      "id": 331373,
-      "imdb_id": "tt4487320",
-      "origin_country": ["AK"],
-      "original_language": "ak",
-      "original_title": "C.4: The Code of Money and Death",
-      "overview": "Ninjas and mafiosos clash in this epic Ghanan tale of betrayal and revenge.",
-      "popularity": 0.0311,
-      "poster_path": null,
-      "production_companies": [
-        {
-          "id": 47995,
-          "logo_path": null,
-          "name": "Ninja Movie Production",
-          "origin_country": ""
-        }
-      ],
-      "production_countries": [
-        {
-          "iso_3166_1": "GH",
-          "name": "Ghana"
-        }
-      ],
-      "release_date": "2013-02-18",
-      "revenue": 0,
-      "runtime": 152,
-      "spoken_languages": [
-        {
-          "english_name": "Akan",
-          "iso_639_1": "ak",
-          "name": ""
-        },
-        {
-          "english_name": "English",
-          "iso_639_1": "en",
-          "name": "English"
-        }
-      ],
-      "status": "Released",
-      "tagline": "",
-      "title": "C.4: The Code of Money and Death",
       "video": false,
       "vote_average": 0,
       "vote_count": 0
