@@ -14,7 +14,7 @@ import { prisma } from '@/lib/prisma';
 import fs from 'fs/promises';
 import path from 'path';
 import dotenv from 'dotenv';
-import { Genre, Country, ProcessedMovie } from '@/types/common';
+import { MartialArt, Genre, Country, ProcessedMovie } from '@/types/common';
 
 dotenv.config();
 
@@ -35,14 +35,14 @@ async function readJson<T>(filePath: string): Promise<{ data: T[] }> {
 async function seedMartialArts() {
   console.log(`\nseeding martial arts data...`);
 
-  const { data: martialArts } = await readJson<string>(MARTIAL_ARTS_FILE);
+  const { data: martialArts } = await readJson<MartialArt>(MARTIAL_ARTS_FILE);
 
   const results = await prisma.$transaction(
-    martialArts.map((name) =>
+    martialArts.map((ma) =>
       prisma.martialArt.upsert({
-        where: { name },
+        where: { name: ma.name },
         update: {},
-        create: { name },
+        create: { name: ma.name, slug: ma.slug },
       })
     )
   );

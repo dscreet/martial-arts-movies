@@ -33,3 +33,8 @@ export interface Country {
   english_name: string;
   native_name: string;
 }
+
+export interface MartialArt {
+  name: string;
+  slug: string;
+}
