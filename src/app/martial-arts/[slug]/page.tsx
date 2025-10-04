@@ -1,13 +1,29 @@
-import { fetchMoviesByMartialArt } from '@/lib/data';
+// e.g. /martial-arts/karate/ - movies where the main martial art is the slug
+import { fetchMovies, MovieFilters } from '@/lib/data';
 
-export default async function Home({ params }) {
+interface PageProps {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{}>;
+}
+
+export default async function Home({ params, searchParams }: PageProps) {
   const { slug } = await params;
-  const martialArt = await fetchMoviesByMartialArt(slug);
-  console.log(martialArt);
+  const filters = await searchParams;
+
+  const movieFilters: MovieFilters = {
+    primaryMartialArt: slug,
+    ...filters,
+  };
+
+  console.log(slug);
+  console.log(filters);
+  const movies = await fetchMovies(movieFilters);
+  console.log(movies.length);
+  if (!movies) return null;
   return (
     <div>
       <ul>
-        {martialArt.movies.map((movie) => (
+        {movies.map((movie) => (
           <li key={movie.id}>{movie.title}</li>
         ))}
       </ul>

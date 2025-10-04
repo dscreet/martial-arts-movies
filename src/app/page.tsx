@@ -1,8 +1,8 @@
+// home page where martial arts cards will be displayed
 import { fetchMartialArts } from '@/lib/data';
 
 export default async function Home() {
   const martialArts = await fetchMartialArts();
-  console.log(martialArts);
   return (
     <div>
       <ul>

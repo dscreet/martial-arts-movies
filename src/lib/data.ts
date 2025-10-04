@@ -1,50 +1,53 @@
 import { prisma } from '@/lib/prisma';
 
+export interface MovieFilters {
+  primaryMartialArt?: string;
+  //genres, countries, marial arts, release date, search term, sort by
+}
+
 export async function fetchMartialArts() {
   try {
     return await prisma.martialArt.findMany();
   } catch (error) {
-    console.error('Database error:', error);
-    throw new Error('Failed to fetch martial arts data.');
+    console.error('Failed to fetch martial arts:', error);
+    throw new Error('Failed to fetch martial arts data');
   }
 }
 
-// TODO: only fetch data that will be used on list page
-// query movie instead?
-export async function fetchMoviesByMartialArt(slug) {
+export async function fetchMovies(filters: MovieFilters = {}) {
   try {
-    return await prisma.martialArt.findUnique({
+    return await prisma.movie.findMany({
       where: {
-        name: slug,
+        ...(filters.primaryMartialArt && {
+          primaryMartialArt: {
+            slug: filters.primaryMartialArt,
+          },
+        }),
       },
       include: {
-        movies: {
-          // include: {
-          //   genres: true,
-          //   primaryMartialArt: true,
-          //   country: true,
-          // },
-        },
+        primaryMartialArt: true,
+        genres: true,
       },
     });
   } catch (error) {
-    console.error('Database error:', error);
-    throw new Error('Failed to fetch movies data.'); //change
+    console.error('Failed to fetch movies:', error);
+    throw new Error('Failed to fetch movies data');
   }
 }
 
-export async function fetchMovie(id) {
-  const movieId = Number(id);
-  if (!Number.isInteger(movieId) || movieId <= 0) {
-    return null;
-  }
-
+export async function fetchMovie(slug: string) {
   try {
     return await prisma.movie.findUnique({
-      where: { id: movieId },
+      where: { slug },
+      include: {
+        genres: true,
+        countries: true,
+        martialArts: true,
+        primaryMartialArt: true,
+      },
     });
   } catch (error) {
-    console.error('Database error:', error);
-    throw new Error('Failed to fetch movie data.');
+    console.error('Failed to fetch movie:', error);
+    throw new Error('Failed to fetch movie data');
   }
 }
