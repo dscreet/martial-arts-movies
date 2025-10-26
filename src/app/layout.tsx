@@ -15,8 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header></Header>
-        <main>{children}</main>
+        <Header />
+        <main className="container mx-auto p-8">{children}</main>
       </body>
     </html>
   );
