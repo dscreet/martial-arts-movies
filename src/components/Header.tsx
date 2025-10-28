@@ -6,7 +6,7 @@ import {
   NavigationMenuList,
 } from '@/components/ui/navigation-menu';
 
-export function Header() {
+export default function Header() {
   return (
     //header can be made reduntant if i want full edge
     <header className="border-b bg-background">

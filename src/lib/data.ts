@@ -2,8 +2,18 @@ import { prisma } from '@/lib/prisma';
 
 export interface MovieFilters {
   primaryMartialArt?: string;
+  sort?: SortOption;
   //genres, countries, marial arts, release date, search term, sort by
 }
+
+export const sortOptions = {
+  'release-asc': { releaseDate: 'asc' },
+  'release-desc': { releaseDate: 'desc' },
+  'title-asc': { title: 'asc' },
+  'title-desc': { title: 'desc' },
+} as const;
+
+export type SortOption = keyof typeof sortOptions;
 
 export async function fetchMartialArts() {
   try {
@@ -16,6 +26,8 @@ export async function fetchMartialArts() {
 
 export async function fetchMovies(filters: MovieFilters = {}) {
   try {
+    const orderBy = sortOptions[filters.sort || 'release-desc'];
+
     return await prisma.movie.findMany({
       where: {
         ...(filters.primaryMartialArt && {
@@ -28,6 +40,7 @@ export async function fetchMovies(filters: MovieFilters = {}) {
         primaryMartialArt: true,
         genres: true,
       },
+      orderBy,
     });
   } catch (error) {
     console.error('Failed to fetch movies:', error);

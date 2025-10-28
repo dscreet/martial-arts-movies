@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Movie } from '@prisma/client';
 
-export function MovieList({ movies }: { movies: Movie[] }) {
+export default function MovieList({ movies }: { movies: Movie[] }) {
   return (
     <ul className="space-y-6">
       {movies.map((movie) => (
