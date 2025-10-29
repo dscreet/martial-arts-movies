@@ -46,6 +46,7 @@ model MartialArt {
 model Genre {
   id     Int     @id // no autoincrement - use TMDB's genre IDs
   name   String  @unique
+  slug   String  @unique
   movies Movie[]
 }
 
