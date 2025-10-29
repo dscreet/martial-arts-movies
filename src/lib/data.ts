@@ -1,6 +1,6 @@
 import { prisma } from '@/lib/prisma';
 
-export interface MovieFilters {
+export interface MovieQuery {
   primaryMartialArt?: string;
   sort?: SortOption;
   //genres, countries, marial arts, release date, search term, sort by
@@ -24,15 +24,15 @@ export async function fetchMartialArts() {
   }
 }
 
-export async function fetchMovies(filters: MovieFilters = {}) {
+export async function fetchMovies(query: MovieQuery = {}) {
   try {
-    const orderBy = sortOptions[filters.sort || 'release-desc'];
+    const orderBy = sortOptions[query.sort || 'release-desc'];
 
     return await prisma.movie.findMany({
       where: {
-        ...(filters.primaryMartialArt && {
+        ...(query.primaryMartialArt && {
           primaryMartialArt: {
-            slug: filters.primaryMartialArt,
+            slug: query.primaryMartialArt,
           },
         }),
       },

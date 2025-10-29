@@ -1,28 +1,27 @@
 // e.g. /martial-arts/karate/ - movies where the main martial art is the slug
-import { fetchMovies, MovieFilters, SortOption, sortOptions } from '@/lib/data';
+import { fetchMovies, MovieQuery, SortOption, sortOptions } from '@/lib/data';
 import MovieList from '@/components/MovieList';
 import Sort from '@/components/Sort';
 
 interface PageProps {
-  params: Promise<{ slug: string }>; //remove promei and try
+  params: Promise<{ slug: string }>;
   searchParams: Promise<{ sort?: string }>;
 }
 
 export default async function Home({ params, searchParams }: PageProps) {
   const { slug } = await params;
-  const filters = await searchParams;
+  const { sort } = await searchParams;
 
-  const sort: SortOption = filters.sort && filters.sort in sortOptions ? (filters.sort as SortOption) : 'release-desc';
+  const sortOption: SortOption = sort && sort in sortOptions ? (sort as SortOption) : 'release-desc';
 
-  const movieFilters: MovieFilters = {
+  const movieQuery: MovieQuery = {
     primaryMartialArt: slug,
-    sort,
-    // ...filters,
+    sort: sortOption,
   };
 
   console.log(slug);
-  console.log(filters);
-  const movies = await fetchMovies(movieFilters);
+  console.log(movieQuery);
+  const movies = await fetchMovies(movieQuery);
   console.log(movies.length);
   if (!movies) return null;
   return (
