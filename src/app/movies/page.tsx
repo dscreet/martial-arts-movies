@@ -2,7 +2,7 @@
 import { fetchMovies, MovieQuery, SortOption, sortOptions, fetchGenres } from '@/lib/data';
 import MovieList from '@/components/MovieList';
 import Sort from '@/components/Sort';
-import GenreFilter from '@/components/GenreFilter';
+import MultiSelectFilter from '@/components/MultiSelectFilter';
 
 interface PageProps {
   searchParams: Promise<{
@@ -47,7 +47,7 @@ export default async function Home({ searchParams }: PageProps) {
       {/* maybe a better way of getting the martial art name */}
       <h1 className="text-4xl font-bold mb-12">All movies</h1>
       <Sort />
-      <GenreFilter genres={allGenres} />
+      <MultiSelectFilter label={'genre'} paramKey={'genre'} options={allGenres} />
       <MovieList movies={movies} />
     </div>
   );
