@@ -57,6 +57,13 @@ export async function fetchMovies(query: MovieQuery = {}) {
             },
           },
         }),
+        ...(query.martialArt?.length && {
+          martialArts: {
+            some: {
+              slug: { in: query.martialArt },
+            },
+          },
+        }),
       },
       include: {
         primaryMartialArt: true,

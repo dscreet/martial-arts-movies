@@ -1,5 +1,5 @@
 // /movies/ - all movies with filtering
-import { fetchMovies, MovieQuery, SortOption, sortOptions, fetchGenres } from '@/lib/data';
+import { fetchMovies, MovieQuery, SortOption, sortOptions, fetchGenres, fetchMartialArts } from '@/lib/data';
 import MovieList from '@/components/MovieList';
 import Sort from '@/components/Sort';
 import MultiSelectFilter from '@/components/MultiSelectFilter';
@@ -26,6 +26,7 @@ export default async function Home({ searchParams }: PageProps) {
 
   //more validation later
   const selectedGenres = queryParams.genre?.split(',') ?? [];
+  const selectedMartialArts = queryParams.martialArt?.split(',') ?? []; //maybe martial-arts instead?
 
   const sort: SortOption =
     queryParams.sort && queryParams.sort in sortOptions ? (queryParams.sort as SortOption) : 'release-desc';
@@ -33,6 +34,7 @@ export default async function Home({ searchParams }: PageProps) {
   const movieQuery: MovieQuery = {
     sort,
     genre: selectedGenres,
+    martialArt: selectedMartialArts,
   };
 
   console.log(queryParams);
@@ -40,6 +42,7 @@ export default async function Home({ searchParams }: PageProps) {
   //fetch all movies, genres, etc at once?
   const movies = await fetchMovies(movieQuery);
   const allGenres = await fetchGenres();
+  const allMartialArts = await fetchMartialArts();
   console.log(movies.length);
   if (!movies) return null;
   return (
@@ -48,6 +51,7 @@ export default async function Home({ searchParams }: PageProps) {
       <h1 className="text-4xl font-bold mb-12">All movies</h1>
       <Sort />
       <MultiSelectFilter label={'genre'} paramKey={'genre'} options={allGenres} />
+      <MultiSelectFilter label={'martial art'} paramKey={'martialArt'} options={allMartialArts} />
       <MovieList movies={movies} />
     </div>
   );
