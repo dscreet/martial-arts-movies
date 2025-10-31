@@ -3,7 +3,11 @@ import { prisma } from '@/lib/prisma';
 export interface MovieQuery {
   primaryMartialArt?: string;
   sort?: SortOption;
-  //genres, countries, marial arts, release date, search term, sort by
+  genre?: string[];
+  martialArt?: string[];
+  country?: string;
+  releaseYearFrom?: string;
+  releaseYearTo?: string;
 }
 
 export const sortOptions = {
@@ -24,6 +28,17 @@ export async function fetchMartialArts() {
   }
 }
 
+export async function fetchGenres() {
+  try {
+    return await prisma.genre.findMany({
+      orderBy: { name: 'asc' },
+    });
+  } catch (error) {
+    console.error('Failed to fetch genres:', error);
+    throw new Error('Failed to fetch genres data');
+  }
+}
+
 export async function fetchMovies(query: MovieQuery = {}) {
   try {
     const orderBy = sortOptions[query.sort || 'release-desc'];
@@ -35,12 +50,20 @@ export async function fetchMovies(query: MovieQuery = {}) {
             slug: query.primaryMartialArt,
           },
         }),
+        ...(query.genre?.length && {
+          genres: {
+            some: {
+              slug: { in: query.genre },
+            },
+          },
+        }),
       },
       include: {
         primaryMartialArt: true,
         genres: true,
       },
       orderBy,
+      take: 100, //toremove
     });
   } catch (error) {
     console.error('Failed to fetch movies:', error);
