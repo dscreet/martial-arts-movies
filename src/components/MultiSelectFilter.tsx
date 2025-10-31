@@ -5,13 +5,12 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
-import { cn } from '@/lib/utils';
 import { ChevronDownIcon } from 'lucide-react';
 
 interface MultiSelectFilterProps {
   label: string;
   paramKey: string;
-  options: { id: number; name: string; slug: string }[];
+  options: { id: number; name: string; value: string }[];
 }
 
 export default function MultiSelectFilter({ label, paramKey, options }: MultiSelectFilterProps) {
@@ -32,20 +31,32 @@ export default function MultiSelectFilter({ label, paramKey, options }: MultiSel
     } else {
       params.delete(paramKey);
     }
-    router.push(`?${params.toString()}`, { scroll: false });
+    router.push(`?${decodeURIComponent(params.toString())}`, { scroll: false });
   }
+
+  const displayNames = selectedOptions
+    .map((value) => {
+      const option = options.find((option) => option.value === value);
+      if (!option) return null;
+      return paramKey === 'country' ? option.value : option.name;
+    })
+    .filter(Boolean) as string[];
 
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button
-          variant="outline"
-          className={cn('w-[200px] justify-between', selectedOptions.length ? 'text-primary' : 'text-muted-foreground')}
-        >
-          {selectedOptions.length
-            ? `${selectedOptions.length} ${label}${selectedOptions.length > 1 ? 's' : ''} selected`
-            : `Select ${label}`}
-          <ChevronDownIcon className="size-4 opacity-50" />
+        <Button variant="outline" className="w-[240px] justify-between">
+          <span>{label}</span>
+          <div className="flex items-center gap-1 text-muted-foreground">
+            <span className="truncate max-w-[100px] block">
+              {displayNames.length === 0
+                ? 'All'
+                : displayNames.length <= 2
+                ? displayNames.join(', ')
+                : `${displayNames.length} selected`}
+            </span>
+            <ChevronDownIcon className="size-4 opacity-50" />
+          </div>
         </Button>
       </PopoverTrigger>
 
@@ -54,11 +65,11 @@ export default function MultiSelectFilter({ label, paramKey, options }: MultiSel
           return (
             <div key={option.id} className="flex items-center space-x-2 py-1">
               <Checkbox
-                id={option.slug}
-                checked={selectedOptions.includes(option.slug)}
-                onCheckedChange={() => toggleOption(option.slug)}
+                id={option.value}
+                checked={selectedOptions.includes(option.value)}
+                onCheckedChange={() => toggleOption(option.value)}
               />
-              <Label htmlFor={option.slug}>{option.name}</Label>
+              <Label htmlFor={option.value}>{option.name}</Label>
             </div>
           );
         })}

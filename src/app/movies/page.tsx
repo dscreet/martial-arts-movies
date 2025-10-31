@@ -1,5 +1,13 @@
 // /movies/ - all movies with filtering
-import { fetchMovies, MovieQuery, SortOption, sortOptions, fetchGenres, fetchMartialArts } from '@/lib/data';
+import {
+  fetchMovies,
+  MovieQuery,
+  SortOption,
+  sortOptions,
+  fetchGenres,
+  fetchMartialArts,
+  fetchCountries,
+} from '@/lib/data';
 import MovieList from '@/components/MovieList';
 import Sort from '@/components/Sort';
 import MultiSelectFilter from '@/components/MultiSelectFilter';
@@ -27,6 +35,7 @@ export default async function Home({ searchParams }: PageProps) {
   //more validation later
   const selectedGenres = queryParams.genre?.split(',') ?? [];
   const selectedMartialArts = queryParams.martialArt?.split(',') ?? []; //maybe martial-arts instead?
+  const selectedCountries = queryParams.country?.split(',') ?? [];
 
   const sort: SortOption =
     queryParams.sort && queryParams.sort in sortOptions ? (queryParams.sort as SortOption) : 'release-desc';
@@ -35,6 +44,7 @@ export default async function Home({ searchParams }: PageProps) {
     sort,
     genre: selectedGenres,
     martialArt: selectedMartialArts,
+    country: selectedCountries,
   };
 
   console.log(queryParams);
@@ -43,6 +53,7 @@ export default async function Home({ searchParams }: PageProps) {
   const movies = await fetchMovies(movieQuery);
   const allGenres = await fetchGenres();
   const allMartialArts = await fetchMartialArts();
+  const allCountries = await fetchCountries();
   console.log(movies.length);
   if (!movies) return null;
   return (
@@ -50,8 +61,21 @@ export default async function Home({ searchParams }: PageProps) {
       {/* maybe a better way of getting the martial art name */}
       <h1 className="text-4xl font-bold mb-12">All movies</h1>
       <Sort />
-      <MultiSelectFilter label={'genre'} paramKey={'genre'} options={allGenres} />
-      <MultiSelectFilter label={'martial art'} paramKey={'martialArt'} options={allMartialArts} />
+      <MultiSelectFilter
+        label={'Genre'}
+        paramKey={'genre'}
+        options={allGenres.map((g) => ({ id: g.id, name: g.name, value: g.slug }))}
+      />
+      <MultiSelectFilter
+        label={'Martial art'}
+        paramKey={'martialArt'}
+        options={allMartialArts.map((m) => ({ id: m.id, name: m.name, value: m.slug }))}
+      />
+      <MultiSelectFilter
+        label={'Country'}
+        paramKey={'country'}
+        options={allCountries.map((c) => ({ id: c.id, name: c.name, value: c.code }))}
+      />
       <MovieList movies={movies} />
     </div>
   );

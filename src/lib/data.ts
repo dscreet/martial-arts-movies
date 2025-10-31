@@ -5,7 +5,7 @@ export interface MovieQuery {
   sort?: SortOption;
   genre?: string[];
   martialArt?: string[];
-  country?: string;
+  country?: string[];
   releaseYearFrom?: string;
   releaseYearTo?: string;
 }
@@ -21,7 +21,9 @@ export type SortOption = keyof typeof sortOptions;
 
 export async function fetchMartialArts() {
   try {
-    return await prisma.martialArt.findMany();
+    return await prisma.martialArt.findMany({
+      orderBy: { name: 'asc' },
+    });
   } catch (error) {
     console.error('Failed to fetch martial arts:', error);
     throw new Error('Failed to fetch martial arts data');
@@ -36,6 +38,17 @@ export async function fetchGenres() {
   } catch (error) {
     console.error('Failed to fetch genres:', error);
     throw new Error('Failed to fetch genres data');
+  }
+}
+
+export async function fetchCountries() {
+  try {
+    return await prisma.country.findMany({
+      orderBy: { name: 'asc' },
+    });
+  } catch (error) {
+    console.error('Failed to fetch countries:', error);
+    throw new Error('Failed to fetch countries data');
   }
 }
 
@@ -61,6 +74,13 @@ export async function fetchMovies(query: MovieQuery = {}) {
           martialArts: {
             some: {
               slug: { in: query.martialArt },
+            },
+          },
+        }),
+        ...(query.country?.length && {
+          countries: {
+            some: {
+              code: { in: query.country },
             },
           },
         }),
