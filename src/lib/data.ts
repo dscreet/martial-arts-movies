@@ -6,8 +6,7 @@ export interface MovieQuery {
   martialArt?: string;
   genre?: string;
   country?: string;
-  releaseYearFrom?: string;
-  releaseYearTo?: string;
+  year?: string; //currently decades
 }
 
 export const sortOptions = {
@@ -72,6 +71,16 @@ export async function fetchMovies(query: MovieQuery = {}) {
         ...(query.country && {
           countries: { some: { code: query.country } },
         }),
+        ...(query.year === 'pre-1950' && {
+          releaseDate: { lte: new Date(1950, 0, 1) },
+        }),
+        ...(query.year &&
+          query.year !== 'pre-1950' && {
+            releaseDate: {
+              gte: new Date(Number(query.year), 0, 1),
+              lte: new Date(Number(query.year) + 9, 11, 31),
+            },
+          }),
       },
       include: {
         primaryMartialArt: true,

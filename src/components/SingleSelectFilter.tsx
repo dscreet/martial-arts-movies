@@ -11,8 +11,9 @@ interface MultiSelectFilterProps {
 }
 
 export default function SelectFilter({ label, paramKey, options }: MultiSelectFilterProps) {
-  const searchParams = useSearchParams();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const selectedValue = searchParams.get(paramKey) || 'all';
 
   function handleFilterChange(value: string) {
     const params = new URLSearchParams(searchParams);
@@ -25,8 +26,6 @@ export default function SelectFilter({ label, paramKey, options }: MultiSelectFi
 
     router.push(`?${decodeURIComponent(params.toString())}`, { scroll: false });
   }
-
-  const selectedValue = searchParams.get(paramKey) || 'all';
 
   return (
     <div>
