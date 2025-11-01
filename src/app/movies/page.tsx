@@ -16,7 +16,7 @@ interface PageProps {
   searchParams: Promise<{
     sort?: string;
     genre?: string;
-    martialArt?: string;
+    'martial-art'?: string;
     country?: string;
     releaseYearFrom?: number;
     releaseYearTo?: number;
@@ -34,7 +34,7 @@ export default async function Home({ searchParams }: PageProps) {
 
   //more validation later
   const selectedGenres = queryParams.genre?.split(',') ?? [];
-  const selectedMartialArts = queryParams.martialArt?.split(',') ?? []; //maybe martial-arts instead?
+  const selectedMartialArts = queryParams['martial-art']?.split(',') ?? []; //maybe martial-arts instead?
   const selectedCountries = queryParams.country?.split(',') ?? [];
 
   const sort: SortOption =
@@ -62,17 +62,17 @@ export default async function Home({ searchParams }: PageProps) {
       <h1 className="text-4xl font-bold mb-12">All movies</h1>
       <Sort />
       <MultiSelectFilter
-        label={'Genre'}
+        label={'Genres'}
         paramKey={'genre'}
         options={allGenres.map((g) => ({ id: g.id, name: g.name, value: g.slug }))}
       />
       <MultiSelectFilter
-        label={'Martial art'}
-        paramKey={'martialArt'}
+        label={'Martial arts'}
+        paramKey={'martial-art'}
         options={allMartialArts.map((m) => ({ id: m.id, name: m.name, value: m.slug }))}
       />
       <MultiSelectFilter
-        label={'Country'}
+        label={'Countries'}
         paramKey={'country'}
         options={allCountries.map((c) => ({ id: c.id, name: c.name, value: c.code }))}
       />
