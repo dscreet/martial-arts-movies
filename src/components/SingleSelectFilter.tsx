@@ -33,7 +33,7 @@ export default function SelectFilter({ label, paramKey, options }: MultiSelectFi
         <SelectTrigger className={cn('w-[200px]', selectedValue === 'all' && 'text-muted-foreground')}>
           <SelectValue />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent className="max-h-96">
           <SelectItem value="all">All {label}</SelectItem>
           {options.map((option) => (
             <SelectItem key={option.id} value={option.value}>

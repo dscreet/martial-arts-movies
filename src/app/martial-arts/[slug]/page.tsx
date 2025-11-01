@@ -2,6 +2,7 @@
 import { fetchMovies, MovieQuery, SortOption, sortOptions } from '@/lib/data';
 import MovieList from '@/components/MovieList';
 import Sort from '@/components/Sort';
+import ControlsContainer from '@/components/ControlsContainer';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -28,7 +29,11 @@ export default async function Home({ params, searchParams }: PageProps) {
     <div>
       {/* maybe a better way of getting the martial art name */}
       <h1 className="text-4xl font-bold mb-12">{movies[0].primaryMartialArt.name} movies</h1>
-      <Sort />
+      <ControlsContainer>
+        <div className="ml-auto">
+          <Sort />
+        </div>
+      </ControlsContainer>
       <MovieList movies={movies} />
     </div>
   );

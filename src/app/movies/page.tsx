@@ -11,6 +11,7 @@ import {
 import MovieList from '@/components/MovieList';
 import Sort from '@/components/Sort';
 import SingleSelectFilter from '@/components/SingleSelectFilter';
+import ControlsContainer from '@/components/ControlsContainer';
 
 interface PageProps {
   searchParams: Promise<{
@@ -71,23 +72,28 @@ export default async function Home({ searchParams }: PageProps) {
   return (
     <div>
       <h1 className="text-4xl font-bold mb-12">All movies</h1>
-      <Sort />
-      <SingleSelectFilter
-        label={'martial arts'}
-        paramKey={'martial-art'}
-        options={allMartialArts.map((m) => ({ id: m.id, name: m.name, value: m.slug }))}
-      />
-      <SingleSelectFilter
-        label={'genres'}
-        paramKey={'genre'}
-        options={allGenres.map((g) => ({ id: g.id, name: g.name, value: g.slug }))}
-      />
-      <SingleSelectFilter
-        label={'countries'}
-        paramKey={'country'}
-        options={allCountries.map((c) => ({ id: c.id, name: c.name, value: c.code }))}
-      />
-      <SingleSelectFilter label={'years'} paramKey={'year'} options={DECADES} />
+      <ControlsContainer>
+        <div className="flex flex-wrap items-center gap-4">
+          <SingleSelectFilter
+            label={'martial arts'}
+            paramKey={'martial-art'}
+            options={allMartialArts.map((m) => ({ id: m.id, name: m.name, value: m.slug }))}
+          />
+          <SingleSelectFilter
+            label={'genres'}
+            paramKey={'genre'}
+            options={allGenres.map((g) => ({ id: g.id, name: g.name, value: g.slug }))}
+          />
+          <SingleSelectFilter
+            label={'countries'}
+            paramKey={'country'}
+            options={allCountries.map((c) => ({ id: c.id, name: c.name, value: c.code }))}
+          />
+          <SingleSelectFilter label={'years'} paramKey={'year'} options={DECADES} />
+        </div>
+
+        <Sort />
+      </ControlsContainer>
       <MovieList movies={movies} />
     </div>
   );
