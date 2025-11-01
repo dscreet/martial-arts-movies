@@ -22,7 +22,6 @@ interface PageProps {
     releaseYearTo?: number;
   }>;
 }
-//plural or singular??
 
 //, to list multiple values for same key e.g. color=purple,pink
 //= to separate key-value pairs e.g. category=dresses
@@ -34,7 +33,7 @@ export default async function Home({ searchParams }: PageProps) {
 
   //more validation later
   const selectedGenres = queryParams.genre?.split(',') ?? [];
-  const selectedMartialArts = queryParams['martial-art']?.split(',') ?? []; //maybe martial-arts instead?
+  const selectedMartialArts = queryParams['martial-art']?.split(',') ?? [];
   const selectedCountries = queryParams.country?.split(',') ?? [];
 
   const sort: SortOption =
@@ -54,6 +53,7 @@ export default async function Home({ searchParams }: PageProps) {
   const allGenres = await fetchGenres();
   const allMartialArts = await fetchMartialArts();
   const allCountries = await fetchCountries();
+  console.log(allCountries.length);
   console.log(movies.length);
   if (!movies) return null;
   return (

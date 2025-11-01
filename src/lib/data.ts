@@ -44,7 +44,14 @@ export async function fetchGenres() {
 export async function fetchCountries() {
   try {
     return await prisma.country.findMany({
-      orderBy: { name: 'asc' },
+      where: {
+        movies: {
+          some: {},
+        },
+      },
+      orderBy: {
+        name: 'asc',
+      },
     });
   } catch (error) {
     console.error('Failed to fetch countries:', error);
