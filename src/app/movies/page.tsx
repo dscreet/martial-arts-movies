@@ -10,13 +10,13 @@ import {
 } from '@/lib/data';
 import MovieList from '@/components/MovieList';
 import Sort from '@/components/Sort';
-import MultiSelectFilter from '@/components/MultiSelectFilter';
+import SingleSelectFilter from '@/components/SingleSelectFilter';
 
 interface PageProps {
   searchParams: Promise<{
     sort?: string;
-    genre?: string;
     'martial-art'?: string;
+    genre?: string;
     country?: string;
     releaseYearFrom?: number;
     releaseYearTo?: number;
@@ -32,22 +32,21 @@ export default async function Home({ searchParams }: PageProps) {
   const queryParams = await searchParams; //individuallry or like this? to name params or keep queryparams?
 
   //more validation later
-  const selectedGenres = queryParams.genre?.split(',') ?? [];
-  const selectedMartialArts = queryParams['martial-art']?.split(',') ?? [];
-  const selectedCountries = queryParams.country?.split(',') ?? [];
+  const martialArt = queryParams['martial-art'];
+  const genre = queryParams.genre;
+  const country = queryParams.country;
 
   const sort: SortOption =
     queryParams.sort && queryParams.sort in sortOptions ? (queryParams.sort as SortOption) : 'release-desc';
 
   const movieQuery: MovieQuery = {
     sort,
-    genre: selectedGenres,
-    martialArt: selectedMartialArts,
-    country: selectedCountries,
+    martialArt,
+    genre,
+    country,
   };
 
   console.log(queryParams);
-  console.log(selectedGenres);
   //fetch all movies, genres, etc at once?
   const movies = await fetchMovies(movieQuery);
   const allGenres = await fetchGenres();
@@ -58,21 +57,20 @@ export default async function Home({ searchParams }: PageProps) {
   if (!movies) return null;
   return (
     <div>
-      {/* maybe a better way of getting the martial art name */}
       <h1 className="text-4xl font-bold mb-12">All movies</h1>
       <Sort />
-      <MultiSelectFilter
-        label={'Genres'}
-        paramKey={'genre'}
-        options={allGenres.map((g) => ({ id: g.id, name: g.name, value: g.slug }))}
-      />
-      <MultiSelectFilter
-        label={'Martial arts'}
+      <SingleSelectFilter
+        label={'martial arts'}
         paramKey={'martial-art'}
         options={allMartialArts.map((m) => ({ id: m.id, name: m.name, value: m.slug }))}
       />
-      <MultiSelectFilter
-        label={'Countries'}
+      <SingleSelectFilter
+        label={'genres'}
+        paramKey={'genre'}
+        options={allGenres.map((g) => ({ id: g.id, name: g.name, value: g.slug }))}
+      />
+      <SingleSelectFilter
+        label={'countries'}
         paramKey={'country'}
         options={allCountries.map((c) => ({ id: c.id, name: c.name, value: c.code }))}
       />

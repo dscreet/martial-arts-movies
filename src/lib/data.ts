@@ -3,9 +3,9 @@ import { prisma } from '@/lib/prisma';
 export interface MovieQuery {
   primaryMartialArt?: string;
   sort?: SortOption;
-  genre?: string[];
-  martialArt?: string[];
-  country?: string[];
+  martialArt?: string;
+  genre?: string;
+  country?: string;
   releaseYearFrom?: string;
   releaseYearTo?: string;
 }
@@ -41,17 +41,14 @@ export async function fetchGenres() {
   }
 }
 
+// only fetch countries that have movies
 export async function fetchCountries() {
   try {
     return await prisma.country.findMany({
       where: {
-        movies: {
-          some: {},
-        },
+        movies: { some: {} },
       },
-      orderBy: {
-        name: 'asc',
-      },
+      orderBy: { name: 'asc' },
     });
   } catch (error) {
     console.error('Failed to fetch countries:', error);
@@ -61,42 +58,26 @@ export async function fetchCountries() {
 
 export async function fetchMovies(query: MovieQuery = {}) {
   try {
-    const orderBy = sortOptions[query.sort || 'release-desc'];
-
     return await prisma.movie.findMany({
       where: {
         ...(query.primaryMartialArt && {
-          primaryMartialArt: {
-            slug: query.primaryMartialArt,
-          },
+          primaryMartialArt: { slug: query.primaryMartialArt },
         }),
-        ...(query.genre?.length && {
-          genres: {
-            some: {
-              slug: { in: query.genre },
-            },
-          },
+        ...(query.martialArt && {
+          martialArts: { some: { slug: query.martialArt } },
         }),
-        ...(query.martialArt?.length && {
-          martialArts: {
-            some: {
-              slug: { in: query.martialArt },
-            },
-          },
+        ...(query.genre && {
+          genres: { some: { slug: query.genre } },
         }),
-        ...(query.country?.length && {
-          countries: {
-            some: {
-              code: { in: query.country },
-            },
-          },
+        ...(query.country && {
+          countries: { some: { code: query.country } },
         }),
       },
       include: {
         primaryMartialArt: true,
         genres: true,
       },
-      orderBy,
+      orderBy: sortOptions[query.sort || 'release-desc'],
       take: 100, //toremove
     });
   } catch (error) {
