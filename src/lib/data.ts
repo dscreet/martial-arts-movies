@@ -100,10 +100,10 @@ export async function fetchMovie(slug: string) {
     return await prisma.movie.findUnique({
       where: { slug },
       include: {
-        genres: true,
-        countries: true,
         martialArts: true,
         primaryMartialArt: true,
+        genres: true,
+        countries: true,
       },
     });
   } catch (error) {
