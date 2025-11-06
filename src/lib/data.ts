@@ -55,40 +55,54 @@ export async function fetchCountries() {
   }
 }
 
-export async function fetchMovies(query: MovieQuery = {}) {
+export async function fetchMovies(query: MovieQuery = {}, page = 1, pageSize = 20) {
   try {
-    return await prisma.movie.findMany({
-      where: {
-        ...(query.primaryMartialArt && {
-          primaryMartialArt: { slug: query.primaryMartialArt },
+    const orderBy = sortOptions[query.sort || 'release-desc'];
+    const skip = (page - 1) * pageSize;
+
+    const where = {
+      ...(query.primaryMartialArt && {
+        primaryMartialArt: { slug: query.primaryMartialArt },
+      }),
+      ...(query.martialArt && {
+        martialArts: { some: { slug: query.martialArt } },
+      }),
+      ...(query.genre && {
+        genres: { some: { slug: query.genre } },
+      }),
+      ...(query.country && {
+        countries: { some: { code: query.country } },
+      }),
+      ...(query.year === 'pre-1950' && {
+        releaseDate: { lte: new Date(1950, 0, 1) },
+      }),
+      ...(query.year &&
+        query.year !== 'pre-1950' && {
+          releaseDate: {
+            gte: new Date(Number(query.year), 0, 1),
+            lte: new Date(Number(query.year) + 9, 11, 31),
+          },
         }),
-        ...(query.martialArt && {
-          martialArts: { some: { slug: query.martialArt } },
-        }),
-        ...(query.genre && {
-          genres: { some: { slug: query.genre } },
-        }),
-        ...(query.country && {
-          countries: { some: { code: query.country } },
-        }),
-        ...(query.year === 'pre-1950' && {
-          releaseDate: { lte: new Date(1950, 0, 1) },
-        }),
-        ...(query.year &&
-          query.year !== 'pre-1950' && {
-            releaseDate: {
-              gte: new Date(Number(query.year), 0, 1),
-              lte: new Date(Number(query.year) + 9, 11, 31),
-            },
-          }),
-      },
-      include: {
-        primaryMartialArt: true,
-        genres: true,
-      },
-      orderBy: sortOptions[query.sort || 'release-desc'],
-      take: 100, //toremove
-    });
+    };
+
+    const [movies, totalCount] = await Promise.all([
+      prisma.movie.findMany({
+        where,
+        include: {
+          primaryMartialArt: true, //needed?
+          genres: true, //needed?
+          countries: true, //needed?
+        },
+        orderBy,
+        skip,
+        take: pageSize,
+      }),
+      prisma.movie.count({ where }),
+    ]);
+
+    const totalPages = Math.ceil(totalCount / pageSize);
+
+    return { movies, totalPages };
   } catch (error) {
     console.error('Failed to fetch movies:', error);
     throw new Error('Failed to fetch movies data');

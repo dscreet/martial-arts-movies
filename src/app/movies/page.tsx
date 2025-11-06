@@ -12,6 +12,7 @@ import MovieList from '@/components/MovieList';
 import Sort from '@/components/Sort';
 import SingleSelectFilter from '@/components/SingleSelectFilter';
 import ControlsContainer from '@/components/ControlsContainer';
+import PaginationBar from '@/components/Pagination';
 
 interface PageProps {
   searchParams: Promise<{
@@ -20,6 +21,7 @@ interface PageProps {
     genre?: string;
     country?: string;
     year?: string;
+    page?: string;
   }>;
 }
 
@@ -30,6 +32,7 @@ interface PageProps {
 
 export default async function Home({ searchParams }: PageProps) {
   const queryParams = await searchParams; //individuallry or like this? to name params or keep queryparams?
+  const currentPage = Number(queryParams.page) || 1;
 
   //more validation later
   const martialArt = queryParams['martial-art'];
@@ -60,12 +63,14 @@ export default async function Home({ searchParams }: PageProps) {
     { id: 9, name: '2020+', value: '2020' },
   ];
 
+  // should page be a part of moviequery??
   console.log(queryParams);
   //fetch all movies, genres, etc at once?
-  const movies = await fetchMovies(movieQuery);
+  const { movies, totalPages } = await fetchMovies(movieQuery, currentPage);
   const allMartialArts = await fetchMartialArts();
   const allGenres = await fetchGenres();
   const allCountries = await fetchCountries();
+  //use countries from fetchMovies instead?
   console.log(allCountries.length);
   console.log(movies.length);
   if (!movies) return null;
@@ -95,6 +100,7 @@ export default async function Home({ searchParams }: PageProps) {
         <Sort />
       </ControlsContainer>
       <MovieList movies={movies} />
+      <PaginationBar totalPages={totalPages} />
     </div>
   );
 }

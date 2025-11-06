@@ -23,6 +23,7 @@ export default function SelectFilter({ label, paramKey, options }: MultiSelectFi
     } else {
       params.set(paramKey, value);
     }
+    params.delete('page');
 
     router.push(`?${decodeURIComponent(params.toString())}`, { scroll: false });
   }
