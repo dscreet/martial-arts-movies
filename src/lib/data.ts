@@ -55,6 +55,18 @@ export async function fetchCountries() {
   }
 }
 
+export async function fetchMartialArt(slug: string) {
+  try {
+    return await prisma.martialArt.findUnique({
+      where: { slug },
+      select: { name: true },
+    });
+  } catch (error) {
+    console.error('Failed to fetch martial art:', error);
+    throw new Error('Failed to fetch martial art data');
+  }
+}
+
 export async function fetchMovies(query: MovieQuery = {}, page = 1, pageSize = 20) {
   try {
     const orderBy = sortOptions[query.sort || 'release-desc'];
@@ -88,11 +100,6 @@ export async function fetchMovies(query: MovieQuery = {}, page = 1, pageSize = 2
     const [movies, totalCount] = await Promise.all([
       prisma.movie.findMany({
         where,
-        include: {
-          primaryMartialArt: true, //needed?
-          genres: true, //needed?
-          countries: true, //needed?
-        },
         orderBy,
         skip,
         take: pageSize,

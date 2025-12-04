@@ -1,5 +1,5 @@
 // e.g. /martial-arts/karate/ - movies where the main martial art is the slug
-import { fetchMovies, MovieQuery, SortOption, sortOptions } from '@/lib/data';
+import { fetchMovies, fetchMartialArt, MovieQuery, SortOption, sortOptions } from '@/lib/data';
 import MovieList from '@/components/MovieList';
 import Sort from '@/components/Sort';
 import ControlsContainer from '@/components/ControlsContainer';
@@ -22,13 +22,13 @@ export default async function Home({ params, searchParams }: PageProps) {
 
   console.log(slug);
   console.log(movieQuery);
-  const movies = await fetchMovies(movieQuery);
+  const martialArt = await fetchMartialArt(slug);
+  const { movies } = await fetchMovies(movieQuery);
   console.log(movies.length);
   if (!movies) return null;
   return (
     <div>
-      {/* maybe a better way of getting the martial art name */}
-      <h1 className="text-4xl font-bold mb-12">{movies[0].primaryMartialArt.name} movies</h1>
+      <h1 className="text-4xl font-bold mb-12">{martialArt?.name} movies</h1>
       <ControlsContainer>
         <div className="ml-auto">
           <Sort />
