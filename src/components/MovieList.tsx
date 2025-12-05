@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import ImageWithFallback from '@/components/ImageWithFallback';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Movie } from '@prisma/client';
@@ -12,9 +12,13 @@ export default function MovieList({ movies }: { movies: Movie[] }) {
             {/* can modify border shadow and width from card */}
             <Card className="p-0 gap-0 flex-row flex overflow-hidden">
               <div className="relative w-24 h-32 flex-shrink-0">
-                {/* cover case of missing image or loading image*/}
-                <Image
-                  src={`https://image.tmdb.org/t/p/original${movie.posterPath}`}
+                <ImageWithFallback
+                  src={
+                    movie.posterPath
+                      ? `https://image.tmdb.org/t/p/original${movie.posterPath}`
+                      : '/images/fallback-image.png'
+                  }
+                  fallbackSrc={'/images/fallback-image.png'}
                   alt={movie.title}
                   fill
                   className="brightness-80"

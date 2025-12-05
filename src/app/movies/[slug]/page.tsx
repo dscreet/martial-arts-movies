@@ -1,6 +1,7 @@
 // e.g. /movies/karate-kid-legends-2025 - specific movie pages
 import { fetchMovie } from '@/lib/data';
 import Image from 'next/image';
+import ImageWithFallback from '@/components/ImageWithFallback';
 import { Badge } from '@/components/ui/badge';
 
 export default async function Home({ params }: { params: Promise<{ slug: string }> }) {
@@ -16,13 +17,15 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
       {/* HERO SECTION */}
       <div className="relative h-[400px] w-fill">
         {/* <div className="relative h-[400px] w-screen left-1/2 right-1/2 -mx-[50vw] -mt-8"> */}
-        <Image
-          src={`https://image.tmdb.org/t/p/original${movie.backdropPath}`}
-          alt={movie.title}
-          fill
-          className="object-cover brightness-90"
-          preload
-        />
+        {movie.backdropPath && (
+          <Image
+            src={`https://image.tmdb.org/t/p/original${movie.backdropPath}`}
+            alt={movie.title}
+            fill
+            className="object-cover brightness-90"
+            preload
+          />
+        )}
         <div className="p-8 text-white absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex flex-col justify-end">
           {/* <div className="container "> */}
           <h1 className="text-5xl font-bold mb-2">{movie.title}</h1>
@@ -36,8 +39,11 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
       <div className="grid grid-cols-[300px_1fr] gap-8 py-8">
         {/* poster */}
         <div className="relative aspect-[2/3] w-full max-w-[300px] mx-auto">
-          <Image
-            src={`https://image.tmdb.org/t/p/original${movie.posterPath}`}
+          <ImageWithFallback
+            src={
+              movie.posterPath ? `https://image.tmdb.org/t/p/original${movie.posterPath}` : '/images/fallback-image.png'
+            }
+            fallbackSrc={'/images/fallback-image.png'}
             alt={movie.title}
             fill
             className="object-cover rounded-lg shadow-lg"
