@@ -8,7 +8,10 @@ export interface MovieQuery {
   country?: string;
   year?: string; //currently decades
 }
-
+//ma
+//genmres
+//countries
+//movies
 export const sortOptions = {
   'release-asc': { releaseDate: 'asc' },
   'release-desc': { releaseDate: 'desc' },
@@ -52,18 +55,6 @@ export async function fetchCountries() {
   } catch (error) {
     console.error('Failed to fetch countries:', error);
     throw new Error('Failed to fetch countries data');
-  }
-}
-
-export async function fetchMartialArt(slug: string) {
-  try {
-    return await prisma.martialArt.findUnique({
-      where: { slug },
-      select: { name: true },
-    });
-  } catch (error) {
-    console.error('Failed to fetch martial art:', error);
-    throw new Error('Failed to fetch martial art data');
   }
 }
 
@@ -113,6 +104,18 @@ export async function fetchMovies(query: MovieQuery = {}, page = 1, pageSize = 2
   } catch (error) {
     console.error('Failed to fetch movies:', error);
     throw new Error('Failed to fetch movies data');
+  }
+}
+
+export async function fetchMartialArt(slug: string) {
+  try {
+    return await prisma.martialArt.findUnique({
+      where: { slug },
+      select: { name: true },
+    });
+  } catch (error) {
+    console.error('Failed to fetch martial art:', error);
+    throw new Error('Failed to fetch martial art data');
   }
 }
 
