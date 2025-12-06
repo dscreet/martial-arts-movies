@@ -6,7 +6,9 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 // ensures reusing client if exists
-export const prisma = globalForPrisma.prisma ?? new PrismaClient();
+const prisma = globalForPrisma.prisma ?? new PrismaClient();
 
 // prevents creating multiple connections during hot reload in dev
 if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+
+export default prisma;

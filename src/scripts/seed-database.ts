@@ -10,7 +10,7 @@
 // 3. Seed countries table
 // 4. Seed processed movies table with relations (genres, countries, martial arts)
 
-import { prisma } from '@/lib/prisma';
+import prisma from '@/lib/prisma';
 import fs from 'fs/promises';
 import path from 'path';
 import dotenv from 'dotenv';
