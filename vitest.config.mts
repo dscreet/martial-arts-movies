@@ -6,6 +6,8 @@ export default defineConfig({
   plugins: [tsconfigPaths(), react()],
   test: {
     environment: 'jsdom',
+    setupFiles: ['./vitest.setup.ts'],
+    globals: true,
     coverage: {
       provider: 'v8',
       // include: ['src/**/*.{ts,tsx}'],
