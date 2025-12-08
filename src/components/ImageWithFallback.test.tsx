@@ -16,7 +16,6 @@ describe('ImageWithFallback', () => {
     render(<ImageWithFallback {...defaultProps} />);
 
     const img = screen.getByRole('img');
-
     expect(img).toHaveAttribute('src', '/original.jpg');
   });
 
@@ -24,9 +23,7 @@ describe('ImageWithFallback', () => {
     render(<ImageWithFallback {...defaultProps} />);
 
     const img = screen.getByRole('img');
-
     fireEvent.error(img);
-
     expect(img).toHaveAttribute('src', '/fallback.jpg');
   });
 });
