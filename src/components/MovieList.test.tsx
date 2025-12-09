@@ -47,6 +47,7 @@ describe('MovieList', () => {
     const movie = createMockMovie({
       releaseDate: new Date('2020-01-01'),
     });
+
     render(<MovieList movies={[movie]} />);
 
     expect(screen.getByText('2020')).toBeInTheDocument();
@@ -57,6 +58,7 @@ describe('MovieList', () => {
       title: 'Test movie',
       releaseDate: null,
     });
+
     render(<MovieList movies={[movie]} />);
 
     expect(screen.getByText('Test movie')).toBeInTheDocument();
