@@ -20,10 +20,6 @@ describe('PaginationBar', () => {
     return render(<PaginationBar totalPages={totalPages} />);
   };
 
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
-
   test('removes the page param when navigating to page 1', () => {
     renderWithParams('page=3');
 

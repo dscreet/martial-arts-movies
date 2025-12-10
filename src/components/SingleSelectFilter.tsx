@@ -4,13 +4,13 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { cn } from '@/lib/utils';
 
-interface MultiSelectFilterProps {
+interface SingleSelectFilterProps {
   label: string;
   paramKey: string;
   options: { id: number; name: string; value: string }[];
 }
 
-export default function SelectFilter({ label, paramKey, options }: MultiSelectFilterProps) {
+export default function SelectFilter({ label, paramKey, options }: SingleSelectFilterProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const selectedValue = searchParams.get(paramKey) || 'all';
