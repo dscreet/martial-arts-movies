@@ -10,7 +10,7 @@ vi.mock('@/components/MovieList', () => ({
 }));
 
 vi.mock('@/components/Pagination', () => ({
-  default: ({ totalPages }: any) => <div data-testid="pagination">pages: {totalPages}</div>,
+  default: ({ totalPages }: any) => <div data-testid="pagination">{totalPages}</div>,
 }));
 
 vi.mock('@/components/Sort', () => ({
@@ -53,13 +53,18 @@ describe('Martial Arts page', () => {
   test('uses default sort and page when params are missing', async () => {
     setupMocks();
 
-    await Home({
+    const ui = await Home({
       params: Promise.resolve({ slug: 'karate' }),
       searchParams: Promise.resolve({}),
     });
 
+    render(ui);
+
     expect(fetchMartialArt).toHaveBeenCalledWith('karate');
     expect(fetchMovies).toHaveBeenCalledWith({ primaryMartialArt: 'karate', sort: 'release-desc' }, 1);
+
+    expect(screen.getByRole('heading')).toHaveTextContent('Karate movies');
+    expect(screen.getByTestId('pagination')).toHaveTextContent('5');
   });
 
   test('uses valid sort and page params when provided', async () => {
