@@ -85,7 +85,7 @@ describe('SelectFilter', () => {
   });
 
   test('preserves other search params when filter changes', async () => {
-    const { user, mockPush } = renderWithParams('genre=action&martial-art=kung-fu&sort=desc');
+    const { user, mockPush } = renderWithParams('genre=action&martial-art=kung-fu&sort=release-desc');
 
     const dropdownButton = screen.getByRole('combobox');
     await user.click(dropdownButton);
@@ -94,7 +94,7 @@ describe('SelectFilter', () => {
     await user.click(advOption);
 
     expect(mockPush).toHaveBeenCalledTimes(1);
-    expect(mockPush).toHaveBeenCalledWith('?genre=adventure&martial-art=kung-fu&sort=desc', { scroll: false });
+    expect(mockPush).toHaveBeenCalledWith('?genre=adventure&martial-art=kung-fu&sort=release-desc', { scroll: false });
   });
 
   test('displays all options', async () => {
