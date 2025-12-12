@@ -1,9 +1,10 @@
 import { describe, test, expect, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
-import MockedImage from '@/__mocks__/next/image';
 import ImageWithFallback from '@/components/ImageWithFallback';
 
-vi.mock('next/image', () => ({ default: MockedImage }));
+vi.mock('next/image', () => ({
+  default: (props: any) => <img {...props} />,
+}));
 
 describe('ImageWithFallback', () => {
   const defaultProps = {

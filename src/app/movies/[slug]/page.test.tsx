@@ -1,10 +1,11 @@
 import { describe, test, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { fetchMovie } from '@/lib/data';
-import MockedImage from '@/__mocks__/next/image';
 import Home from '@/app/movies/[slug]/page';
 
-vi.mock('next/image', () => ({ default: MockedImage })); //removemocckedimage
+vi.mock('next/image', () => ({
+  default: (props: any) => <img {...props} />,
+}));
 
 vi.mock('@/components/ImageWithFallback', () => ({
   default: (props: any) => <img {...props} />,

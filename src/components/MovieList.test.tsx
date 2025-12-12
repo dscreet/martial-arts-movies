@@ -1,10 +1,11 @@
 import { describe, test, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import MockedImage from '@/__mocks__/next/image';
 import MovieList from '@/components/MovieList';
 import { Movie } from '@prisma/client';
 
-vi.mock('next/image', () => ({ default: MockedImage }));
+vi.mock('next/image', () => ({
+  default: (props: any) => <img {...props} />,
+}));
 
 describe('MovieList', () => {
   const createMockMovie = (overrides: Partial<Movie>): Movie =>
