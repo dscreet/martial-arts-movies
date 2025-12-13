@@ -15,7 +15,7 @@ import generatePagination from '@/lib/pagination';
 export default function PaginationBar({ totalPages }: { totalPages: number }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const currentPage = Number(searchParams.get('page') || 1);
+  const currentPage = Number(searchParams.get('page')) || 1;
 
   function setPage(page: number) {
     const params = new URLSearchParams(searchParams);
