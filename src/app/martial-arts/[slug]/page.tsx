@@ -30,7 +30,7 @@ export default async function Home({ params, searchParams }: PageProps) {
   const martialArt = await fetchMartialArt(slug);
   const { movies, totalPages } = await fetchMovies(movieQuery, currentPage);
   console.log(movies.length);
-  if (!movies) return null;
+
   return (
     <div>
       <h1 className="text-4xl font-bold mb-12">{martialArt?.name} movies</h1>
@@ -39,7 +39,11 @@ export default async function Home({ params, searchParams }: PageProps) {
           <Sort />
         </div>
       </ControlsContainer>
-      <MovieList movies={movies} />
+      {movies.length ? (
+        <MovieList movies={movies} />
+      ) : (
+        <p className="p-2 text-lg text-muted-foreground">No movies found</p>
+      )}
       <PaginationBar totalPages={totalPages} />
     </div>
   );

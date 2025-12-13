@@ -73,7 +73,7 @@ export default async function Home({ searchParams }: PageProps) {
   //use countries from fetchMovies instead?
   console.log(allCountries.length);
   console.log(movies.length);
-  if (!movies) return null;
+
   return (
     <div>
       <h1 className="text-4xl font-bold mb-12">All movies</h1>
@@ -99,7 +99,11 @@ export default async function Home({ searchParams }: PageProps) {
 
         <Sort />
       </ControlsContainer>
-      <MovieList movies={movies} />
+      {movies.length ? (
+        <MovieList movies={movies} />
+      ) : (
+        <p className="p-2 text-lg text-muted-foreground">No movies found</p>
+      )}
       <PaginationBar totalPages={totalPages} />
     </div>
   );
