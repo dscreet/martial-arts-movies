@@ -2,10 +2,14 @@
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { SortOption, sortOptions } from '@/lib/data';
 
 export default function Sort() {
-  const searchParams = useSearchParams();
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const sort = searchParams.get('sort');
+  const sortValue: SortOption = sort && sort in sortOptions ? (sort as SortOption) : 'release-desc';
 
   function handleSortChange(value: string) {
     const params = new URLSearchParams(searchParams);
@@ -15,7 +19,7 @@ export default function Sort() {
 
   return (
     <div>
-      <Select onValueChange={handleSortChange} value={searchParams.get('sort') || 'release-desc'}>
+      <Select onValueChange={handleSortChange} value={sortValue}>
         <SelectTrigger className="w-[180px]">
           <SelectValue />
         </SelectTrigger>
