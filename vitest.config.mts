@@ -11,7 +11,7 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       // include: ['src/**/*.{ts,tsx}'],
-      exclude: ['src/components/ui/**', 'src/__mocks__/**', 'src/lib/utils.ts'],
+      exclude: ['src/components/ui/**', 'src/__mocks__/**', 'src/lib/utils.ts', 'src/lib/prisma.ts'],
     },
   },
 });

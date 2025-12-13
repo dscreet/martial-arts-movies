@@ -55,11 +55,7 @@ export async function fetchCountries() {
   }
 }
 
-export async function fetchMovies(
-  query: MovieQuery = {},
-  page = 1,
-  pageSize = 20
-) {
+export async function fetchMovies(query: MovieQuery = {}, page = 1, pageSize = 20) {
   try {
     const orderBy = sortOptions[query.sort || 'release-desc'];
     const skip = (page - 1) * pageSize;

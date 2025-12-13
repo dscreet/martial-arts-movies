@@ -1,7 +1,7 @@
 import { describe, test, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { fetchMovies, fetchMartialArt } from '@/lib/data';
-import Home from '@/app/martial-arts/[slug]/page';
+import { fetchMovies, fetchMartialArts, fetchGenres, fetchCountries } from '@/lib/data';
+import Home from '@/app/movies/page';
 
 vi.mock('@/components/MovieList', () => ({
   default: ({ movies }: any) => (
@@ -17,6 +17,10 @@ vi.mock('@/components/Sort', () => ({
   default: () => <div data-testid="sort" />,
 }));
 
+vi.mock('@/components/SingleSelectFilter', () => ({
+  default: () => <div data-testid="filter" />,
+}));
+
 vi.mock('@/components/ControlsContainer', () => ({
   default: ({ children }: any) => <div data-testid="controls">{children}</div>,
 }));
@@ -25,72 +29,77 @@ vi.mock('@/lib/data', async () => {
   const { sortOptions } = await vi.importActual('@/lib/data');
   return {
     fetchMovies: vi.fn(),
-    fetchMartialArt: vi.fn(),
+    fetchMartialArts: vi.fn(),
+    fetchGenres: vi.fn(),
+    fetchCountries: vi.fn(),
     sortOptions: sortOptions,
   };
 });
 
-describe('Martial Arts page', () => {
-  const mockMartialArt = { id: 1, name: 'Karate', slug: 'karate' };
-
+describe('All movies page', () => {
   const mockMovies = [
     { id: 1, title: 'The Karate Kid' },
     { id: 2, title: 'The Karate Kid 2' },
   ] as any;
 
   const setupMocks = (movies = mockMovies, totalPages = 5) => {
-    vi.mocked(fetchMartialArt).mockResolvedValue(mockMartialArt);
     vi.mocked(fetchMovies).mockResolvedValue({ movies, totalPages });
+    vi.mocked(fetchMartialArts).mockResolvedValue([]);
+    vi.mocked(fetchGenres).mockResolvedValue([]);
+    vi.mocked(fetchCountries).mockResolvedValue([]);
   };
 
   test('uses default sort and page when params are missing', async () => {
     setupMocks();
 
-    const ui = await Home({
-      params: Promise.resolve({ slug: 'karate' }),
-      searchParams: Promise.resolve({}),
-    });
-
+    const ui = await Home({ searchParams: Promise.resolve({}) });
     render(ui);
 
-    expect(fetchMartialArt).toHaveBeenCalledWith('karate');
-    expect(fetchMovies).toHaveBeenCalledWith({ primaryMartialArt: 'karate', sort: 'release-desc' }, 1);
+    expect(fetchMovies).toHaveBeenCalledWith({ sort: 'release-desc' }, 1);
 
-    expect(screen.getByRole('heading', { level: 1, name: 'Karate movies' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: 'All movies' })).toBeInTheDocument();
     expect(screen.getByTestId('movie-list')).toHaveTextContent('2 movies');
     expect(screen.getByTestId('pagination')).toHaveTextContent('5');
   });
 
-  test('uses valid sort and page params when provided', async () => {
+  test('uses valid filters, sort and page params when provided', async () => {
     setupMocks();
 
     await Home({
-      params: Promise.resolve({ slug: 'karate' }),
-      searchParams: Promise.resolve({ sort: 'title-asc', page: '5' }),
+      searchParams: Promise.resolve({
+        sort: 'title-asc',
+        'martial-art': 'karate',
+        genre: 'action',
+        country: 'US',
+        year: '1980',
+        page: '2',
+      }),
     });
 
-    expect(fetchMovies).toHaveBeenCalledWith({ primaryMartialArt: 'karate', sort: 'title-asc' }, 5);
+    expect(fetchMovies).toHaveBeenCalledWith(
+      {
+        sort: 'title-asc',
+        martialArt: 'karate',
+        genre: 'action',
+        country: 'US',
+        year: '1980',
+      },
+      2
+    );
   });
 
   test('falls back to default sort and page when params are invalid', async () => {
     setupMocks();
 
-    await Home({
-      params: Promise.resolve({ slug: 'karate' }),
-      searchParams: Promise.resolve({ sort: 'invalid-sort', page: 'x' }),
-    });
+    await Home({ searchParams: Promise.resolve({ sort: 'invalid-sort', page: 'x' }) });
 
-    expect(fetchMovies).toHaveBeenCalledWith({ primaryMartialArt: 'karate', sort: 'release-desc' }, 1);
+    expect(fetchMovies).toHaveBeenCalledWith({ sort: 'release-desc' }, 1);
   });
 
   test('shows empty message when no movies', async () => {
     setupMocks([], 0);
 
-    const ui = await Home({
-      params: Promise.resolve({ slug: 'karate' }),
-      searchParams: Promise.resolve({}),
-    });
-
+    const ui = await Home({ searchParams: Promise.resolve({}) });
     render(ui);
 
     expect(screen.getByText('No movies found')).toBeInTheDocument();
