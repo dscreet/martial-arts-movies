@@ -15,7 +15,7 @@ export default function Sort() {
     const params = new URLSearchParams(searchParams);
     params.set('sort', value);
     params.delete('page');
-    router.push(`?${params.toString()}`, { scroll: false });
+    router.push(`?${params.toString()}`);
   }
 
   return (

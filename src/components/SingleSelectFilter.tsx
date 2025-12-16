@@ -25,7 +25,7 @@ export default function SelectFilter({ label, paramKey, options }: SingleSelectF
     }
     params.delete('page');
 
-    router.push(`?${decodeURIComponent(params.toString())}`, { scroll: false });
+    router.push(`?${decodeURIComponent(params.toString())}`);
   }
 
   return (

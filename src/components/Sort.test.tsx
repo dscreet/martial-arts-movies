@@ -46,7 +46,7 @@ describe('Sort', () => {
     await user.click(oldestOption);
 
     expect(mockPush).toHaveBeenCalledTimes(1);
-    expect(mockPush).toHaveBeenCalledWith('?sort=release-asc', { scroll: false });
+    expect(mockPush).toHaveBeenCalledWith('?sort=release-asc');
   });
 
   test('preserves other search params when sort changes', async () => {
@@ -59,6 +59,6 @@ describe('Sort', () => {
     await user.click(newestOption);
 
     expect(mockPush).toHaveBeenCalledTimes(1);
-    expect(mockPush).toHaveBeenCalledWith('?genre=action&martial-art=kung-fu&sort=release-desc', { scroll: false });
+    expect(mockPush).toHaveBeenCalledWith('?genre=action&martial-art=kung-fu&sort=release-desc');
   });
 });

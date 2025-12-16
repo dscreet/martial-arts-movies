@@ -55,7 +55,7 @@ describe('SelectFilter', () => {
     await user.click(allOption);
 
     expect(mockPush).toHaveBeenCalledTimes(1);
-    expect(mockPush).toHaveBeenCalledWith('?', { scroll: false });
+    expect(mockPush).toHaveBeenCalledWith('?');
   });
 
   test('sets param when selecting a specific option', async () => {
@@ -68,7 +68,7 @@ describe('SelectFilter', () => {
     await user.click(advOption);
 
     expect(mockPush).toHaveBeenCalledTimes(1);
-    expect(mockPush).toHaveBeenCalledWith('?genre=adventure', { scroll: false });
+    expect(mockPush).toHaveBeenCalledWith('?genre=adventure');
   });
 
   test('removes page param when filter changes', async () => {
@@ -81,7 +81,7 @@ describe('SelectFilter', () => {
     await user.click(advOption);
 
     expect(mockPush).toHaveBeenCalledTimes(1);
-    expect(mockPush).toHaveBeenCalledWith('?genre=adventure', { scroll: false });
+    expect(mockPush).toHaveBeenCalledWith('?genre=adventure');
   });
 
   test('preserves other search params when filter changes', async () => {
@@ -94,7 +94,7 @@ describe('SelectFilter', () => {
     await user.click(advOption);
 
     expect(mockPush).toHaveBeenCalledTimes(1);
-    expect(mockPush).toHaveBeenCalledWith('?genre=adventure&martial-art=kung-fu&sort=release-desc', { scroll: false });
+    expect(mockPush).toHaveBeenCalledWith('?genre=adventure&martial-art=kung-fu&sort=release-desc');
   });
 
   test('displays all options', async () => {
