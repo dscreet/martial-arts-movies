@@ -1,4 +1,4 @@
-import { describe, test, expect, vi, beforeEach } from 'vitest';
+import { describe, test, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import PaginationBar from '@/components/Pagination';

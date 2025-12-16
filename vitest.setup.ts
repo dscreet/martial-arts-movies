@@ -1,6 +1,5 @@
 import '@testing-library/jest-dom/vitest';
 import { vi } from 'vitest';
-//add image mock here maybe
 
 // because radix/select is pain
 class MockPointerEvent extends Event {
