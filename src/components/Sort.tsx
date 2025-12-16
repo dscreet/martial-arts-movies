@@ -14,6 +14,7 @@ export default function Sort() {
   function handleSortChange(value: string) {
     const params = new URLSearchParams(searchParams);
     params.set('sort', value);
+    params.delete('page');
     router.push(`?${params.toString()}`, { scroll: false });
   }
 
