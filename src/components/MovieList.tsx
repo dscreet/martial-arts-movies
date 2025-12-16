@@ -5,7 +5,7 @@ import { Movie } from '@prisma/client';
 
 export default function MovieList({ movies }: { movies: Movie[] }) {
   return (
-    <ul className="space-y-6">
+    <ul data-testid="movie-list" className="space-y-6">
       {movies.map((movie) => (
         <li key={movie.id}>
           <Link href={`/movies/${movie.slug}`}>
