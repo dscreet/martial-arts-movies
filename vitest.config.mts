@@ -7,10 +7,10 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     setupFiles: ['./vitest.setup.ts'],
+    include: ['tests/unit/**/*.test.{ts,tsx}', 'tests/integration/**/*.test.{ts,tsx}'],
     globals: true,
     coverage: {
       provider: 'v8',
-      include: ['tests/unit/**/*.test.{ts,tsx}', 'tests/integration/**/*.test.{ts,tsx}'],
       exclude: ['src/components/ui/**', 'src/__mocks__/**', 'src/lib/utils.ts', 'src/lib/prisma.ts'],
     },
   },
