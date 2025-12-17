@@ -61,6 +61,7 @@ const eslintConfig = defineConfig([
     'next-env.d.ts',
     // custom (shadcn)
     'src/components/ui/**',
+    'src/scripts/**',
   ]),
 ]);
 
