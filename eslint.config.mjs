@@ -1,16 +1,67 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import { defineConfig, globalIgnores } from 'eslint/config';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTs from 'eslint-config-next/typescript';
+import prettier from 'eslint-config-prettier/flat';
+import betterTailwindcss from 'eslint-plugin-better-tailwindcss';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import vitest from '@vitest/eslint-plugin';
+import playwright from 'eslint-plugin-playwright';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+  // import sorting
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    plugins: {
+      'simple-import-sort': simpleImportSort,
+    },
+    rules: {
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
+    },
+  },
 
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
+  // tailwind
+  {
+    files: ['src/**/*.{js,jsx,ts,tsx}'],
+    plugins: {
+      'better-tailwindcss': betterTailwindcss,
+    },
+    rules: {
+      ...betterTailwindcss.configs.recommended.rules,
+    },
+    settings: {
+      'better-tailwindcss': {
+        entryPoint: 'src/app/globals.css',
+      },
+    },
+  },
+
+  // tests
+  {
+    files: ['tests/unit/**', 'tests/integration/**'],
+    ...vitest.configs.recommended,
+  },
+  {
+    files: ['tests/e2e/**'],
+    ...playwright.configs['flat/recommended'],
+  },
+
+  // ensures no conflicts with prettier config
+  prettier,
+
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
+    // custom (shadcn)
+    'src/components/ui/**',
+  ]),
+]);
 
 export default eslintConfig;
