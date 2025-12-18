@@ -1,7 +1,7 @@
 import ImageWithFallback from '@/components/ImageWithFallback';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
-import { Movie } from '@prisma/client';
+import type { Movie } from '@prisma/client';
 
 export default function MovieList({ movies }: { movies: Movie[] }) {
   return (

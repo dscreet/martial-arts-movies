@@ -1,5 +1,5 @@
 // e.g. /martial-arts/karate/ - movies where the main martial art is the slug
-import { fetchMovies, fetchMartialArt, MovieQuery, SortOption, sortOptions } from '@/lib/data';
+import { fetchMovies, fetchMartialArt, sortOptions, type MovieQuery, type SortOption } from '@/lib/data';
 import MovieList from '@/components/MovieList';
 import Sort from '@/components/Sort';
 import ControlsContainer from '@/components/ControlsContainer';

@@ -2,7 +2,7 @@
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { SortOption, sortOptions } from '@/lib/data';
+import { type SortOption, sortOptions } from '@/lib/data';
 
 export default function Sort() {
   const router = useRouter();

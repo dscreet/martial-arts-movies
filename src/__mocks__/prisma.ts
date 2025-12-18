@@ -1,6 +1,6 @@
-import { PrismaClient } from '@prisma/client';
+import type { PrismaClient } from '@prisma/client';
 import { beforeEach } from 'vitest';
-import { mockDeep, mockReset, DeepMockProxy } from 'vitest-mock-extended';
+import { mockDeep, mockReset, type DeepMockProxy } from 'vitest-mock-extended';
 
 beforeEach(() => {
   mockReset(prismaMock);

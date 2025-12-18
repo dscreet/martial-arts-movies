@@ -1,12 +1,12 @@
 // /movies/ - all movies with filtering
 import {
   fetchMovies,
-  MovieQuery,
-  SortOption,
   sortOptions,
   fetchGenres,
   fetchMartialArts,
   fetchCountries,
+  type MovieQuery,
+  type SortOption,
 } from '@/lib/data';
 import MovieList from '@/components/MovieList';
 import Sort from '@/components/Sort';

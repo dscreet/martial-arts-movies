@@ -11,13 +11,21 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
 
-  // avoid non-issue ts lint errors
+  // ts
   {
     rules: {
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
+          // avoids non-issue error
           ignoreRestSiblings: true,
+        },
+      ],
+      // ensures importing types as `import type`
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        {
+          fixStyle: 'inline-type-imports',
         },
       ],
     },
