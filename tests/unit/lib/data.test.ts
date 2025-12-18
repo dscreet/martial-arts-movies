@@ -1,11 +1,18 @@
+import type { PrismaClient } from '@prisma/client';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
+import { mockDeep, mockReset } from 'vitest-mock-extended';
 
-import { prismaMock } from '@/__mocks__/prisma';
 import { fetchCountries, fetchMartialArt, fetchMartialArts, fetchMovie, fetchMovies } from '@/lib/data';
+import prisma from '@/lib/prisma';
 
-vi.mock('@/lib/prisma', () => ({ default: prismaMock }));
+vi.mock('@/lib/prisma', () => ({
+  default: mockDeep<PrismaClient>(),
+}));
+
+const prismaMock = vi.mocked(prisma, true);
 
 beforeEach(() => {
+  mockReset(prismaMock);
   vi.spyOn(console, 'error').mockImplementation(() => {});
 });
 
