@@ -73,7 +73,7 @@ export default async function Home({ searchParams }: PageProps) {
 
   return (
     <div>
-      <h1 className="text-4xl font-bold mb-12">All movies</h1>
+      <h1 className="mb-12 text-4xl font-bold">All movies</h1>
       <ControlsContainer>
         <div className="flex flex-wrap items-center gap-4">
           <SingleSelectFilter

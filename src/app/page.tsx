@@ -9,19 +9,19 @@ export default async function Home() {
   const martialArts = await fetchMartialArts();
   return (
     <div>
-      <h1 className="text-4xl font-bold text-center mb-12">Explore Martial Arts</h1>
+      <h1 className="mb-12 text-center text-4xl font-bold">Explore Martial Arts</h1>
       <div className="grid grid-cols-5 gap-6">
         {martialArts.map((martialArt) => (
           <Link key={martialArt.id} href={`/martial-arts/${martialArt.slug}`}>
-            <Card className="group hover:shadow-md transition-shadow">
+            <Card className="group transition-shadow hover:shadow-md">
               <CardContent className="relative h-40 overflow-hidden">
                 <Image
                   src={`/images/${martialArt.slug}.jpg`}
                   alt={martialArt.name}
                   fill
-                  className="object-cover transition-transform transition-[filter] duration-300 group-hover:scale-105 brightness-80 group-hover:brightness-60"
+                  className="object-cover brightness-80 transition-transform duration-300 group-hover:scale-105 group-hover:brightness-60"
                 />
-                <CardTitle className="absolute inset-0 flex items-center justify-center text-xl text-white font-semibold">
+                <CardTitle className="absolute inset-0 flex items-center justify-center text-xl font-semibold text-white">
                   {martialArt.name}
                 </CardTitle>
               </CardContent>

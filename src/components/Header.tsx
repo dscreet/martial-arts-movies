@@ -11,7 +11,7 @@ export default function Header() {
   return (
     //header can be made reduntant if i want full edge
     <header className="border-b bg-background">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="text-2xl font-bold">
           Martial Arts Movies
         </Link>

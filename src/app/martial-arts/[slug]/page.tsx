@@ -30,7 +30,7 @@ export default async function Home({ params, searchParams }: PageProps) {
 
   return (
     <div>
-      <h1 className="text-4xl font-bold mb-12">{martialArt?.name} movies</h1>
+      <h1 className="mb-12 text-4xl font-bold">{martialArt?.name} movies</h1>
       <ControlsContainer>
         <div className="ml-auto">
           <Sort />

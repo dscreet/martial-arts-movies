@@ -15,7 +15,7 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
   return (
     <div>
       {/* HERO SECTION */}
-      <div className="relative h-[400px] w-fill">
+      <div className="relative h-[400px] w-full">
         {/* <div className="relative h-[400px] w-screen left-1/2 right-1/2 -mx-[50vw] -mt-8"> */}
         {movie.backdropPath && (
           <Image
@@ -26,9 +26,9 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
             preload
           />
         )}
-        <div className="p-8 text-white absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex flex-col justify-end">
+        <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black/70 via-black/40 to-transparent p-8 text-white">
           {/* <div className="container "> */}
-          <h1 className="text-5xl font-bold mb-2">{movie.title}</h1>
+          <h1 className="mb-2 text-5xl font-bold">{movie.title}</h1>
           <p className="text-xl text-white/80">{movie.releaseDate?.getFullYear()}</p>
         </div>
       </div>
@@ -38,7 +38,7 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
       {/* grid-cols-1 md:grid-cols... */}
       <div className="grid grid-cols-[300px_1fr] gap-8 py-8">
         {/* poster */}
-        <div className="relative aspect-[2/3] w-full max-w-[300px] mx-auto">
+        <div className="relative mx-auto aspect-2/3 w-full max-w-[300px]">
           <ImageWithFallback
             src={
               movie.posterPath ? `https://image.tmdb.org/t/p/original${movie.posterPath}` : '/images/fallback-image.png'
@@ -46,7 +46,7 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
             fallbackSrc={'/images/fallback-image.png'}
             alt={movie.title}
             fill
-            className="object-cover rounded-lg shadow-lg"
+            className="rounded-lg object-cover shadow-lg"
           />
         </div>
 
@@ -54,20 +54,20 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
         <div className="space-y-6">
           {/* overview */}
           <div>
-            <h2 className="text-2xl font-semibold mb-3">Overview</h2>
-            <p className="text-muted-foreground leading-relaxed">{movie.overview}</p>
+            <h2 className="mb-3 text-2xl font-semibold">Overview</h2>
+            <p className="leading-relaxed text-muted-foreground">{movie.overview}</p>
           </div>
 
           {/* primary martial art */}
           <div>
-            <h3 className="text-xl font-semibold mb-2">Primary martial art</h3>
+            <h3 className="mb-2 text-xl font-semibold">Primary martial art</h3>
             <Badge className="text-base">{movie.primaryMartialArt.name}</Badge>
           </div>
 
           {/* secondary martial arts */}
           {secondaryMartialArts && secondaryMartialArts.length > 0 && (
             <div>
-              <h3 className="text-xl font-semibold mb-2">Also features</h3>
+              <h3 className="mb-2 text-xl font-semibold">Also features</h3>
               <div className="flex flex-wrap gap-2">
                 {secondaryMartialArts.map((art) => (
                   <Badge key={art.id} variant="secondary">
@@ -80,7 +80,7 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
 
           {/* genres */}
           <div>
-            <h3 className="text-xl font-semibold mb-2">Genres</h3>
+            <h3 className="mb-2 text-xl font-semibold">Genres</h3>
             <div className="flex flex-wrap gap-2">
               {movie.genres.map((genre) => (
                 <Badge key={genre.id} variant="outline">
@@ -92,7 +92,7 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
 
           {/* countries */}
           <div>
-            <h3 className="text-xl font-semibold mb-2">Countries</h3>
+            <h3 className="mb-2 text-xl font-semibold">Countries</h3>
             <div className="flex flex-wrap gap-2">
               {movie.countries.map((country) => (
                 <Badge key={country.id} variant="outline">
