@@ -6,7 +6,6 @@ import { Badge } from '@/components/ui/badge';
 
 export default async function Home({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  console.log(slug);
   const movie = await fetchMovie(slug);
   if (!movie) return null; //implement error page later
 

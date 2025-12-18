@@ -64,15 +64,12 @@ export default async function Home({ searchParams }: PageProps) {
   ];
 
   // should page be a part of moviequery??
-  console.log(queryParams);
   //fetch all movies, genres, etc at once?
   const { movies, totalPages } = await fetchMovies(movieQuery, currentPage);
   const allMartialArts = await fetchMartialArts();
   const allGenres = await fetchGenres();
   const allCountries = await fetchCountries();
   //use countries from fetchMovies instead?
-  console.log(allCountries.length);
-  console.log(movies.length);
 
   return (
     <div>

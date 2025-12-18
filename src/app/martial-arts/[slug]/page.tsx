@@ -25,11 +25,8 @@ export default async function Home({ params, searchParams }: PageProps) {
     sort: sortOption,
   };
 
-  console.log(slug);
-  console.log(movieQuery);
   const martialArt = await fetchMartialArt(slug);
   const { movies, totalPages } = await fetchMovies(movieQuery, currentPage);
-  console.log(movies.length);
 
   return (
     <div>

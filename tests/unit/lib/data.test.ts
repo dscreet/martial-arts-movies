@@ -1,8 +1,16 @@
-import { describe, test, expect, vi } from 'vitest';
+import { describe, test, expect, vi, beforeEach, afterEach } from 'vitest';
 import { prismaMock } from '@/__mocks__/prisma';
 import { fetchMartialArt, fetchMartialArts, fetchCountries, fetchMovie, fetchMovies } from '@/lib/data';
 
 vi.mock('@/lib/prisma', () => ({ default: prismaMock }));
+
+beforeEach(() => {
+  vi.spyOn(console, 'error').mockImplementation(() => {});
+});
+
+afterEach(() => {
+  vi.restoreAllMocks();
+});
 
 describe('fetchMartialArts', () => {
   test('returns a list of martial arts when found', async () => {
