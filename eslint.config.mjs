@@ -76,6 +76,15 @@ const eslintConfig = defineConfig([
     ...playwright.configs['flat/recommended'],
   },
 
+  // should be able to mock next/image for tests and not have to set alt
+  {
+    files: ['**/*.test.{ts,tsx}', '**/*.spec.{ts,tsx}'],
+    rules: {
+      '@next/next/no-img-element': 'off',
+      'jsx-a11y/alt-text': 'off',
+    },
+  },
+
   // ensures no conflicts with prettier config
   prettier,
 
