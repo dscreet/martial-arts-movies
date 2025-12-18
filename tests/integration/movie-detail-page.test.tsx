@@ -4,11 +4,11 @@ import { fetchMovie } from '@/lib/data';
 import Home from '@/app/movies/[slug]/page';
 
 vi.mock('next/image', () => ({
-  default: (props: any) => <img {...props} />,
+  default: ({ fill, preload, ...props }: any) => <img {...props} />,
 }));
 
 vi.mock('@/components/ImageWithFallback', () => ({
-  default: (props: any) => <img {...props} />,
+  default: ({ fill, fallbackSrc, ...props }: any) => <img {...props} />,
 }));
 
 vi.mock('@/components/ui/badge', () => ({

@@ -11,6 +11,18 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
 
+  // avoid non-issue ts lint errors
+  {
+    rules: {
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          ignoreRestSiblings: true,
+        },
+      ],
+    },
+  },
+
   // import sorting
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
@@ -59,9 +71,10 @@ const eslintConfig = defineConfig([
     'out/**',
     'build/**',
     'next-env.d.ts',
-    // custom (shadcn)
+    // custom
     'src/components/ui/**',
     'src/scripts/**',
+    'coverage/**',
   ]),
 ]);
 

@@ -4,7 +4,7 @@ import MovieList from '@/components/MovieList';
 import { Movie } from '@prisma/client';
 
 vi.mock('next/image', () => ({
-  default: (props: any) => <img {...props} />,
+  default: ({ fill, ...props }: any) => <img {...props} />,
 }));
 
 describe('MovieList', () => {
@@ -17,7 +17,7 @@ describe('MovieList', () => {
       overview: 'Movie overview',
       releaseDate: new Date('2000-01-01'),
       ...overrides,
-    } as Movie);
+    }) as Movie;
 
   test('renders the correct number of movies', () => {
     const movies = [createMockMovie({ id: 1 }), createMockMovie({ id: 2 }), createMockMovie({ id: 3 })];
