@@ -1,9 +1,9 @@
 // e.g. /martial-arts/karate/ - movies where the main martial art is the slug
-import { fetchMovies, fetchMartialArt, sortOptions, type MovieQuery, type SortOption } from '@/lib/data';
-import MovieList from '@/components/MovieList';
-import Sort from '@/components/Sort';
 import ControlsContainer from '@/components/ControlsContainer';
+import MovieList from '@/components/MovieList';
 import PaginationBar from '@/components/Pagination';
+import Sort from '@/components/Sort';
+import { fetchMartialArt, fetchMovies, type MovieQuery, type SortOption, sortOptions } from '@/lib/data';
 
 interface PageProps {
   params: Promise<{ slug: string }>;

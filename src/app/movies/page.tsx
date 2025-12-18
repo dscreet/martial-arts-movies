@@ -1,18 +1,18 @@
 // /movies/ - all movies with filtering
+import ControlsContainer from '@/components/ControlsContainer';
+import MovieList from '@/components/MovieList';
+import PaginationBar from '@/components/Pagination';
+import SingleSelectFilter from '@/components/SingleSelectFilter';
+import Sort from '@/components/Sort';
 import {
-  fetchMovies,
-  sortOptions,
+  fetchCountries,
   fetchGenres,
   fetchMartialArts,
-  fetchCountries,
+  fetchMovies,
   type MovieQuery,
   type SortOption,
+  sortOptions,
 } from '@/lib/data';
-import MovieList from '@/components/MovieList';
-import Sort from '@/components/Sort';
-import SingleSelectFilter from '@/components/SingleSelectFilter';
-import ControlsContainer from '@/components/ControlsContainer';
-import PaginationBar from '@/components/Pagination';
 
 interface PageProps {
   searchParams: Promise<{

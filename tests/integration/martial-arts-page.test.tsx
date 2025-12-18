@@ -1,7 +1,8 @@
-import { describe, test, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { fetchMovies, fetchMartialArt } from '@/lib/data';
+import { describe, expect, test, vi } from 'vitest';
+
 import Home from '@/app/martial-arts/[slug]/page';
+import { fetchMartialArt, fetchMovies } from '@/lib/data';
 
 vi.mock('@/components/MovieList', () => ({
   default: ({ movies }: any) => (

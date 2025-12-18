@@ -1,6 +1,7 @@
-import { describe, test, expect, vi, beforeEach, afterEach } from 'vitest';
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
+
 import { prismaMock } from '@/__mocks__/prisma';
-import { fetchMartialArt, fetchMartialArts, fetchCountries, fetchMovie, fetchMovies } from '@/lib/data';
+import { fetchCountries, fetchMartialArt, fetchMartialArts, fetchMovie, fetchMovies } from '@/lib/data';
 
 vi.mock('@/lib/prisma', () => ({ default: prismaMock }));
 

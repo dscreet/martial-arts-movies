@@ -1,7 +1,8 @@
-import { describe, test, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import MovieList from '@/components/MovieList';
 import type { Movie } from '@prisma/client';
+import { render, screen } from '@testing-library/react';
+import { describe, expect, test, vi } from 'vitest';
+
+import MovieList from '@/components/MovieList';
 
 vi.mock('next/image', () => ({
   default: ({ fill, ...props }: any) => <img {...props} />,

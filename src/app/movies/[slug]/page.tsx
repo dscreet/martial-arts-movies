@@ -1,8 +1,9 @@
 // e.g. /movies/karate-kid-legends-2025 - specific movie pages
-import { fetchMovie } from '@/lib/data';
 import Image from 'next/image';
+
 import ImageWithFallback from '@/components/ImageWithFallback';
 import { Badge } from '@/components/ui/badge';
+import { fetchMovie } from '@/lib/data';
 
 export default async function Home({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

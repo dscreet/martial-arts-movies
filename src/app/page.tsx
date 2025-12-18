@@ -1,7 +1,8 @@
 // home page where martial arts cards will be displayed
 import Image from 'next/image';
 import Link from 'next/link';
-import { Card, CardTitle, CardContent } from '@/components/ui/card';
+
+import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { fetchMartialArts } from '@/lib/data';
 
 export default async function Home() {

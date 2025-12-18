@@ -1,8 +1,9 @@
-import { describe, test, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { useRouter, useSearchParams } from 'next/navigation';
-import SelectFilter from '@/components/SingleSelectFilter';
 import userEvent from '@testing-library/user-event';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { describe, expect, test, vi } from 'vitest';
+
+import SelectFilter from '@/components/SingleSelectFilter';
 
 vi.mock('next/navigation', () => ({
   useRouter: vi.fn(),

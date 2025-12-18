@@ -1,7 +1,8 @@
-import { describe, test, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { fetchMovie } from '@/lib/data';
+import { describe, expect, test, vi } from 'vitest';
+
 import Home from '@/app/movies/[slug]/page';
+import { fetchMovie } from '@/lib/data';
 
 vi.mock('next/image', () => ({
   default: ({ fill, preload, ...props }: any) => <img {...props} />,
