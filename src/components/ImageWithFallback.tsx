@@ -3,7 +3,7 @@
 import Image, { type ImageProps } from 'next/image';
 import { useState } from 'react';
 
-interface ImageWithFallbackProps extends ImageProps {
+export interface ImageWithFallbackProps extends ImageProps {
   fallbackSrc: string;
 }
 

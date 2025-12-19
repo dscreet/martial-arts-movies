@@ -1,19 +1,25 @@
 import { render, screen } from '@testing-library/react';
+import type { ImageProps } from 'next/image';
 import { describe, expect, test, vi } from 'vitest';
 
 import Home from '@/app/movies/[slug]/page';
+import type { ImageWithFallbackProps } from '@/components/ImageWithFallback';
 import { fetchMovie } from '@/lib/data';
 
 vi.mock('next/image', () => ({
-  default: ({ fill, preload, ...props }: any) => <img {...props} />,
+  default: ({ fill, preload, ...props }: ImageProps) => (
+    <img {...(props as React.ImgHTMLAttributes<HTMLImageElement>)} />
+  ),
 }));
 
 vi.mock('@/components/ImageWithFallback', () => ({
-  default: ({ fill, fallbackSrc, ...props }: any) => <img {...props} />,
+  default: ({ fill, fallbackSrc, ...props }: ImageWithFallbackProps) => (
+    <img {...(props as React.ImgHTMLAttributes<HTMLImageElement>)} />
+  ),
 }));
 
 vi.mock('@/components/ui/badge', () => ({
-  Badge: ({ children, ...rest }: any) => <span {...rest}>{children}</span>,
+  Badge: ({ children, ...rest }: { children?: React.ReactNode }) => <span {...rest}>{children}</span>,
 }));
 
 vi.mock('@/lib/data', async () => ({
@@ -23,14 +29,11 @@ vi.mock('@/lib/data', async () => ({
 type Movie = NonNullable<Awaited<ReturnType<typeof fetchMovie>>>;
 
 describe('Movie details page', () => {
-  const mockMovie: Partial<Movie> = {
+  const mockMovie = {
     id: 1,
     slug: 'karate-kid-legends-2025',
     title: 'Karate Kid Legends',
-    overview: 'A reboot of the classic franchise.',
     releaseDate: new Date('2025-01-01'),
-    posterPath: '/poster.jpg',
-    backdropPath: '/backdrop.jpg',
     primaryMartialArt: { id: 1, name: 'Karate', slug: 'karate' },
     martialArts: [
       { id: 1, name: 'Karate', slug: 'karate' },
@@ -41,7 +44,7 @@ describe('Movie details page', () => {
       { id: 2, name: 'Adventure', slug: 'adventure' },
     ],
     countries: [{ id: 1, name: 'United States of America', code: 'US' }],
-  };
+  } satisfies Partial<Movie>;
 
   test('fetches movie using slug', async () => {
     vi.mocked(fetchMovie).mockResolvedValue(mockMovie as Movie);

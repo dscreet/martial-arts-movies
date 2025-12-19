@@ -1,4 +1,5 @@
-import type { PrismaClient } from '@prisma/client';
+import type { MartialArt, PrismaClient } from '@prisma/client';
+import type { Movie } from '@prisma/client';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 import { mockDeep, mockReset } from 'vitest-mock-extended';
 
@@ -72,7 +73,7 @@ describe('fetchCountries', () => {
 describe('fetchMovies', () => {
   test('returns movies with pagination on default parameters', async () => {
     const mockMovies = [{ id: 1, title: 'Ip Man' }];
-    prismaMock.movie.findMany.mockResolvedValue(mockMovies as any);
+    prismaMock.movie.findMany.mockResolvedValue(mockMovies as Movie[]);
     prismaMock.movie.count.mockResolvedValue(42);
 
     const result = await fetchMovies();
@@ -184,7 +185,7 @@ describe('fetchMovies', () => {
 describe('fetchMartialArt', () => {
   test('returns martial art data when found', async () => {
     const mockResult = { name: 'Kung Fu' };
-    prismaMock.martialArt.findUnique.mockResolvedValue(mockResult as any);
+    prismaMock.martialArt.findUnique.mockResolvedValue(mockResult as unknown as MartialArt);
 
     const result = await fetchMartialArt('kung-fu');
 
@@ -217,12 +218,8 @@ describe('fetchMovie', () => {
       id: 1,
       title: 'Ip Man',
       slug: 'ip-man-x',
-      primaryMartialArt: null,
-      martialArts: [],
-      genres: [],
-      countries: [],
     };
-    prismaMock.movie.findUnique.mockResolvedValue(mockResult as any);
+    prismaMock.movie.findUnique.mockResolvedValue(mockResult as unknown as Movie);
 
     const result = await fetchMovie('ip-man-x');
 

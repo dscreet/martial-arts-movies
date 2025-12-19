@@ -1,10 +1,11 @@
 import { fireEvent, render, screen } from '@testing-library/react';
+import type { ImageProps } from 'next/image';
 import { describe, expect, test, vi } from 'vitest';
 
 import ImageWithFallback from '@/components/ImageWithFallback';
 
 vi.mock('next/image', () => ({
-  default: (props: any) => <img {...props} />,
+  default: (props: ImageProps) => <img {...(props as React.ImgHTMLAttributes<HTMLImageElement>)} />,
 }));
 
 describe('ImageWithFallback', () => {

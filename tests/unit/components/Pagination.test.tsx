@@ -17,7 +17,7 @@ vi.mock('@/lib/pagination', () => ({
 describe('PaginationBar', () => {
   const renderWithParams = (searchParams = '', totalPages = 3) => {
     vi.mocked(usePathname).mockReturnValue('/movies');
-    vi.mocked(useSearchParams).mockReturnValue(new URLSearchParams(searchParams) as any);
+    vi.mocked(useSearchParams).mockReturnValue(new URLSearchParams(searchParams) as ReturnType<typeof useSearchParams>);
     return render(<PaginationBar totalPages={totalPages} />);
   };
 

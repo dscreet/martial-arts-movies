@@ -13,8 +13,9 @@ vi.mock('next/navigation', () => ({
 describe('Sort', () => {
   const renderWithParams = (search = '') => {
     const mockPush = vi.fn();
-    vi.mocked(useRouter).mockReturnValue({ push: mockPush } as any);
-    vi.mocked(useSearchParams).mockReturnValue(new URLSearchParams(search) as any);
+    type useRouterType = ReturnType<typeof useRouter>;
+    vi.mocked(useRouter).mockReturnValue({ push: mockPush } as Partial<useRouterType> as useRouterType);
+    vi.mocked(useSearchParams).mockReturnValue(new URLSearchParams(search) as ReturnType<typeof useSearchParams>);
 
     return {
       user: userEvent.setup(),

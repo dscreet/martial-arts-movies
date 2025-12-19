@@ -1,3 +1,4 @@
+import type { Movie } from '@prisma/client';
 import { render, screen } from '@testing-library/react';
 import { describe, expect, test, vi } from 'vitest';
 
@@ -5,13 +6,13 @@ import Home from '@/app/martial-arts/[slug]/page';
 import { fetchMartialArt, fetchMovies } from '@/lib/data';
 
 vi.mock('@/components/MovieList', () => ({
-  default: ({ movies }: any) => (
+  default: ({ movies }: { movies: Movie[] }) => (
     <div data-testid="movie-list">{!movies.length ? 'No movies found' : `${movies.length} movies`}</div>
   ),
 }));
 
 vi.mock('@/components/Pagination', () => ({
-  default: ({ totalPages }: any) => <div data-testid="pagination">{totalPages}</div>,
+  default: ({ totalPages }: { totalPages: number }) => <div data-testid="pagination">{totalPages}</div>,
 }));
 
 vi.mock('@/components/Sort', () => ({
@@ -19,7 +20,7 @@ vi.mock('@/components/Sort', () => ({
 }));
 
 vi.mock('@/components/ControlsContainer', () => ({
-  default: ({ children }: any) => <div data-testid="controls">{children}</div>,
+  default: ({ children }: { children: React.ReactNode }) => <div data-testid="controls">{children}</div>,
 }));
 
 vi.mock('@/lib/data', async () => {
@@ -37,9 +38,9 @@ describe('Martial Arts page', () => {
   const mockMovies = [
     { id: 1, title: 'The Karate Kid' },
     { id: 2, title: 'The Karate Kid 2' },
-  ] as any;
+  ] satisfies Partial<Movie>[];
 
-  const setupMocks = (movies = mockMovies, totalPages = 5) => {
+  const setupMocks = (movies = mockMovies as Movie[], totalPages = 5) => {
     vi.mocked(fetchMartialArt).mockResolvedValue(mockMartialArt);
     vi.mocked(fetchMovies).mockResolvedValue({ movies, totalPages });
   };

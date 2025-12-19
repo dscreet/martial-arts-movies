@@ -1,11 +1,12 @@
 import type { Movie } from '@prisma/client';
 import { render, screen } from '@testing-library/react';
+import type { ImageProps } from 'next/image';
 import { describe, expect, test, vi } from 'vitest';
 
 import MovieList from '@/components/MovieList';
 
 vi.mock('next/image', () => ({
-  default: ({ fill, ...props }: any) => <img {...props} />,
+  default: ({ fill, ...props }: ImageProps) => <img {...(props as React.ImgHTMLAttributes<HTMLImageElement>)} />,
 }));
 
 describe('MovieList', () => {
