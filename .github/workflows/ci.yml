@@ -16,6 +16,8 @@ jobs:
       - run: npm run lint
       - run: npm run typecheck
       - run: npm run test
+      - env:
+          DATABASE_URL: file:./dev.db
       - run: npx playwright install --with-deps
       - run: npm run test:e2e
 #name steps
