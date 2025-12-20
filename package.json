@@ -19,7 +19,8 @@
     "coverage": "vitest run --coverage",
     "data:fetch": "tsx src/scripts/fetch-tmdb-data.ts",
     "data:process": "tsx src/scripts/process-data.ts",
-    "data:seed": "tsx src/scripts/seed-database.ts"
+    "data:seed": "tsx src/scripts/seed-database.ts",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^6.18.0",
