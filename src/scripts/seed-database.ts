@@ -60,7 +60,7 @@ async function seedGenres() {
       prisma.genre.upsert({
         where: { id: genre.id },
         update: {},
-        create: { id: genre.id, name: genre.name },
+        create: { id: genre.id, name: genre.name, slug: genre.slug },
       })
     )
   );
