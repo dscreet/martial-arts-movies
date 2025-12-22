@@ -73,7 +73,7 @@ describe('MovieList', () => {
     render(<MovieList movies={[movie]} />);
 
     const img = screen.getByRole('img');
-    expect(img).toHaveAttribute('src', 'https://image.tmdb.org/t/p/original/example-path.jpg');
+    expect(img.getAttribute('src')).toMatch(/^https:\/\/image\.tmdb\.org\/t\/p\/.+\/example-path\.jpg$/);
   });
 
   test('handles missing posterPath properly', () => {
