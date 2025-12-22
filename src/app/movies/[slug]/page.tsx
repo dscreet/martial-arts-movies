@@ -4,7 +4,7 @@ import Image from 'next/image';
 import ImageWithFallback from '@/components/ImageWithFallback';
 import { Badge } from '@/components/ui/badge';
 import { fetchMovie } from '@/lib/data';
-import { imageLoader } from '@/lib/image-loader';
+import imageLoader from '@/lib/image-loader';
 
 export default async function Home({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
