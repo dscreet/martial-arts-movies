@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [new URL('https://image.tmdb.org/t/p/**')],
     unoptimized: process.env.CI === 'true', // to prevent timeout issues in ci
     // unoptimized: true,
+    loaderFile: './src/lib/image-loader.js',
   },
   /* config options here */
 };

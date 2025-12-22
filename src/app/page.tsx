@@ -19,6 +19,8 @@ export default async function Home() {
                   src={`/images/${martialArt.slug}.jpg`}
                   alt={martialArt.name}
                   fill
+                  // placeholder="blur"
+                  // blurDataURL={`/images/${martialArt.slug}.jpg`}
                   className="object-cover brightness-80 transition-transform duration-300 group-hover:scale-105 group-hover:brightness-60"
                 />
                 <CardTitle className="absolute inset-0 flex items-center justify-center text-xl font-semibold text-white">

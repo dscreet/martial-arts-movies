@@ -4,6 +4,7 @@ import Image from 'next/image';
 import ImageWithFallback from '@/components/ImageWithFallback';
 import { Badge } from '@/components/ui/badge';
 import { fetchMovie } from '@/lib/data';
+import { imageLoader } from '@/lib/image-loader';
 
 export default async function Home({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -19,11 +20,13 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
         {/* <div className="relative h-[400px] w-screen left-1/2 right-1/2 -mx-[50vw] -mt-8"> */}
         {movie.backdropPath && (
           <Image
-            src={`https://image.tmdb.org/t/p/original${movie.backdropPath}`}
+            src={movie.backdropPath}
             alt={movie.title}
             fill
+            loader={imageLoader}
             className="object-cover brightness-90"
             preload
+            // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         )}
         <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black/70 via-black/40 to-transparent p-8 text-white">
@@ -40,13 +43,13 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
         {/* poster */}
         <div className="relative mx-auto aspect-2/3 w-full max-w-[300px]">
           <ImageWithFallback
-            src={
-              movie.posterPath ? `https://image.tmdb.org/t/p/original${movie.posterPath}` : '/images/fallback-image.png'
-            }
+            src={movie.posterPath ? movie.posterPath : '/images/fallback-image.png'}
             fallbackSrc={'/images/fallback-image.png'}
             alt={movie.title}
-            fill
+            width={300}
+            height={300}
             className="rounded-lg object-cover shadow-lg"
+            loader={imageLoader}
           />
         </div>
 
