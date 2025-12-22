@@ -16,7 +16,7 @@ export default function MovieList({ movies }: { movies: Movie[] }) {
                 <ImageWithFallback
                   src={
                     movie.posterPath
-                      ? `https://image.tmdb.org/t/p/original${movie.posterPath}`
+                      ? `https://image.tmdb.org/t/p/w500${movie.posterPath}`
                       : '/images/fallback-image.png'
                   }
                   fallbackSrc={'/images/fallback-image.png'}
