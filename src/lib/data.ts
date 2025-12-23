@@ -132,3 +132,17 @@ export async function fetchMovie(slug: string) {
     throw new Error('Failed to fetch movie data');
   }
 }
+
+export async function fetchAllMovieSlugs() {
+  try {
+    return prisma.movie.findMany({
+      select: {
+        slug: true,
+        updatedAt: true,
+      },
+    });
+  } catch (error) {
+    console.error('Failed to fetch all movie slugs:', error);
+    throw new Error('Failed to fetch movie slug data');
+  }
+}
