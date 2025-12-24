@@ -1,5 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /stats.js
-
-Sitemap: https://martialmovies.com/sitemap.xml

@@ -6,7 +6,7 @@ import Script from 'next/script';
 import Header from '@/components/Header';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://martialmovies.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL ?? 'https://martialmovies.com'),
   openGraph: {
     siteName: 'Martial Arts Movies',
   },

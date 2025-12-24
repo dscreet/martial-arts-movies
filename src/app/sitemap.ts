@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 import { fetchAllMovieSlugs, fetchMartialArts } from '@/lib/data';
 
-const URL = 'https://martialmovies.com';
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const martialArts = await fetchMartialArts();
@@ -10,19 +10,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     {
-      url: `${URL}/`,
+      url: `${baseUrl}/`,
     },
 
     {
-      url: `${URL}/movies`,
+      url: `${baseUrl}/movies`,
     },
 
     ...martialArts.map((ma) => ({
-      url: `${URL}/martial-arts/${ma.slug}`,
+      url: `${baseUrl}/martial-arts/${ma.slug}`,
     })),
 
     ...movies.map((movie) => ({
-      url: `${URL}/movies/${movie.slug}`,
+      url: `${baseUrl}/movies/${movie.slug}`,
       lastModified: movie.updatedAt ?? new Date(),
     })),
   ];

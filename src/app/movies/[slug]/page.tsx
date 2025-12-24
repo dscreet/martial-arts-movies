@@ -1,14 +1,17 @@
 // e.g. /movies/karate-kid-legends-2025 - specific movie pages
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import { cache } from 'react';
 
 import ImageWithFallback from '@/components/ImageWithFallback';
 import { Badge } from '@/components/ui/badge';
 import { fetchMovie } from '@/lib/data';
 
+const getMovieCached = cache(fetchMovie);
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const movie = await fetchMovie(slug);
+  const movie = await getMovieCached(slug);
 
   if (!movie) {
     return {
@@ -52,7 +55,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function Home({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const movie = await fetchMovie(slug);
+  const movie = await getMovieCached(slug);
   if (!movie) return null; //implement error page later
 
   const secondaryMartialArts = movie.martialArts.filter((ma) => ma.id !== movie.primaryMartialArt?.id);

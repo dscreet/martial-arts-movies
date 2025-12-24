@@ -16,6 +16,22 @@ import {
   sortOptions,
 } from '@/lib/data';
 
+interface PageProps {
+  searchParams: Promise<{
+    sort?: string;
+    'martial-art'?: string;
+    genre?: string;
+    country?: string;
+    year?: string;
+    page?: string;
+  }>;
+}
+
+//, to list multiple values for same key e.g. color=purple,pink
+//= to separate key-value pairs e.g. category=dresses
+//& to add additional parameters e.g. category=dresses&color=purple,pink
+//- to separate words e.g. color-profile=dark-grey
+
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
   const hasParams = Object.keys(await searchParams).length > 0;
 
@@ -47,22 +63,6 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
     },
   };
 }
-
-interface PageProps {
-  searchParams: Promise<{
-    sort?: string;
-    'martial-art'?: string;
-    genre?: string;
-    country?: string;
-    year?: string;
-    page?: string;
-  }>;
-}
-
-//, to list multiple values for same key e.g. color=purple,pink
-//= to separate key-value pairs e.g. category=dresses
-//& to add additional parameters e.g. category=dresses&color=purple,pink
-//- to separate words e.g. color-profile=dark-grey
 
 export default async function Home({ searchParams }: PageProps) {
   const queryParams = await searchParams; //individuallry or like this? to name params or keep queryparams?

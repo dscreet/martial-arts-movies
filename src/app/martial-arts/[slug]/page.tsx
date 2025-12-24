@@ -1,5 +1,6 @@
 // e.g. /martial-arts/karate/ - movies where the main martial art is the slug
 import type { Metadata } from 'next';
+import { cache } from 'react';
 
 import ControlsContainer from '@/components/ControlsContainer';
 import MovieList from '@/components/MovieList';
@@ -7,9 +8,19 @@ import PaginationBar from '@/components/Pagination';
 import Sort from '@/components/Sort';
 import { fetchMartialArt, fetchMovies, type MovieQuery, type SortOption, sortOptions } from '@/lib/data';
 
+const getMartialArtCached = cache(fetchMartialArt);
+
+interface PageProps {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{
+    sort?: string;
+    page?: string;
+  }>;
+}
+
 export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const martialArt = await fetchMartialArt(slug);
+  const martialArt = await getMartialArtCached(slug);
 
   const hasParams = Object.keys(await searchParams).length > 0;
 
@@ -53,14 +64,6 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   };
 }
 
-interface PageProps {
-  params: Promise<{ slug: string }>;
-  searchParams: Promise<{
-    sort?: string;
-    page?: string;
-  }>;
-}
-
 export default async function Home({ params, searchParams }: PageProps) {
   const { slug } = await params;
   const { sort, page } = await searchParams;
@@ -73,7 +76,7 @@ export default async function Home({ params, searchParams }: PageProps) {
     sort: sortOption,
   };
 
-  const martialArt = await fetchMartialArt(slug);
+  const martialArt = await getMartialArtCached(slug);
   const { movies, totalPages } = await fetchMovies(movieQuery, currentPage);
 
   return (
