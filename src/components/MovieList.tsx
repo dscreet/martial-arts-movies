@@ -12,7 +12,7 @@ export default function MovieList({ movies }: { movies: Movie[] }) {
           <Link href={`/movies/${movie.slug}`}>
             {/* can modify border shadow and width from card */}
             <Card className="flex flex-row gap-0 overflow-hidden p-0">
-              <div className="relative h-32 w-24 shrink-0">
+              <div className="relative h-28 w-20 shrink-0 sm:h-32 sm:w-24">
                 <ImageWithFallback
                   src={
                     movie.posterPath
@@ -27,7 +27,7 @@ export default function MovieList({ movies }: { movies: Movie[] }) {
               </div>
 
               <div className="flex flex-1 flex-col justify-center space-y-2">
-                <CardHeader className="text-lg">
+                <CardHeader className="text-base sm:text-lg">
                   <CardTitle className="hover:text-gray-500"> {movie.title}</CardTitle>
                   <CardDescription>{movie.releaseDate?.getFullYear()}</CardDescription>
                 </CardHeader>

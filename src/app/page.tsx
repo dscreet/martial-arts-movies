@@ -23,12 +23,12 @@ export default async function Home() {
   const martialArts = await fetchMartialArts();
   return (
     <div>
-      <h1 className="mb-12 text-center text-4xl font-bold">Explore Martial Arts</h1>
-      <div className="grid grid-cols-5 gap-6">
+      <h1 className="mb-8 text-center text-3xl font-bold sm:mb-10 sm:text-4xl lg:mb-12">Explore Martial Arts</h1>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-4 lg:gap-6 xl:grid-cols-5">
         {martialArts.map((martialArt) => (
           <Link key={martialArt.id} href={`/martial-arts/${martialArt.slug}`}>
-            <Card className="group transition-shadow hover:shadow-md">
-              <CardContent className="relative h-40 overflow-hidden">
+            <Card className="group p-0 transition-shadow hover:shadow-md">
+              <CardContent className="relative aspect-[16/9] overflow-hidden rounded-tr-md rounded-bl-md">
                 <Image
                   src={`/images/${martialArt.slug}.webp`}
                   alt={martialArt.name}

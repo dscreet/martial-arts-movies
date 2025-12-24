@@ -22,7 +22,7 @@ export default function RootLayout({
       <body>
         <Script src="/stats.js" data-website-id={process.env.UMAMI_WEBSITE_ID} />
         <Header />
-        <main className="container mx-auto p-8">{children}</main>
+        <main className="container mx-auto px-6 py-8 sm:px-8 lg:px-10">{children}</main>
       </body>
     </html>
   );

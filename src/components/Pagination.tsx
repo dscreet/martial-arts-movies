@@ -34,7 +34,7 @@ export default function PaginationBar({ totalPages }: { totalPages: number }) {
 
   //class names and such dry?
   return (
-    <Pagination className="mt-8">
+    <Pagination className="mt-6 sm:mt-8">
       <PaginationContent>
         <PaginationItem>
           <PaginationPrevious

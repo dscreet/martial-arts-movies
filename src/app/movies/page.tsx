@@ -96,9 +96,9 @@ export default async function Home({ searchParams }: PageProps) {
 
   return (
     <div>
-      <h1 className="mb-12 text-4xl font-bold">All movies</h1>
+      <h1 className="mb-8 text-3xl font-bold sm:mb-10 sm:text-4xl lg:mb-12">All movies</h1>
       <ControlsContainer>
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap gap-4">
           <SingleSelectFilter
             label={'martial arts'}
             paramKey={'martial-art'}

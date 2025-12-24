@@ -52,7 +52,7 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
   return (
     <div>
       {/* HERO SECTION */}
-      <div className="relative h-[400px] w-full">
+      <div className="relative h-[260px] w-full sm:h-[320px] lg:h-[400px]">
         {/* <div className="relative h-[400px] w-screen left-1/2 right-1/2 -mx-[50vw] -mt-8"> */}
         {movie.backdropPath && (
           <Image
@@ -63,19 +63,17 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
             preload
           />
         )}
-        <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black/70 via-black/40 to-transparent p-8 text-white">
+        <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black/70 via-black/40 to-transparent p-4 text-white sm:p-6 lg:p-8">
           {/* <div className="container "> */}
-          <h1 className="mb-2 text-5xl font-bold">{movie.title}</h1>
-          <p className="text-xl text-white/80">{movie.releaseDate?.getFullYear()}</p>
+          <h1 className="mb-2 text-3xl font-bold sm:text-4xl lg:text-5xl">{movie.title}</h1>
+          <p className="text-base text-white/80 sm:text-lg lg:text-xl">{movie.releaseDate?.getFullYear()}</p>
         </div>
       </div>
 
       {/* CONTENT SECTION */}
-      {/* <div className="container  border-violet-500 border-3"> */}
-      {/* grid-cols-1 md:grid-cols... */}
-      <div className="grid grid-cols-[300px_1fr] gap-8 py-8">
+      <div className="grid grid-cols-1 gap-8 py-6 sm:py-8 md:grid-cols-[280px_1fr] lg:grid-cols-[300px_1fr]">
         {/* poster */}
-        <div className="relative mx-auto aspect-2/3 w-full max-w-[300px]">
+        <div className="relative mx-auto aspect-2/3 w-full max-w-[220px] sm:max-w-[300px]">
           <ImageWithFallback
             src={
               movie.posterPath ? `https://image.tmdb.org/t/p/w1280${movie.posterPath}` : '/images/fallback-image.png'
@@ -91,20 +89,20 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
         <div className="space-y-6">
           {/* overview */}
           <div>
-            <h2 className="mb-3 text-2xl font-semibold">Overview</h2>
+            <h2 className="mb-3 text-xl font-semibold sm:text-2xl">Overview</h2>
             <p className="leading-relaxed text-muted-foreground">{movie.overview}</p>
           </div>
 
           {/* primary martial art */}
           <div>
-            <h3 className="mb-2 text-xl font-semibold">Primary martial art</h3>
+            <h3 className="mb-2 text-lg font-semibold sm:text-xl">Primary martial art</h3>
             <Badge className="text-base">{movie.primaryMartialArt.name}</Badge>
           </div>
 
           {/* secondary martial arts */}
           {secondaryMartialArts && secondaryMartialArts.length > 0 && (
             <div>
-              <h3 className="mb-2 text-xl font-semibold">Also features</h3>
+              <h3 className="mb-2 text-lg font-semibold sm:text-xl">Also features</h3>
               <div className="flex flex-wrap gap-2">
                 {secondaryMartialArts.map((art) => (
                   <Badge key={art.id} variant="secondary">
@@ -117,7 +115,7 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
 
           {/* genres */}
           <div>
-            <h3 className="mb-2 text-xl font-semibold">Genres</h3>
+            <h3 className="mb-2 text-lg font-semibold sm:text-xl">Genres</h3>
             <div className="flex flex-wrap gap-2">
               {movie.genres.map((genre) => (
                 <Badge key={genre.id} variant="outline">
@@ -129,7 +127,7 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
 
           {/* countries */}
           <div>
-            <h3 className="mb-2 text-xl font-semibold">Countries</h3>
+            <h3 className="mb-2 text-lg font-semibold sm:text-xl">Countries</h3>
             <div className="flex flex-wrap gap-2">
               {movie.countries.map((country) => (
                 <Badge key={country.id} variant="outline">

@@ -69,9 +69,9 @@ export default async function Home({ params, searchParams }: PageProps) {
 
   return (
     <div>
-      <h1 className="mb-12 text-4xl font-bold">{martialArt?.name} movies</h1>
+      <h1 className="mb-8 text-3xl font-bold sm:mb-10 sm:text-4xl lg:mb-12">{martialArt?.name} movies</h1>
       <ControlsContainer>
-        <div className="ml-auto">
+        <div>
           <Sort />
         </div>
       </ControlsContainer>
