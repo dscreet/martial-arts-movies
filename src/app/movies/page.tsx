@@ -15,6 +15,7 @@ import {
   type SortOption,
   sortOptions,
 } from '@/lib/data';
+import { baseMetadata } from '@/lib/seo';
 
 interface PageProps {
   searchParams: Promise<{
@@ -35,31 +36,19 @@ interface PageProps {
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
   const hasParams = Object.keys(await searchParams).length > 0;
 
-  const socialTitle = 'All Martial Arts Movies';
-  const socialDescription =
-    'Browse the full martial arts movie catalog. Discover films by style, genre, country, and year.';
-
   return {
-    title: 'All Martial Arts Movies | Browse the Complete Catalog',
-    description:
-      'Browse all martial arts movies in one place. Discover classic and modern films across fighting styles, countries, genres, and eras.',
-    openGraph: {
-      title: socialTitle,
-      description: socialDescription,
+    ...baseMetadata({
+      title: 'All Martial Arts Movies | Browse the Complete Catalog',
+      description:
+        'Browse all martial arts movies in one place. Discover classic and modern films across fighting styles, countries, genres, and eras.',
       url: '/movies',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: socialTitle,
-      description: socialDescription,
-    },
+      socialTitle: 'All Martial Arts Movies',
+      socialDescription:
+        'Browse the full martial arts movie catalog. Discover films by style, genre, country, and year.',
+    }),
     robots: {
       index: !hasParams,
       follow: true,
-    },
-    alternates: {
-      canonical: '/movies',
     },
   };
 }

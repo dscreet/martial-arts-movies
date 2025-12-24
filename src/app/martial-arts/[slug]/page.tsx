@@ -7,6 +7,7 @@ import MovieList from '@/components/MovieList';
 import PaginationBar from '@/components/Pagination';
 import Sort from '@/components/Sort';
 import { fetchMartialArt, fetchMovies, type MovieQuery, type SortOption, sortOptions } from '@/lib/data';
+import { baseMetadata } from '@/lib/seo';
 
 const getMartialArtCached = cache(fetchMartialArt);
 
@@ -38,28 +39,15 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const title = `${name} Movies | Martial Arts Movie Catalog`;
   const description = `Browse the best ${name} movies of all time. Discover classic and modern ${name} films.`;
 
-  const url = `/martial-arts/${slug}`;
-
   return {
-    title,
-    description,
-    openGraph: {
+    ...baseMetadata({
       title,
       description,
-      url,
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-    },
+      url: `/martial-arts/${slug}`,
+    }),
     robots: {
       index: !hasParams,
       follow: true,
-    },
-    alternates: {
-      canonical: url,
     },
   };
 }

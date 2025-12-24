@@ -6,6 +6,7 @@ import { cache } from 'react';
 import ImageWithFallback from '@/components/ImageWithFallback';
 import { Badge } from '@/components/ui/badge';
 import { fetchMovie } from '@/lib/data';
+import { baseMetadata } from '@/lib/seo';
 
 const getMovieCached = cache(fetchMovie);
 
@@ -31,25 +32,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const description =
     rawDescription.length > 160 ? rawDescription.slice(0, 160).replace(/\s+\S*$/, '…') : rawDescription;
 
-  const url = `/movies/${slug}`;
-
   return {
-    title,
-    description,
-    openGraph: {
+    ...baseMetadata({
       title,
       description,
-      url,
+      url: `/movies/${slug}`,
       type: 'video.movie',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-    },
-    alternates: {
-      canonical: url,
-    },
+    }),
   };
 }
 
