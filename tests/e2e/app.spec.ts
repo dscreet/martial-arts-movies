@@ -4,7 +4,8 @@ test.describe('Discovery and navigation', () => {
   test('home page loads and displays martial arts', async ({ page }) => {
     await page.goto('/');
 
-    // check title
+    await expect(page).toHaveTitle(/Martial Arts Movies/);
+
     await expect(page.getByRole('heading', { name: 'Explore Martial Arts' })).toBeVisible();
 
     await expect(page.getByRole('link', { name: 'Kung Fu' })).toBeVisible();
@@ -27,7 +28,8 @@ test.describe('Martial arts page', () => {
   test('martial arts page renders correctly', async ({ page }) => {
     await page.goto('/martial-arts/kung-fu');
 
-    // check title
+    await expect(page).toHaveTitle(/Kung Fu Movies/);
+
     await expect(page.getByRole('heading', { name: 'Kung Fu movies' })).toBeVisible();
 
     await expect(page.getByTestId('movie-list')).toBeVisible();
@@ -64,7 +66,8 @@ test.describe('All movies page', () => {
   test('all movies page renders correctly', async ({ page }) => {
     await page.goto('/movies');
 
-    // check title
+    await expect(page).toHaveTitle(/All Martial Arts Movies/);
+
     await expect(page.getByRole('heading', { name: 'All movies' })).toBeVisible();
 
     await expect(page.getByTestId('movie-list')).toBeVisible();
@@ -127,7 +130,7 @@ test.describe('Movie page', () => {
   test('movie page renders correctly', async ({ page }) => {
     await page.goto('/movies/karate-kid-legends-2025');
 
-    //check title
+    await expect(page).toHaveTitle(/Karate Kid: Legends \(2025\)/);
 
     await expect(page.getByRole('heading', { name: 'Karate Kid: Legends' })).toBeVisible();
     await expect(page.getByText('2025')).toBeVisible();
