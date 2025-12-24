@@ -1,9 +1,57 @@
 // e.g. /martial-arts/karate/ - movies where the main martial art is the slug
+import type { Metadata } from 'next';
+
 import ControlsContainer from '@/components/ControlsContainer';
 import MovieList from '@/components/MovieList';
 import PaginationBar from '@/components/Pagination';
 import Sort from '@/components/Sort';
 import { fetchMartialArt, fetchMovies, type MovieQuery, type SortOption, sortOptions } from '@/lib/data';
+
+export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const martialArt = await fetchMartialArt(slug);
+
+  const hasParams = Object.keys(await searchParams).length > 0;
+
+  if (!martialArt) {
+    return {
+      title: 'Not Found',
+      robots: {
+        index: false,
+        follow: true,
+      },
+    };
+  }
+
+  const name = martialArt?.name;
+  const title = `${name} Movies | Martial Arts Movie Catalog`;
+  const description = `Browse the best ${name} movies of all time. Discover classic and modern ${name} films.`;
+
+  const url = `/martial-arts/${slug}`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    robots: {
+      index: !hasParams,
+      follow: true,
+    },
+    alternates: {
+      canonical: url,
+    },
+  };
+}
 
 interface PageProps {
   params: Promise<{ slug: string }>;

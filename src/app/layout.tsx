@@ -7,6 +7,9 @@ import Header from '@/components/Header';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://martialmovies.com'),
+  openGraph: {
+    siteName: 'Martial Arts Movies',
+  },
 };
 
 export default function RootLayout({

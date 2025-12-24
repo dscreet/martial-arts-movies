@@ -1,9 +1,34 @@
 // home page where martial arts cards will be displayed
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { fetchMartialArts } from '@/lib/data';
+
+const socialTitle = 'Martial Arts Movies';
+const socialDescription =
+  'Discover Kung Fu, Karate, MMA and other martial arts films. Browse movies by fighting style, country, genre, and era.';
+
+export const metadata: Metadata = {
+  title: 'Martial Arts Movies | Kung Fu, Karate & MMA Films',
+  description:
+    'Browse a curated catalog of martial arts movies, organised by fighting style. Explore Kung Fu, Karate, MMA and more across countries, genres, and eras.',
+  openGraph: {
+    title: socialTitle,
+    description: socialDescription,
+    url: '/',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: socialTitle,
+    description: socialDescription,
+  },
+  alternates: {
+    canonical: '/',
+  },
+};
 
 export default async function Home() {
   const martialArts = await fetchMartialArts();

@@ -1,9 +1,54 @@
 // e.g. /movies/karate-kid-legends-2025 - specific movie pages
+import type { Metadata } from 'next';
 import Image from 'next/image';
 
 import ImageWithFallback from '@/components/ImageWithFallback';
 import { Badge } from '@/components/ui/badge';
 import { fetchMovie } from '@/lib/data';
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const movie = await fetchMovie(slug);
+
+  if (!movie) {
+    return {
+      title: 'Not Found',
+      robots: {
+        index: false,
+        follow: true,
+      },
+    };
+  }
+
+  const yearValue = movie.releaseDate?.getFullYear();
+  const year = yearValue ? ` (${yearValue})` : '';
+
+  const title = `${movie.title}${year} | Martial Arts Movie`;
+  const rawDescription = `${movie.title}${year} is a martial arts movie. ${movie.overview}`;
+  const description =
+    rawDescription.length > 160 ? rawDescription.slice(0, 160).replace(/\s+\S*$/, '…') : rawDescription;
+
+  const url = `/movies/${slug}`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url,
+      type: 'video.movie',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    alternates: {
+      canonical: url,
+    },
+  };
+}
 
 export default async function Home({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
