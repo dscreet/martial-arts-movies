@@ -41,10 +41,10 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
       title: 'All Martial Arts Movies | Browse the Complete Catalog',
       description:
         'Browse all martial arts movies in one place. Discover classic and modern films across fighting styles, countries, genres, and eras.',
-      url: '/movies',
       socialTitle: 'All Martial Arts Movies',
       socialDescription:
         'Browse the full martial arts movie catalog. Discover films by style, genre, country, and year.',
+      url: '/movies',
     }),
     robots: {
       index: !hasParams,
