@@ -71,7 +71,7 @@ export default async function Home({ params, searchParams }: PageProps) {
     <div>
       <h1 className="mb-8 text-3xl font-bold sm:mb-10 sm:text-4xl lg:mb-12">{martialArt?.name} movies</h1>
       <ControlsContainer>
-        <div>
+        <div className="sm:ml-auto">
           <Sort />
         </div>
       </ControlsContainer>
