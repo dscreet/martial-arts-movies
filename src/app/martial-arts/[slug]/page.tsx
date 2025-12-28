@@ -1,5 +1,6 @@
 // e.g. /martial-arts/karate/ - movies where the main martial art is the slug
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { cache } from 'react';
 
 import ControlsContainer from '@/components/ControlsContainer';
@@ -26,13 +27,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const hasParams = Object.keys(await searchParams).length > 0;
 
   if (!martialArt) {
-    return {
-      title: 'Not Found',
-      robots: {
-        index: false,
-        follow: true,
-      },
-    };
+    notFound();
   }
 
   const name = martialArt?.name;
@@ -65,6 +60,8 @@ export default async function Home({ params, searchParams }: PageProps) {
   };
 
   const martialArt = await getMartialArtCached(slug);
+  if (!martialArt) notFound();
+
   const { movies, totalPages } = await fetchMovies(movieQuery, currentPage);
 
   return (
