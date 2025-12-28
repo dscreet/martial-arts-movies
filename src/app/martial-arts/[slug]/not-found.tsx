@@ -14,7 +14,7 @@ export default function NotFound() {
     <NotFoundLayout
       title="Martial art not found"
       description="The martial art you’re looking for doesn’t exist or may have been removed."
-      primaryAction={{ href: '/', label: 'Browse martial arts' }}
+      primaryAction={{ href: '/', label: 'Explore martial arts' }}
       secondaryAction={{ href: '/movies', label: 'View all movies' }}
     />
   );

@@ -22,6 +22,16 @@ test.describe('Discovery and navigation', () => {
     await expect(page).toHaveURL('/');
     await expect(page.getByRole('heading', { name: 'Explore Martial Arts' })).toBeVisible();
   });
+
+  test('unknown route shows global not found page', async ({ page }) => {
+    await page.goto('/invalid-path');
+
+    await expect(page).toHaveTitle(/Page Not Found/);
+
+    await expect(page.getByRole('heading', { name: 'Page not found' })).toBeVisible();
+
+    await expect(page.getByRole('link', { name: 'Go home' })).toHaveAttribute('href', '/');
+  });
 });
 
 test.describe('Martial arts page', () => {
@@ -59,6 +69,16 @@ test.describe('Martial arts page', () => {
     await expect(page).toHaveURL(/page=2/);
 
     await expect(page.getByTestId('movie-list')).toBeVisible();
+  });
+
+  test('invalid martial art slug shows martial art not found page', async ({ page }) => {
+    await page.goto('/martial-arts/invalid-path');
+
+    await expect(page).toHaveTitle(/Martial Art Not Found/);
+
+    await expect(page.getByRole('heading', { name: 'Martial art not found' })).toBeVisible();
+
+    await expect(page.getByRole('link', { name: 'Explore martial arts' })).toHaveAttribute('href', '/');
   });
 });
 
@@ -137,6 +157,16 @@ test.describe('Movie page', () => {
 
     await expect(page.getByText('Overview')).toBeVisible();
     await expect(page.getByText('Primary martial art')).toBeVisible();
+  });
+
+  test('invalid movie slug shows movie not found page', async ({ page }) => {
+    await page.goto('/movies/invalid-path');
+
+    await expect(page).toHaveTitle(/Movie Not Found/);
+
+    await expect(page.getByRole('heading', { name: 'Movie not found' })).toBeVisible();
+
+    await expect(page.getByRole('link', { name: 'Browse all movies' })).toHaveAttribute('href', '/movies');
   });
 });
 
