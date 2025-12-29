@@ -3,7 +3,14 @@ import type { Movie } from '@prisma/client';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 import { mockDeep, mockReset } from 'vitest-mock-extended';
 
-import { fetchCountries, fetchMartialArt, fetchMartialArts, fetchMovie, fetchMovies } from '@/lib/data';
+import {
+  fetchAllMovieSlugs,
+  fetchCountries,
+  fetchMartialArt,
+  fetchMartialArts,
+  fetchMovie,
+  fetchMovies,
+} from '@/lib/data';
 import prisma from '@/lib/prisma';
 
 vi.mock('@/lib/prisma', () => ({
@@ -38,10 +45,10 @@ describe('fetchMartialArts', () => {
   });
 
   test('throws an error when Prisma throws internally', async () => {
-    const dbError = new Error('DB connection failed');
+    const dbError = new Error('DB connection error');
     prismaMock.martialArt.findMany.mockRejectedValue(dbError);
 
-    await expect(fetchMartialArts()).rejects.toThrow('Failed to fetch martial arts data');
+    await expect(fetchMartialArts()).rejects.toThrow('DB connection error');
   });
 });
 
@@ -63,10 +70,10 @@ describe('fetchCountries', () => {
   });
 
   test('throws an error when Prisma throws internally', async () => {
-    const dbError = new Error('DB connection failed');
+    const dbError = new Error('DB connection error');
     prismaMock.country.findMany.mockRejectedValue(dbError);
 
-    await expect(fetchCountries()).rejects.toThrow('Failed to fetch countries data');
+    await expect(fetchCountries()).rejects.toThrow('DB connection error');
   });
 });
 
@@ -175,10 +182,10 @@ describe('fetchMovies', () => {
   });
 
   test('throws an error when Prisma throws internally', async () => {
-    const dbError = new Error('DB connection failed');
+    const dbError = new Error('DB connection error');
     prismaMock.movie.findMany.mockRejectedValue(dbError);
 
-    await expect(fetchMovies()).rejects.toThrow('Failed to fetch movies data');
+    await expect(fetchMovies()).rejects.toThrow('DB connection error');
   });
 });
 
@@ -205,10 +212,10 @@ describe('fetchMartialArt', () => {
   });
 
   test('throws an error when Prisma throws internally', async () => {
-    const dbError = new Error('DB connection failed');
+    const dbError = new Error('DB connection error');
     prismaMock.martialArt.findUnique.mockRejectedValue(dbError);
 
-    await expect(fetchMartialArt('kung-fu')).rejects.toThrow('Failed to fetch martial art data');
+    await expect(fetchMartialArt('kung-fu')).rejects.toThrow('DB connection error');
   });
 });
 
@@ -244,9 +251,33 @@ describe('fetchMovie', () => {
   });
 
   test('throws an error when Prisma throws internally', async () => {
-    const dbError = new Error('DB connection failed');
+    const dbError = new Error('DB connection error');
     prismaMock.movie.findUnique.mockRejectedValue(dbError);
 
-    await expect(fetchMovie('ip-man-x')).rejects.toThrow('Failed to fetch movie data');
+    await expect(fetchMovie('ip-man-x')).rejects.toThrow('DB connection error');
+  });
+});
+
+describe('fetchAllMovieSlugs', () => {
+  test('returns a list of movie slugs when found', async () => {
+    const mockResult = [
+      { slug: 'movie-1', updatedAt: new Date() },
+      { slug: 'movie-2', updatedAt: new Date() },
+    ];
+    prismaMock.movie.findMany.mockResolvedValue(mockResult as unknown as Movie[]);
+
+    const result = await fetchAllMovieSlugs();
+
+    expect(prismaMock.movie.findMany).toHaveBeenCalledWith({
+      select: { slug: true, updatedAt: true },
+    });
+    expect(result).toEqual(mockResult);
+  });
+
+  test('throws an error when Prisma throws internally', async () => {
+    const dbError = new Error('DB connection error');
+    prismaMock.movie.findMany.mockRejectedValue(dbError);
+
+    await expect(fetchAllMovieSlugs()).rejects.toThrow('DB connection error');
   });
 });
