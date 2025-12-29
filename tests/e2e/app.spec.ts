@@ -30,7 +30,23 @@ test.describe('Discovery and navigation', () => {
 
     await expect(page.getByRole('heading', { name: 'Page not found' })).toBeVisible();
 
-    await expect(page.getByRole('link', { name: 'Go home' })).toHaveAttribute('href', '/');
+    await page.getByRole('link', { name: 'Go home' }).click();
+    await expect(page).toHaveURL('/');
+  });
+
+  test('error page renders correctly', async ({ page }) => {
+    await page.goto('/test-error');
+
+    await expect(page).toHaveTitle(/Error/);
+
+    const heading = page.getByRole('heading', { name: 'Something went wrong' });
+    await expect(heading).toBeVisible();
+
+    await page.getByRole('button', { name: 'Try again' }).click();
+    await expect(heading).toBeVisible();
+
+    await page.getByRole('link', { name: 'Go home' }).click();
+    await expect(page).toHaveURL('/');
   });
 });
 
@@ -78,7 +94,8 @@ test.describe('Martial arts page', () => {
 
     await expect(page.getByRole('heading', { name: 'Martial art not found' })).toBeVisible();
 
-    await expect(page.getByRole('link', { name: 'Explore martial arts' })).toHaveAttribute('href', '/');
+    await page.getByRole('link', { name: 'Explore martial arts' }).click();
+    await expect(page).toHaveURL('/');
   });
 });
 
@@ -166,7 +183,8 @@ test.describe('Movie page', () => {
 
     await expect(page.getByRole('heading', { name: 'Movie not found' })).toBeVisible();
 
-    await expect(page.getByRole('link', { name: 'Browse all movies' })).toHaveAttribute('href', '/movies');
+    await page.getByRole('link', { name: 'Browse all movies' }).click();
+    await expect(page).toHaveURL('/movies');
   });
 });
 
