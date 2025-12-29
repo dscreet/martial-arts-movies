@@ -1,4 +1,4 @@
-import NotFoundLayout from '@/components/NotFound';
+import FallbackLayout from '@/components/FallbackLayout';
 
 export const metadata = {
   title: 'Movie Not Found',
@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <NotFoundLayout
+    <FallbackLayout
       title="Movie not found"
       description="We couldn’t find this movie. It may have been removed, renamed, or never existed."
       primaryAction={{ href: '/movies', label: 'Browse all movies' }}

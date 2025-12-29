@@ -1,4 +1,4 @@
-import NotFoundLayout from '@/components/NotFound';
+import FallbackLayout from '@/components/FallbackLayout';
 
 export const metadata = {
   title: 'Page Not Found',
@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <NotFoundLayout
+    <FallbackLayout
       title="Page not found"
       description="The page you’re looking for doesn’t exist."
       primaryAction={{ href: '/', label: 'Go home' }}

@@ -1,4 +1,4 @@
-import NotFoundLayout from '@/components/NotFound';
+import FallbackLayout from '@/components/FallbackLayout';
 
 export const metadata = {
   title: 'Martial Art Not Found',
@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <NotFoundLayout
+    <FallbackLayout
       title="Martial art not found"
       description="The martial art you’re looking for doesn’t exist or may have been removed."
       primaryAction={{ href: '/', label: 'Explore martial arts' }}
