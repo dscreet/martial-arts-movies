@@ -6,10 +6,19 @@ import { cache } from 'react';
 
 import ImageWithFallback from '@/components/ImageWithFallback';
 import { Badge } from '@/components/ui/badge';
-import { fetchMovie } from '@/lib/data';
+import { fetchAllMovieSlugs, fetchMovie } from '@/lib/data';
 import { baseMetadata } from '@/lib/seo';
 
 const getMovieCached = cache(fetchMovie);
+
+// generates static pages for all movies at build time
+export async function generateStaticParams() {
+  const movies = await fetchAllMovieSlugs();
+  return movies.map((movie) => ({ slug: movie.slug }));
+}
+
+// return 404 for slugs not pre-rendered at build time
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
