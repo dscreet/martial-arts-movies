@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   }),
 };
 
-export default async function Home() {
+export default async function HomePage() {
   const martialArts = await fetchMartialArts();
   return (
     <div>
@@ -28,7 +28,7 @@ export default async function Home() {
         {martialArts.map((martialArt) => (
           <Link key={martialArt.id} href={`/martial-arts/${martialArt.slug}`}>
             <Card className="group p-0 transition-shadow hover:shadow-md">
-              <CardContent className="relative aspect-[16/9] overflow-hidden rounded-tr-md rounded-bl-md">
+              <CardContent className="relative aspect-video overflow-hidden rounded-tr-md rounded-bl-md">
                 <Image
                   src={`/images/${martialArt.slug}.webp`}
                   alt={martialArt.name}

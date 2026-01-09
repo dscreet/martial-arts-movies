@@ -7,6 +7,7 @@ import PaginationBar from '@/components/Pagination';
 import SingleSelectFilter from '@/components/SingleSelectFilter';
 import Sort from '@/components/Sort';
 import {
+  DECADES,
   fetchCountries,
   fetchGenres,
   fetchMartialArts,
@@ -28,6 +29,7 @@ interface PageProps {
   }>;
 }
 
+// google guidelines===
 //, to list multiple values for same key e.g. color=purple,pink
 //= to separate key-value pairs e.g. category=dresses
 //& to add additional parameters e.g. category=dresses&color=purple,pink
@@ -53,18 +55,10 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   };
 }
 
-export default async function Home({ searchParams }: PageProps) {
-  const queryParams = await searchParams; //individuallry or like this? to name params or keep queryparams?
-  const currentPage = Number(queryParams.page) || 1;
-
-  //more validation later
-  const martialArt = queryParams['martial-art'];
-  const genre = queryParams.genre;
-  const country = queryParams.country;
-  const year = queryParams.year;
-
-  const sort: SortOption =
-    queryParams.sort && queryParams.sort in sortOptions ? (queryParams.sort as SortOption) : 'release-desc';
+export default async function MoviesPage({ searchParams }: PageProps) {
+  const { sort: sortParam, 'martial-art': martialArt, genre, country, year, page } = await searchParams;
+  const currentPage = Number(page) || 1;
+  const sort: SortOption = sortParam && sortParam in sortOptions ? (sortParam as SortOption) : 'release-desc';
 
   const movieQuery: MovieQuery = {
     sort,
@@ -73,18 +67,6 @@ export default async function Home({ searchParams }: PageProps) {
     country,
     year,
   };
-
-  const DECADES = [
-    { id: 1, name: 'Pre 1950', value: 'pre-1950' },
-    { id: 2, name: '1950s', value: '1950' },
-    { id: 3, name: '1960s', value: '1960' },
-    { id: 4, name: '1970s', value: '1970' },
-    { id: 5, name: '1980s', value: '1980' },
-    { id: 6, name: '1990s', value: '1990' },
-    { id: 7, name: '2000s', value: '2000' },
-    { id: 8, name: '2010s', value: '2010' },
-    { id: 9, name: '2020+', value: '2020' },
-  ];
 
   const [{ movies, totalPages }, allMartialArts, allGenres, allCountries] = await Promise.all([
     fetchMovies(movieQuery, currentPage),
@@ -115,7 +97,6 @@ export default async function Home({ searchParams }: PageProps) {
           />
           <SingleSelectFilter label={'years'} paramKey={'year'} options={DECADES} />
         </div>
-
         <Sort />
       </ControlsContainer>
       {movies.length ? (

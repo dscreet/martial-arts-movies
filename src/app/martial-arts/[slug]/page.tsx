@@ -28,7 +28,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
 
   const hasParams = Object.keys(await searchParams).length > 0;
 
-  const name = martialArt?.name;
+  const name = martialArt.name;
   const title = `${name} Movies | Martial Arts Movie Catalog`;
   const description = `Browse the best ${name} movies of all time. Discover classic and modern ${name} films.`;
 
@@ -45,7 +45,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   };
 }
 
-export default async function Home({ params, searchParams }: PageProps) {
+export default async function MartialArtPage({ params, searchParams }: PageProps) {
   const { slug } = await params;
   const { sort, page } = await searchParams;
   const currentPage = Number(page) || 1;
@@ -67,7 +67,7 @@ export default async function Home({ params, searchParams }: PageProps) {
 
   return (
     <div>
-      <h1 className="mb-8 text-3xl font-bold sm:mb-10 sm:text-4xl lg:mb-12">{martialArt?.name} movies</h1>
+      <h1 className="mb-8 text-3xl font-bold sm:mb-10 sm:text-4xl lg:mb-12">{martialArt.name} movies</h1>
       <ControlsContainer>
         <div className="sm:ml-auto">
           <Sort />

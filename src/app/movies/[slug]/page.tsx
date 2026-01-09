@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function Home({ params }: { params: Promise<{ slug: string }> }) {
+export default async function MoviePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const movie = await getMovieCached(slug);
 
@@ -53,7 +53,6 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
     <div>
       {/* HERO SECTION */}
       <div className="relative h-[260px] w-full sm:h-[320px] lg:h-[400px]">
-        {/* <div className="relative h-[400px] w-screen left-1/2 right-1/2 -mx-[50vw] -mt-8"> */}
         {movie.backdropPath && (
           <Image
             src={`https://image.tmdb.org/t/p/original${movie.backdropPath}`}
@@ -64,7 +63,6 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
           />
         )}
         <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black/70 via-black/40 to-transparent p-4 text-white sm:p-6 lg:p-8">
-          {/* <div className="container "> */}
           <h1 className="mb-2 text-3xl font-bold sm:text-4xl lg:text-5xl">{movie.title}</h1>
           <p className="text-base text-white/80 sm:text-lg lg:text-xl">{movie.releaseDate?.getFullYear()}</p>
         </div>
@@ -96,7 +94,7 @@ export default async function Home({ params }: { params: Promise<{ slug: string 
           {/* primary martial art */}
           <div>
             <h3 className="mb-2 text-lg font-semibold sm:text-xl">Primary martial art</h3>
-            <Badge className="text-base">{movie.primaryMartialArt.name}</Badge>
+            <Badge className="text-base">{movie.primaryMartialArt?.name}</Badge>
           </div>
 
           {/* secondary martial arts */}
