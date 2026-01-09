@@ -28,13 +28,14 @@ vi.mock('@/components/ControlsContainer', () => ({
 }));
 
 vi.mock('@/lib/data', async () => {
-  const { sortOptions } = await vi.importActual('@/lib/data');
+  const { sortOptions, DECADES } = await vi.importActual('@/lib/data');
   return {
     fetchMovies: vi.fn(),
     fetchMartialArts: vi.fn(),
     fetchGenres: vi.fn(),
     fetchCountries: vi.fn(),
-    sortOptions: sortOptions,
+    sortOptions,
+    DECADES,
   };
 });
 

@@ -28,7 +28,7 @@ vi.mock('@/lib/data', async () => {
   return {
     fetchMovies: vi.fn(),
     fetchMartialArt: vi.fn(),
-    sortOptions: sortOptions,
+    sortOptions,
   };
 });
 
