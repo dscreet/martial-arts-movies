@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
 
-interface Props {
+interface FallbackLayoutProps {
   title: string;
   description: string;
   primaryAction?: {
@@ -16,11 +16,10 @@ interface Props {
   };
 }
 
-export default function FallbackLayout({ title, description, primaryAction, secondaryAction }: Props) {
+export default function FallbackLayout({ title, description, primaryAction, secondaryAction }: FallbackLayoutProps) {
   return (
     <div className="mx-auto py-28 text-center">
       <h1 className="mb-6 text-3xl font-bold sm:text-4xl">{title}</h1>
-
       <p className="mb-8 text-base text-muted-foreground sm:text-lg">{description}</p>
 
       <div className="flex flex-col justify-center gap-4 sm:flex-row">

@@ -32,7 +32,6 @@ export default function PaginationBar({ totalPages }: { totalPages: number }) {
 
   const allPages = generatePagination(currentPage, totalPages);
 
-  //class names and such dry?
   return (
     <Pagination className="mt-6 sm:mt-8">
       <PaginationContent>
