@@ -24,11 +24,9 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const { slug } = await params;
   const martialArt = await getMartialArtCached(slug);
 
-  const hasParams = Object.keys(await searchParams).length > 0;
+  if (!martialArt) notFound();
 
-  if (!martialArt) {
-    notFound();
-  }
+  const hasParams = Object.keys(await searchParams).length > 0;
 
   const name = martialArt?.name;
   const title = `${name} Movies | Martial Arts Movie Catalog`;
@@ -59,10 +57,13 @@ export default async function Home({ params, searchParams }: PageProps) {
     sort: sortOption,
   };
 
-  const martialArt = await getMartialArtCached(slug);
-  if (!martialArt) notFound();
+  // mA not being found is very unlikely - so just parallel fetch
+  const [martialArt, { movies, totalPages }] = await Promise.all([
+    getMartialArtCached(slug),
+    fetchMovies(movieQuery, currentPage),
+  ]);
 
-  const { movies, totalPages } = await fetchMovies(movieQuery, currentPage);
+  if (!martialArt) notFound();
 
   return (
     <div>

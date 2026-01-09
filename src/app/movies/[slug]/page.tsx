@@ -21,9 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const movie = await getMovieCached(slug);
 
-  if (!movie) {
-    notFound();
-  }
+  if (!movie) notFound();
 
   const yearValue = movie.releaseDate?.getFullYear();
   const year = yearValue ? ` (${yearValue})` : '';
@@ -46,6 +44,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function Home({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const movie = await getMovieCached(slug);
+
   if (!movie) notFound();
 
   const secondaryMartialArts = movie.martialArts.filter((ma) => ma.id !== movie.primaryMartialArt?.id);

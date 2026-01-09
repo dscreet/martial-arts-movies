@@ -5,8 +5,7 @@ import { fetchAllMovieSlugs, fetchMartialArts } from '@/lib/data';
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const martialArts = await fetchMartialArts();
-  const movies = await fetchAllMovieSlugs();
+  const [martialArts, movies] = await Promise.all([fetchMartialArts(), fetchAllMovieSlugs()]);
 
   return [
     {

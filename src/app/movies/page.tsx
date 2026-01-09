@@ -86,13 +86,12 @@ export default async function Home({ searchParams }: PageProps) {
     { id: 9, name: '2020+', value: '2020' },
   ];
 
-  // should page be a part of moviequery??
-  //fetch all movies, genres, etc at once?
-  const { movies, totalPages } = await fetchMovies(movieQuery, currentPage);
-  const allMartialArts = await fetchMartialArts();
-  const allGenres = await fetchGenres();
-  const allCountries = await fetchCountries();
-  //use countries from fetchMovies instead?
+  const [{ movies, totalPages }, allMartialArts, allGenres, allCountries] = await Promise.all([
+    fetchMovies(movieQuery, currentPage),
+    fetchMartialArts(),
+    fetchGenres(),
+    fetchCountries(),
+  ]);
 
   return (
     <div>
