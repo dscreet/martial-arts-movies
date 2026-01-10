@@ -5,6 +5,7 @@ import { DM_Sans, Poppins } from 'next/font/google';
 import Script from 'next/script';
 
 import Header from '@/components/Header';
+import { ThemeProvider } from '@/components/ThemeProvider';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -30,13 +31,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${poppins.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${dmSans.variable} ${poppins.variable}`}>
       <body>
         {process.env.NODE_ENV === 'production' && (
           <Script src="/stats.js" data-website-id={process.env.UMAMI_WEBSITE_ID} />
         )}
-        <Header />
-        <main className="container mx-auto px-6 py-8 sm:px-8 lg:px-10">{children}</main>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Header />
+          <main className="container mx-auto px-6 py-8 sm:px-8 lg:px-10">{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );

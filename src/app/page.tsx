@@ -27,7 +27,7 @@ export default async function HomePage() {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-4 lg:gap-6 xl:grid-cols-5">
         {martialArts.map((martialArt) => (
           <Link key={martialArt.id} href={`/martial-arts/${martialArt.slug}`}>
-            <Card className="group p-0 transition-shadow hover:shadow-md">
+            <Card className="group border-0 p-0 transition-shadow hover:shadow-md">
               <CardContent className="relative aspect-video overflow-hidden rounded-tr-md rounded-bl-md">
                 <Image
                   src={`/images/${martialArt.slug}.webp`}

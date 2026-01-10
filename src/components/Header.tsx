@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { ThemeToggle } from '@/components/ThemeToggle';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -15,21 +16,25 @@ export default function Header() {
           Martial Arts Movies
         </Link>
 
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link href="/">Home</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+        <div className="flex items-center gap-2 sm:gap-4">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link href="/">Home</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link href="/movies">All movies</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link href="/movies">All movies</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );
