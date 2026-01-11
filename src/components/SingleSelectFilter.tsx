@@ -32,7 +32,10 @@ export default function SelectFilter({ label, paramKey, options }: SingleSelectF
   return (
     <div>
       <Select onValueChange={handleFilterChange} value={selectedValue}>
-        <SelectTrigger className={cn('w-[200px]', selectedValue === 'all' && 'text-muted-foreground')}>
+        <SelectTrigger
+          className={cn('w-[200px]', selectedValue === 'all' && 'text-muted-foreground')}
+          aria-label={`Filter by ${label}`}
+        >
           <SelectValue />
         </SelectTrigger>
         <SelectContent className="max-h-96">

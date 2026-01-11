@@ -11,7 +11,7 @@ export default function MovieList({ movies }: { movies: Movie[] }) {
         <li key={movie.id}>
           <Link href={`/movies/${movie.slug}`}>
             <Card className="flex flex-row gap-0 overflow-hidden p-0">
-              <div className="relative h-28 w-20 shrink-0 sm:h-32 sm:w-24">
+              <div className="relative aspect-[2/3] w-20 shrink-0 sm:w-24">
                 <ImageWithFallback
                   src={
                     movie.posterPath

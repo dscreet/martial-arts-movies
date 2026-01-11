@@ -22,7 +22,7 @@ export default function Sort() {
   return (
     <div>
       <Select onValueChange={handleSortChange} value={sortValue}>
-        <SelectTrigger className="w-[180px]">
+        <SelectTrigger className="w-[180px]" aria-label="Sort movies by">
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
