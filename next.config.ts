@@ -2,7 +2,11 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [new URL('https://image.tmdb.org/t/p/**')],
+    remotePatterns: [
+      new URL('https://image.tmdb.org/t/p/**'),
+      new URL('https://media.movieofthenight.com/**'),
+      new URL('https://cdn.movieofthenight.com/**'),
+    ],
     // unoptimized: process.env.CI === 'true', // to prevent timeout issues in ci
     unoptimized: true, // to prevent the bills...
   },
