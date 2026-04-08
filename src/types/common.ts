@@ -38,3 +38,24 @@ export interface MartialArt {
   name: string;
   slug: string;
 }
+
+export interface StreamingAvailabilityService {
+  id: string;
+  name: string;
+  imageSet: {
+    lightThemeImage: string;
+    darkThemeImage: string;
+  };
+}
+
+export interface StreamingAvailabilityOption {
+  service: StreamingAvailabilityService;
+  type: 'free' | 'subscription' | 'buy' | 'rent' | 'addon';
+  addon?: StreamingAvailabilityService;
+  link: string;
+  quality: string;
+}
+
+export interface StreamingAvailabilityResponse {
+  streamingOptions: Record<string, StreamingAvailabilityOption[]>;
+}

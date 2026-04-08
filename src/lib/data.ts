@@ -1,4 +1,5 @@
 import prisma from '@/lib/prisma';
+import { type StreamingAvailabilityResponse } from '@/types/common';
 
 export interface MovieQuery {
   primaryMartialArt?: string;
@@ -122,4 +123,40 @@ export async function fetchAllMovieSlugs() {
       updatedAt: true,
     },
   });
+}
+
+export async function fetchStreamingAvailability(
+  tmdbId: number,
+  country: string
+): Promise<StreamingAvailabilityResponse | null> {
+  const apiKey = process.env.X_RAPIDAPI_KEY;
+
+  if (!apiKey) {
+    console.error('Streaming availability API key is missing.');
+    return null;
+  }
+
+  const url = `https://streaming-availability.p.rapidapi.com/shows/${tmdbId}?country=${country}`;
+  const options = {
+    method: 'GET',
+    headers: {
+      'x-rapidapi-key': apiKey,
+      'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
+      'Content-Type': 'application/json',
+    },
+  };
+
+  try {
+    const response = await fetch(url, options);
+
+    if (!response.ok) {
+      console.error(`Streaming availability API error: ${response.status} ${response.statusText}`, { url });
+      return null;
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error(`Streaming availability fetch error: ${url}`, error);
+    return null;
+  }
 }

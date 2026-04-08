@@ -10,6 +10,7 @@ import {
   fetchMartialArts,
   fetchMovie,
   fetchMovies,
+  fetchStreamingAvailability,
 } from '@/lib/data';
 import prisma from '@/lib/prisma';
 
@@ -279,5 +280,69 @@ describe('fetchAllMovieSlugs', () => {
     prismaMock.movie.findMany.mockRejectedValue(dbError);
 
     await expect(fetchAllMovieSlugs()).rejects.toThrow('DB connection error');
+  });
+});
+
+describe('fetchStreamingAvailability', () => {
+  beforeEach(() => {
+    process.env.X_RAPIDAPI_KEY = 'test-api-key';
+    vi.spyOn(global, 'fetch').mockReset();
+  });
+
+  test('returns streaming availability data when api request succeeds', async () => {
+    const mockResult = { streamingOptions: { us: [] } };
+    vi.mocked(global.fetch).mockResolvedValue({
+      ok: true,
+      json: vi.fn().mockResolvedValue(mockResult),
+    } as unknown as Response);
+
+    const result = await fetchStreamingAvailability(1, 'us');
+
+    expect(global.fetch).toHaveBeenCalledWith(
+      'https://streaming-availability.p.rapidapi.com/shows/1?country=us',
+      expect.objectContaining({
+        method: 'GET',
+        headers: expect.objectContaining({
+          'x-rapidapi-key': 'test-api-key',
+          'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
+        }),
+      })
+    );
+    expect(result).toEqual(mockResult);
+  });
+
+  test('returns null when api key is missing', async () => {
+    delete process.env.X_RAPIDAPI_KEY;
+
+    const result = await fetchStreamingAvailability(1, 'us');
+
+    expect(result).toBeNull();
+    expect(console.error).toHaveBeenCalled();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  test('returns null when api responds with non-ok status', async () => {
+    vi.mocked(global.fetch).mockResolvedValue({
+      ok: false,
+      status: 500,
+      statusText: 'Internal Server Error',
+    } as Response);
+
+    const result = await fetchStreamingAvailability(1, 'us');
+
+    expect(result).toBeNull();
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringContaining('API error'),
+      expect.objectContaining({ url: expect.stringContaining('/shows/1?country=us') })
+    );
+  });
+
+  test('returns null when fetch throws', async () => {
+    vi.mocked(global.fetch).mockRejectedValue(new Error('network error'));
+
+    const result = await fetchStreamingAvailability(1, 'us');
+
+    expect(result).toBeNull();
+    expect(console.error).toHaveBeenCalledWith(expect.stringContaining('fetch error'), expect.any(Error));
   });
 });
