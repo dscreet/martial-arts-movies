@@ -174,6 +174,11 @@ test.describe('Movie page', () => {
 
     await expect(page.getByText('Overview')).toBeVisible();
     await expect(page.getByText('Primary martial art')).toBeVisible();
+
+    await expect(page.getByRole('heading', { name: 'Where to watch' })).toBeVisible();
+    await expect(
+      page.getByText(/Error loading availability|No watch options are currently available|Free|Stream|Rent|Buy/)
+    ).toBeVisible();
   });
 
   test('invalid movie slug shows movie not found page', async ({ page }) => {

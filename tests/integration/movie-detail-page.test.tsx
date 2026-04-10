@@ -4,7 +4,7 @@ import { describe, expect, test, vi } from 'vitest';
 
 import Home from '@/app/movies/[slug]/page';
 import type { ImageWithFallbackProps } from '@/components/ImageWithFallback';
-import { fetchMovie } from '@/lib/data';
+import { fetchMovie, fetchStreamingAvailability } from '@/lib/data';
 
 vi.mock('next/image', () => ({
   default: ({ fill, preload, ...props }: ImageProps) => (
@@ -22,8 +22,13 @@ vi.mock('@/components/ui/badge', () => ({
   Badge: ({ children, ...rest }: { children?: React.ReactNode }) => <span {...rest}>{children}</span>,
 }));
 
+vi.mock('@/components/StreamingAvailability', () => ({
+  default: () => <div>Streaming availability component</div>,
+}));
+
 vi.mock('@/lib/data', async () => ({
   fetchMovie: vi.fn(),
+  fetchStreamingAvailability: vi.fn(),
 }));
 
 type Movie = NonNullable<Awaited<ReturnType<typeof fetchMovie>>>;
@@ -46,16 +51,29 @@ describe('Movie details page', () => {
     countries: [{ id: 1, name: 'United States of America', code: 'US' }],
   } satisfies Partial<Movie>;
 
+  const setupMocks = (movie = mockMovie as Movie, availabilityData = null) => {
+    vi.mocked(fetchMovie).mockResolvedValue(movie);
+    vi.mocked(fetchStreamingAvailability).mockResolvedValue(availabilityData);
+  };
+
   test('fetches movie using slug', async () => {
-    vi.mocked(fetchMovie).mockResolvedValue(mockMovie as Movie);
+    setupMocks();
 
     await Home({ params: Promise.resolve({ slug: 'karate-kid-x' }) });
 
     expect(fetchMovie).toHaveBeenCalledWith('karate-kid-x');
   });
 
+  test('fetches streaming availability using movie id', async () => {
+    setupMocks();
+
+    await Home({ params: Promise.resolve({ slug: 'karate-kid-x' }) });
+
+    expect(fetchStreamingAvailability).toHaveBeenCalledWith(mockMovie.id, 'us');
+  });
+
   test('renders title and release year', async () => {
-    vi.mocked(fetchMovie).mockResolvedValue(mockMovie as Movie);
+    setupMocks();
 
     const ui = await Home({ params: Promise.resolve({ slug: 'karate-kid-x' }) });
     render(ui);
@@ -65,7 +83,7 @@ describe('Movie details page', () => {
   });
 
   test('renders primary martial art', async () => {
-    vi.mocked(fetchMovie).mockResolvedValue(mockMovie as Movie);
+    setupMocks();
 
     const ui = await Home({ params: Promise.resolve({ slug: 'karate-kid-x' }) });
     render(ui);
@@ -75,7 +93,7 @@ describe('Movie details page', () => {
   });
 
   test('renders secondary martial arts when present', async () => {
-    vi.mocked(fetchMovie).mockResolvedValue(mockMovie as Movie);
+    setupMocks();
 
     const ui = await Home({ params: Promise.resolve({ slug: 'karate-kid-x' }) });
     render(ui);
@@ -85,7 +103,7 @@ describe('Movie details page', () => {
   });
 
   test('does not render secondary martial arts when none exist', async () => {
-    vi.mocked(fetchMovie).mockResolvedValue({
+    setupMocks({
       ...mockMovie,
       martialArts: [mockMovie.primaryMartialArt],
     } as Movie);
@@ -95,6 +113,16 @@ describe('Movie details page', () => {
 
     const secondaryMartialArtsSection = screen.queryByRole('heading', { name: 'Also features' });
     expect(secondaryMartialArtsSection).not.toBeInTheDocument();
+  });
+
+  test('renders where to watch section', async () => {
+    setupMocks();
+
+    const ui = await Home({ params: Promise.resolve({ slug: 'karate-kid-x' }) });
+    render(ui);
+
+    expect(screen.getByRole('heading', { name: 'Where to watch' })).toBeInTheDocument();
+    expect(screen.getByText('Streaming availability component')).toBeInTheDocument();
   });
 
   //TODO: test error page
