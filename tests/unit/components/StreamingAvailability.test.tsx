@@ -167,4 +167,46 @@ describe('StreamingAvailability', () => {
     expect(primeLogo).toHaveAttribute('src', 'https://example.com/prime-dark.svg');
     expect(pulpLogo).toHaveAttribute('src', 'https://example.com/midnight-pulp-dark.svg');
   });
+
+  test('deduplicates options that share same link within a section', () => {
+    const duplicateLinkAvailabilityData: StreamingAvailabilityResponse = {
+      streamingOptions: {
+        us: [
+          {
+            service: {
+              id: 'prime',
+              name: 'Prime Video',
+              imageSet: {
+                lightThemeImage: 'https://example.com/prime-light.svg',
+                darkThemeImage: 'https://example.com/prime-dark.svg',
+              },
+            },
+            type: 'rent',
+            link: 'https://example.com/prime-rent',
+            quality: 'sd',
+          },
+          {
+            service: {
+              id: 'prime',
+              name: 'Prime Video',
+              imageSet: {
+                lightThemeImage: 'https://example.com/prime-light.svg',
+                darkThemeImage: 'https://example.com/prime-dark.svg',
+              },
+            },
+            type: 'rent',
+            link: 'https://example.com/prime-rent',
+            quality: 'hd',
+          },
+        ],
+      },
+    };
+
+    render(<StreamingAvailability availabilityData={duplicateLinkAvailabilityData} />);
+
+    const rentLinks = screen.getAllByRole('link', { name: 'Prime Video' });
+
+    expect(rentLinks).toHaveLength(1);
+    expect(rentLinks[0]).toHaveAttribute('href', 'https://example.com/prime-rent');
+  });
 });

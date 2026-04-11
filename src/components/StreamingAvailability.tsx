@@ -15,6 +15,15 @@ function getStreamingOptionName(option: StreamingAvailabilityOption) {
   return option.addon?.name ?? option.service.name;
 }
 
+function deduplicateOptions(options: StreamingAvailabilityOption[]) {
+  const seen = new Set<string>();
+  return options.filter((option) => {
+    if (seen.has(option.link)) return false;
+    seen.add(option.link);
+    return true;
+  });
+}
+
 export default function StreamingAvailability({
   availabilityData,
 }: {
@@ -48,7 +57,10 @@ export default function StreamingAvailability({
     },
     { title: 'Rent', options: userCountryOptions.filter((option) => option.type === 'rent') },
     { title: 'Buy', options: userCountryOptions.filter((option) => option.type === 'buy') },
-  ].filter((section) => section.options.length);
+  ]
+    .map((section) => ({ ...section, options: deduplicateOptions(section.options) }))
+    .filter((section) => section.options.length);
+  console.log(watchSections);
 
   if (!watchSections.length) {
     return <p className="text-muted-foreground">No watch options are currently available in your country.</p>;
