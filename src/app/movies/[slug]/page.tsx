@@ -50,7 +50,7 @@ export default async function MoviePage({ params }: { params: Promise<{ slug: st
   if (!movie) notFound();
 
   const secondaryMartialArts = movie.martialArts.filter((ma) => ma.id !== movie.primaryMartialArt?.id);
-  const streamingAvailability = await fetchStreamingAvailability(movie.id, 'us');
+  const streamingAvailability = await fetchStreamingAvailability(movie.tmdbId, 'us');
 
   return (
     <div>

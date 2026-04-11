@@ -136,7 +136,7 @@ export async function fetchStreamingAvailability(
     return null;
   }
 
-  const url = `https://streaming-availability.p.rapidapi.com/shows/${tmdbId}?country=${country}`;
+  const url = `https://streaming-availability.p.rapidapi.com/shows/movie/${tmdbId}?country=${country}`;
   const options = {
     method: 'GET',
     headers: {
