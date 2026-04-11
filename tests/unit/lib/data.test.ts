@@ -299,7 +299,7 @@ describe('fetchStreamingAvailability', () => {
     const result = await fetchStreamingAvailability(1, 'us');
 
     expect(global.fetch).toHaveBeenCalledWith(
-      'https://streaming-availability.p.rapidapi.com/shows/1?country=us',
+      'https://streaming-availability.p.rapidapi.com/shows/movie/1?country=us',
       expect.objectContaining({
         method: 'GET',
         headers: expect.objectContaining({
@@ -333,7 +333,7 @@ describe('fetchStreamingAvailability', () => {
     expect(result).toBeNull();
     expect(console.error).toHaveBeenCalledWith(
       expect.stringContaining('API error'),
-      expect.objectContaining({ url: expect.stringContaining('/shows/1?country=us') })
+      expect.objectContaining({ url: expect.stringContaining('/shows/movie/1?country=us') })
     );
   });
 

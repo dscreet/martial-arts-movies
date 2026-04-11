@@ -36,6 +36,7 @@ type Movie = NonNullable<Awaited<ReturnType<typeof fetchMovie>>>;
 describe('Movie details page', () => {
   const mockMovie = {
     id: 1,
+    tmdbId: 10,
     slug: 'karate-kid-legends-2025',
     title: 'Karate Kid Legends',
     releaseDate: new Date('2025-01-01'),
@@ -69,7 +70,7 @@ describe('Movie details page', () => {
 
     await Home({ params: Promise.resolve({ slug: 'karate-kid-x' }) });
 
-    expect(fetchStreamingAvailability).toHaveBeenCalledWith(mockMovie.id, 'us');
+    expect(fetchStreamingAvailability).toHaveBeenCalledWith(mockMovie.tmdbId, 'us');
   });
 
   test('renders title and release year', async () => {
