@@ -60,7 +60,6 @@ export default function StreamingAvailability({
   ]
     .map((section) => ({ ...section, options: deduplicateOptions(section.options) }))
     .filter((section) => section.options.length);
-  console.log(watchSections);
 
   if (!watchSections.length) {
     return <p className="text-muted-foreground">No watch options are currently available in your country.</p>;
@@ -73,7 +72,7 @@ export default function StreamingAvailability({
           <h4 className="min-w-16 text-sm font-semibold text-muted-foreground sm:pt-3">{section.title}</h4>
           <div className="flex flex-wrap gap-3">
             {section.options.map((option) => (
-              <Link key={`${option.type}-${option.service.id}-${option.quality}`} href={option.link}>
+              <Link key={`${option.type}-${option.service.id}-${option.quality}-${option.link}`} href={option.link}>
                 <div className="overflow-hidden rounded-lg border shadow-sm">
                   <ImageWithFallback
                     src={getStreamingOptionLogo(option, resolvedTheme)}

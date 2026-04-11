@@ -140,7 +140,7 @@ export default async function MoviePage({ params }: { params: Promise<{ slug: st
 
           {/* streaming availability */}
           <div>
-            <h3 className="mb-2 text-lg font-semibold sm:text-xl">Where to watch</h3>
+            <h3 className="mb-3 text-lg font-semibold sm:text-xl">Where to watch</h3>
             <StreamingAvailability availabilityData={streamingAvailability} />
           </div>
         </div>
