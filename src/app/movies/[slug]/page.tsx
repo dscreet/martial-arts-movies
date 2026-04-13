@@ -7,11 +7,15 @@ import { cache } from 'react';
 import ImageWithFallback from '@/components/ImageWithFallback';
 import StreamingAvailability from '@/components/StreamingAvailability';
 import { Badge } from '@/components/ui/badge';
-import { fetchAllMovieSlugs, fetchMovie } from '@/lib/data';
-import { fetchStreamingAvailability } from '@/lib/data';
+import { fetchAllMovieSlugs, fetchMovie, fetchStreamingAvailability } from '@/lib/data';
 import { baseMetadata } from '@/lib/seo';
 
 const getMovieCached = cache(fetchMovie);
+const STREAMING_COUNTRY_OPTIONS = [
+  { id: 1, name: 'United States', value: 'us' },
+  { id: 2, name: 'United Kingdom', value: 'gb' },
+  { id: 3, name: 'Canada', value: 'ca' },
+];
 
 // generates static pages for all movies at build time
 export async function generateStaticParams() {
@@ -50,7 +54,7 @@ export default async function MoviePage({ params }: { params: Promise<{ slug: st
   if (!movie) notFound();
 
   const secondaryMartialArts = movie.martialArts.filter((ma) => ma.id !== movie.primaryMartialArt?.id);
-  const streamingAvailability = await fetchStreamingAvailability(movie.tmdbId, 'us');
+  const streamingAvailability = await fetchStreamingAvailability(movie.tmdbId);
 
   return (
     <div>
@@ -141,7 +145,10 @@ export default async function MoviePage({ params }: { params: Promise<{ slug: st
           {/* streaming availability */}
           <div>
             <h3 className="mb-3 text-lg font-semibold sm:text-xl">Where to watch</h3>
-            <StreamingAvailability availabilityData={streamingAvailability} />
+            <StreamingAvailability
+              availabilityData={streamingAvailability}
+              countryOptions={STREAMING_COUNTRY_OPTIONS}
+            />
           </div>
         </div>
       </div>

@@ -296,10 +296,10 @@ describe('fetchStreamingAvailability', () => {
       json: vi.fn().mockResolvedValue(mockResult),
     } as unknown as Response);
 
-    const result = await fetchStreamingAvailability(1, 'us');
+    const result = await fetchStreamingAvailability(1);
 
     expect(global.fetch).toHaveBeenCalledWith(
-      'https://streaming-availability.p.rapidapi.com/shows/movie/1?country=us',
+      'https://streaming-availability.p.rapidapi.com/shows/movie/1',
       expect.objectContaining({
         method: 'GET',
         headers: expect.objectContaining({
@@ -314,7 +314,7 @@ describe('fetchStreamingAvailability', () => {
   test('returns null when api key is missing', async () => {
     delete process.env.X_RAPIDAPI_KEY;
 
-    const result = await fetchStreamingAvailability(1, 'us');
+    const result = await fetchStreamingAvailability(1);
 
     expect(result).toBeNull();
     expect(console.error).toHaveBeenCalled();
@@ -328,19 +328,19 @@ describe('fetchStreamingAvailability', () => {
       statusText: 'Internal Server Error',
     } as Response);
 
-    const result = await fetchStreamingAvailability(1, 'us');
+    const result = await fetchStreamingAvailability(1);
 
     expect(result).toBeNull();
     expect(console.error).toHaveBeenCalledWith(
       expect.stringContaining('API error'),
-      expect.objectContaining({ url: expect.stringContaining('/shows/movie/1?country=us') })
+      expect.objectContaining({ url: expect.stringContaining('/shows/movie/1') })
     );
   });
 
   test('returns null when fetch throws', async () => {
     vi.mocked(global.fetch).mockRejectedValue(new Error('network error'));
 
-    const result = await fetchStreamingAvailability(1, 'us');
+    const result = await fetchStreamingAvailability(1);
 
     expect(result).toBeNull();
     expect(console.error).toHaveBeenCalledWith(expect.stringContaining('fetch error'), expect.any(Error));

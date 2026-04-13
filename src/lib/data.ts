@@ -125,10 +125,7 @@ export async function fetchAllMovieSlugs() {
   });
 }
 
-export async function fetchStreamingAvailability(
-  tmdbId: number,
-  country: string
-): Promise<StreamingAvailabilityResponse | null> {
+export async function fetchStreamingAvailability(tmdbId: number): Promise<StreamingAvailabilityResponse | null> {
   const apiKey = process.env.X_RAPIDAPI_KEY;
 
   if (!apiKey) {
@@ -136,7 +133,8 @@ export async function fetchStreamingAvailability(
     return null;
   }
 
-  const url = `https://streaming-availability.p.rapidapi.com/shows/movie/${tmdbId}?country=${country}`;
+  const url = `https://streaming-availability.p.rapidapi.com/shows/movie/${tmdbId}`;
+
   const options = {
     method: 'GET',
     headers: {

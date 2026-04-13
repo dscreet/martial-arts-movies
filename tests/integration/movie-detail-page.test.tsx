@@ -53,6 +53,7 @@ describe('Movie details page', () => {
   } satisfies Partial<Movie>;
 
   const setupMocks = (movie = mockMovie as Movie, availabilityData = null) => {
+    vi.clearAllMocks();
     vi.mocked(fetchMovie).mockResolvedValue(movie);
     vi.mocked(fetchStreamingAvailability).mockResolvedValue(availabilityData);
   };
@@ -70,7 +71,7 @@ describe('Movie details page', () => {
 
     await Home({ params: Promise.resolve({ slug: 'karate-kid-x' }) });
 
-    expect(fetchStreamingAvailability).toHaveBeenCalledWith(mockMovie.tmdbId, 'us');
+    expect(fetchStreamingAvailability).toHaveBeenCalledWith(mockMovie.tmdbId);
   });
 
   test('renders title and release year', async () => {
