@@ -99,6 +99,7 @@ const eslintConfig = defineConfig([
     'src/components/ui/**',
     'src/scripts/**',
     'coverage/**',
+    '.github/scripts/**',
   ]),
 ]);
 

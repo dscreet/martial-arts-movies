@@ -23,7 +23,12 @@ jobs:
       - name: Run type check
         run: pnpm run typecheck
       - name: Run unit and integration tests
-        run: pnpm run test
+        run: pnpm run test:coverage
+      - name: Publish test summary
+        if: ${{ !cancelled() }}
+        uses: actions/github-script@v9
+        with:
+          script: await require('./.github/scripts/publish-test-summary.js')({ core })
       - name: Install playwright browsers
         run: pnpm exec playwright install --with-deps
       - name: Run e2e tests
