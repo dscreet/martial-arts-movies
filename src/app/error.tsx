@@ -6,7 +6,7 @@ import FallbackLayout from '@/components/FallbackLayout';
 
 // metadata doesn't work here
 
-export default function Error({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
+export default function Error({ error, retry }: { error: Error & { digest?: string }; retry: () => void }) {
   useEffect(() => {
     console.error(error);
   }, [error]);
@@ -17,7 +17,7 @@ export default function Error({ error, reset }: { error: Error & { digest?: stri
       <FallbackLayout
         title="Something went wrong"
         description="An unexpected error occurred while loading this page. Please try again, or return to the home page."
-        primaryAction={{ onClick: () => reset(), label: 'Try again' }}
+        primaryAction={{ onClick: () => retry(), label: 'Try again' }}
         secondaryAction={{ href: '/', label: 'Go home' }}
       />
     </>
