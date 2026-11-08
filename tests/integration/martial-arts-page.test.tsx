@@ -23,14 +23,10 @@ vi.mock('@/components/ControlsContainer', () => ({
   default: ({ children }: { children: React.ReactNode }) => <div data-testid="controls">{children}</div>,
 }));
 
-vi.mock('@/lib/data', async () => {
-  const { sortOptions } = await vi.importActual('@/lib/data');
-  return {
-    fetchMovies: vi.fn(),
-    fetchMartialArt: vi.fn(),
-    sortOptions,
-  };
-});
+vi.mock('@/lib/data', () => ({
+  fetchMovies: vi.fn(),
+  fetchMartialArt: vi.fn(),
+}));
 
 describe('Martial Arts page', () => {
   const mockMartialArt = { id: 1, name: 'Karate', slug: 'karate' };

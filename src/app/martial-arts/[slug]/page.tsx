@@ -7,7 +7,8 @@ import ControlsContainer from '@/components/ControlsContainer';
 import MovieList from '@/components/MovieList';
 import PaginationBar from '@/components/Pagination';
 import Sort from '@/components/Sort';
-import { fetchMartialArt, fetchMovies, type MovieQuery, type SortOption, sortOptions } from '@/lib/data';
+import { fetchMartialArt, fetchMovies, type MovieQuery } from '@/lib/data';
+import { DEFAULT_SORT, SORT_OPTIONS, type SortOption } from '@/lib/movie-options';
 import { baseMetadata } from '@/lib/seo';
 
 const getMartialArtCached = cache(fetchMartialArt);
@@ -50,7 +51,7 @@ export default async function MartialArtPage({ params, searchParams }: PageProps
   const { sort, page } = await searchParams;
   const currentPage = Number(page) || 1;
 
-  const sortOption: SortOption = sort && sort in sortOptions ? (sort as SortOption) : 'release-desc';
+  const sortOption: SortOption = sort && sort in SORT_OPTIONS ? (sort as SortOption) : DEFAULT_SORT;
 
   const movieQuery: MovieQuery = {
     primaryMartialArt: slug,

@@ -6,16 +6,8 @@ import MovieList from '@/components/MovieList';
 import PaginationBar from '@/components/Pagination';
 import SingleSelectFilter from '@/components/SingleSelectFilter';
 import Sort from '@/components/Sort';
-import {
-  DECADES,
-  fetchCountries,
-  fetchGenres,
-  fetchMartialArts,
-  fetchMovies,
-  type MovieQuery,
-  type SortOption,
-  sortOptions,
-} from '@/lib/data';
+import { fetchCountries, fetchGenres, fetchMartialArts, fetchMovies, type MovieQuery } from '@/lib/data';
+import { DECADES, DEFAULT_SORT, SORT_OPTIONS, type SortOption } from '@/lib/movie-options';
 import { baseMetadata } from '@/lib/seo';
 
 interface PageProps {
@@ -58,7 +50,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
 export default async function MoviesPage({ searchParams }: PageProps) {
   const { sort: sortParam, 'martial-art': martialArt, genre, country, year, page } = await searchParams;
   const currentPage = Number(page) || 1;
-  const sort: SortOption = sortParam && sortParam in sortOptions ? (sortParam as SortOption) : 'release-desc';
+  const sort: SortOption = sortParam && sortParam in SORT_OPTIONS ? (sortParam as SortOption) : DEFAULT_SORT;
 
   const movieQuery: MovieQuery = {
     sort,

@@ -27,17 +27,12 @@ vi.mock('@/components/ControlsContainer', () => ({
   default: ({ children }: { children: React.ReactNode }) => <div data-testid="controls">{children}</div>,
 }));
 
-vi.mock('@/lib/data', async () => {
-  const { sortOptions, DECADES } = await vi.importActual('@/lib/data');
-  return {
-    fetchMovies: vi.fn(),
-    fetchMartialArts: vi.fn(),
-    fetchGenres: vi.fn(),
-    fetchCountries: vi.fn(),
-    sortOptions,
-    DECADES,
-  };
-});
+vi.mock('@/lib/data', () => ({
+  fetchMovies: vi.fn(),
+  fetchMartialArts: vi.fn(),
+  fetchGenres: vi.fn(),
+  fetchCountries: vi.fn(),
+}));
 
 describe('All movies page', () => {
   const mockMovies = [

@@ -3,14 +3,14 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { type SortOption, sortOptions } from '@/lib/data';
+import { DEFAULT_SORT, SORT_OPTIONS, type SortOption } from '@/lib/movie-options';
 
 export default function Sort() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
   const sort = searchParams.get('sort');
-  const sortValue: SortOption = sort && sort in sortOptions ? (sort as SortOption) : 'release-desc';
+  const sortValue: SortOption = sort && sort in SORT_OPTIONS ? (sort as SortOption) : DEFAULT_SORT;
 
   function handleSortChange(value: string) {
     const params = new URLSearchParams(searchParams);
